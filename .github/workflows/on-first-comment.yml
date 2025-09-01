@@ -32,17 +32,37 @@ jobs:
 
             return isFirst;
 
+      - name: Check if blocked user
+        id: check-blocked
+        uses: actions/github-script@v7
+        if: steps.first-comment.outputs.result == 'true'
+        with:
+          github-token: ${{ secrets.GH_TOKEN }}
+          script: |
+            const blockedUsers = [
+              "RooveThelema",
+              "Tema13cm",
+              "FunnySmailey"
+            ];
+
+            const commentUser = context.payload.comment.user.login;
+
+            if (blockedUsers.includes(commentUser)) {
+              core.setFailed(`User ${commentUser} is blocked and cannot take this issue.`);
+            } else {
+              console.log(`User ${commentUser} is allowed.`);
+            }
 
       - name: Get project data and check if Blocked
         id: get-item
-        if: steps.first-comment.outputs.result == 'true'
+        if: steps.first-comment.outputs.result == 'true' && steps.check-blocked.outcome == 'success'
         uses: actions/github-script@v7
         with:
           github-token: ${{ secrets.GH_TOKEN }}
           script: |
             const issueNodeId = context.payload.issue.node_id;
             const projectNumber = 3;
-            const userLogin = "tsenturion";
+            const userLogin = "tsenturion"; // можно заменить на актуального пользователя, если нужно динамически
 
             const result = await github.graphql(`
               query($userLogin: String!, $projectNumber: Int!) {
@@ -127,7 +147,7 @@ jobs:
             }));
 
       - name: Assign user who commented
-        if: steps.first-comment.outputs.result == 'true' && steps.get-item.outcome == 'success'
+        if: steps.first-comment.outputs.result == 'true' && steps.check-blocked.outcome == 'success' && steps.get-item.outcome == 'success'
         uses: actions/github-script@v7
         with:
           github-token: ${{ secrets.GH_TOKEN }}
@@ -143,7 +163,7 @@ jobs:
             });
 
       - name: Set status to In Progress
-        if: steps.first-comment.outputs.result == 'true' && steps.get-item.outcome == 'success'
+        if: steps.first-comment.outputs.result == 'true' && steps.check-blocked.outcome == 'success' && steps.get-item.outcome == 'success'
         uses: actions/github-script@v7
         env:
           PROJECT_DATA: ${{ steps.get-item.outputs.projectData }}
@@ -170,5 +190,3 @@ jobs:
                 }
               }
             });
-            
-        
