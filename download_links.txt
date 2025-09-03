@@ -5,5 +5,10 @@ https://www.python.org/downloads/
     убрать галочку от админа
     добавить галочку в PATH
 https://git-scm.com/downloads/win
+    убрать галочку only show new options
     В свою папку
 https://desktop.github.com/download/
+
+ms-python.python
+Codeium.codeium
+https://gigacode.ru/
