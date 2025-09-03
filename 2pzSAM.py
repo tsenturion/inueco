@@ -10,21 +10,13 @@ oper = str(input("Операция + - * /" ))
 
 if oper == "+":
     answ = nu1 + nu2
-    print(answ)
-    print(type(answ))
 elif oper == "-":
     answ = nu1 - nu2
-    print(answ)
-    print(type(answ))
 elif oper == "*":
     answ = nu1 * nu2
-    print(answ)
-    print(type(answ))
 elif oper == "/":
     answ = nu1 / nu2
-    print(answ)
-    print(type(answ))
 else: 
     print("ERROR: WRONG SYNT.")
-    
-    
+print(answ)
+print(type(answ))     
