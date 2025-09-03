@@ -3,19 +3,19 @@
 # 3. Используя if/elif/else, выполните нужную операцию
 # 4. Выведите результат и его тип
 
-nu1 = int(input( ))
-nu2 = int(input( ))
+num1 = int(input( ))
+num2 = int(input( ))
 
 oper = str(input("Операция + - * /" ))
 
 if oper == "+":
-    answ = nu1 + nu2
+    answ = num1 + num2
 elif oper == "-":
-    answ = nu1 - nu2
+    answ = num1 - num2
 elif oper == "*":
-    answ = nu1 * nu2
+    answ = num1 * num2
 elif oper == "/":
-    answ = nu1 / nu2
+    answ = num1 / num2
 else: 
     answ = "ERROR"
 print(answ)
