@@ -12,4 +12,3 @@ else:
     print("Не больше 18!")
 print("Тип переменной: ", type(age))
 
-'Test'
