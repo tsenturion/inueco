@@ -11,3 +11,5 @@ if (age > 18):
 else:
     print("Не больше 18!")
 print("Тип переменной: ", type(age))
+
+'sdsdsd'
