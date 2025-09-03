@@ -17,6 +17,6 @@ elif oper == "*":
 elif oper == "/":
     answ = nu1 / nu2
 else: 
-    print("ERROR: WRONG SYNT.")
+    answ = "ERROR"
 print(answ)
 print(type(answ))     
