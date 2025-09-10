@@ -3,5 +3,5 @@
 вывести на экран
 """
 
-list = list(range(100, 1000001, 5000))
+list = list(range(100, 1000000, 5000))
 print(list)
