@@ -33,6 +33,7 @@ Flase:
 {}
 set()
 frozenset()
+None
 
 True:
 когда есть что-то
