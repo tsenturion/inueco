@@ -13,3 +13,5 @@ ms-python.python
 Codeium.codeium
 https://gigacode.ru/
 GitHub.vscode-pull-request-github
+
+https://code-basics.com/ru
