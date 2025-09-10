@@ -1,3 +1,23 @@
+SELECT 
+    c.customer_name,
+    YEAR(CURDATE()) - YEAR(c.birth_date) - 
+        (CASE 
+            WHEN MONTH(c.birth_date) > MONTH(CURDATE()) OR 
+                 (MONTH(c.birth_date) = MONTH(CURDATE()) AND DAY(c.birth_date) > DAY(CURDATE())) 
+            THEN 1 
+            ELSE 0 
+        END) AS age,
+    COUNT(o.order_id) AS purchase_count
+FROM customers c
+JOIN orders o ON c.id = o.customer_id
+JOIN products p ON o.product_id = p.id
+WHERE p.title = 'Crab'
+GROUP BY c.id, c.customer_name, c.birth_date
+ORDER BY purchase_count DESC, c.customer_name ASC;
+
+
+
+
 Наш магазин морепродуктов собирается сменить дизайн упаковки своих товаров. Для этого нам нужно знать, на какую возрастную группу покупателей мы будем ориентироваться
 
 Таблица customers содержит информацию о покупателях: имя и дату рождения
