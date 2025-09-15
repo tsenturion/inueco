@@ -6,7 +6,9 @@ if обязательный
 если в условии образуется False, то выполняется второй блок кода внутри else
 else без условия, но с : в конце
 else не обязателен
+elif
 """
+print(print())
 age = int(input("Enter your age: "))
 
 if age > 18:
@@ -24,7 +26,7 @@ if flag1:
     print("True")
 
 """
-Flase:
+False:
 0
 ""
 ''
@@ -33,6 +35,7 @@ Flase:
 {}
 set()
 frozenset()
+
 None
 
 True:
@@ -43,7 +46,13 @@ if 0:
     if 0:
         print("True")
     else:
-        print("False")
+        if 0:
+            if 0:
+                print("True")
+            else:
+                print("False")
+        else:
+            print("False")
 else:
     print("False")
 
@@ -60,6 +69,7 @@ else:
     print("D")
 
 """
+<<<<<<< HEAD
 опередить возраст
 >65 пожилой
 >18 совершеннолетний
@@ -74,3 +84,20 @@ elif age >= 18:
 else:
     print("Тебе ещё даже 18 нет, так что учись пока, дальше всё будет только сложнее, наслаждайся жизьню пока можешь, дальше будут хуже")
 
+=======
+определить возраст
+> 65 пожилой
+> 18 совершеннолетний
+< 18 несовершеннолетний
+"""
+
+# age = 12
+age = int(input("Enter your age: "))
+
+if age > 65:
+    print("пожилой")
+elif age >= 18:
+    print("совершеннолетний")
+else:
+    print("несовершеннолетний")
+>>>>>>> 81c9451d9398857c3c34ebb6e0ad6e8c716c96d5
