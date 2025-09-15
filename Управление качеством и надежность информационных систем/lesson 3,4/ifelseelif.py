@@ -74,3 +74,10 @@ else:
 > 18 совершеннолтний
 < 18 несовершеннолтний
 """
+mark = int(input("Enter your mark: "))
+if mark > 65:
+    print("пожилой")
+elif mark > 18:
+    print("Совершеннолетний")
+else:
+    print("Несовершеннолетний")
