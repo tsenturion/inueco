@@ -1,0 +1,152 @@
+Наш магазин морепродуктов собирается сменить дизайн упаковки своих товаров. Для этого нам нужно знать, на какую возрастную группу покупателей мы будем ориентироваться
+
+Таблица customers содержит информацию о покупателях: имя и дату рождения
+
+id	customer_name	birth_date
+1	Kelley Bastie	1990-01-12
+2	Frank Smyley	1998-06-20
+3	Milton Rougier	2000-07-19
+4	Carmel Edards	1991-07-15
+Таблица products содержит информацию о товарах магазина
+
+id	title	price
+1	Salmon	20
+2	Crab	50
+3	Eggs	5
+4	Bread	1.5
+Таблица orders содержит информацию о сделанных покупках
+
+order_id	customer_id	product_id
+1	1	4
+2	2	2
+3	3	1
+4	4	2
+5	2	2
+
+Составьте запрос, который найдет 3 покупателей, покупающих больше всего крабов ('Crab'). Выведите также возраст этих покупателей. Итоговая выборка должна содержать поля customer_name, age и purchase_count – количество покупок. Отсортируйте вывод по количеству покупок DESC и имени ASC.
+
+customer_name	age	purchase_count
+Frank Smyley	26	2
+Carmel Edards	33	1
+
+Для решения упражнения вам потребуется получить возраст в годах исходя из даты рождения покупателя. Для этого вам может понадобиться функция EXTRACT() и AGE()
+EXTRACT(YEAR FROM AGE(birth_date))
+Про работу функции AGE() можно почитать в документации
+https://www.postgresqltutorial.com/postgresql-date-functions/postgresql-age/
+
+CREATE TABLE customers (
+    id bigint,
+    customer_name varchar(255),
+    birth_date date
+);
+
+CREATE TABLE orders (
+    order_id bigint,
+    customer_id bigint,
+    product_id bigint
+);
+
+CREATE TABLE products (
+    id bigint,
+    title varchar(255),
+    price int
+);
+
+INSERT INTO customers VALUES
+(1, 'Ardene Twomey', '2002-05-13'),
+(2, 'Scarlet Bambrough', '1992-01-17'),
+(3, 'Frank Smyley', '1998-06-20'),
+(4, 'Milton Rougier', '2000-07-19'),
+(5, 'Carmel Edards', '1991-07-15'),
+(6, 'Toddie Nisco', '1990-04-15'),
+(7, 'Ellery Largan', '1992-02-01'),
+(8, 'Emanuele Rooney', '1992-11-18'),
+(9, 'Norean Hullot', '2003-06-14'),
+(10, 'Paddy Caldroni', '1992-10-08'),
+(11, 'Neils Kendell', '1991-01-04'),
+(12, 'Kyle Allinson', '1995-02-18'),
+(13, 'Drake Fawdrey', '1990-10-14'),
+(14, 'Siegfried Yurmanovev', '2000-11-15'),
+(15, 'Tate O''Caherny', '2003-01-14'),
+(16, 'Tierney Carlesi', '1995-07-28'),
+(17, 'Ara Harlowe', '1993-04-17'),
+(18, 'Antonella Matteo', '1996-01-08'),
+(19, 'Uta Reasun', '1992-04-27'),
+(20, 'Elia Cattlow', '2002-05-16'),
+(21, 'Orsola Dibdall', '1994-10-02'),
+(22, 'Abey Booley', '1995-02-02'),
+(23, 'Cymbre Briscow', '2002-03-09'),
+(24, 'Elwin de Wilde', '1997-07-07'),
+(25, 'Antonie Fearon', '1992-05-14'),
+(26, 'Franz Grinvalds', '2004-09-27'),
+(27, 'Jonas Van den Bosch', '1995-02-10'),
+(28, 'Woodman Frany', '1997-08-05'),
+(29, 'Wynny Kestian', '1995-06-30'),
+(30, 'Marya Dabbes', '2000-07-18');
+
+
+INSERT INTO products VALUES
+(1, 'Mince Meat - Filling', 11),
+(2, 'Savory', 5),
+(3, 'Sauce - Hoisin', 15),
+(4, 'Lettuce - Boston Bib - Organic', 7),
+(5, 'Vinegar - Raspberry', 15),
+(6, 'Wine - Pinot Noir Stoneleigh', 19),
+(7, 'Smirnoff Green Apple Twist', 13),
+(8, 'Crab', 15),
+(9, 'Almonds Ground Blanched', 10),
+(10, 'Tabasco Sauce, 2 Oz', 10);
+
+
+
+INSERT INTO orders VALUES
+(1, 10, 8),
+(2, 22, 6),
+(3, 8, 2),
+(4, 6, 8),
+(5, 17, 3),
+(6, 15, 10),
+(7, 1, 2),
+(8, 24, 10),
+(9, 4, 4),
+(10, 8, 7),
+(11, 25, 2),
+(12, 10, 5),
+(13, 29, 8),
+(14, 17, 7),
+(15, 10, 1),
+(16, 20, 7),
+(17, 12, 8),
+(18, 3, 1),
+(19, 5, 10),
+(20, 3, 8),
+(21, 21, 8),
+(22, 4, 3),
+(23, 3, 1),
+(24, 13, 8),
+(25, 8, 4),
+(26, 23, 3),
+(27, 27, 8),
+(28, 17, 3),
+(29, 30, 1),
+(30, 10, 8),
+(31, 4, 3),
+(32, 6, 8),
+(33, 7, 9),
+(34, 16, 8),
+(35, 27, 1),
+(36, 3, 9),
+(37, 17, 1),
+(38, 4, 7),
+(39, 10, 2),
+(40, 13, 2),
+(41, 12, 4),
+(42, 10, 5),
+(43, 30, 3),
+(44, 7, 9),
+(45, 19, 2),
+(46, 14, 8),
+(47, 28, 7),
+(48, 8, 1),
+(49, 29, 6),
+(50, 4, 4);
