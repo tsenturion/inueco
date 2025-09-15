@@ -22,3 +22,7 @@ students = {
 """
 найти лучше студента по среднему баллу
 """
+best = max(students.values(), key=lambda s: sum(s["grades"].values())/len(s["grades"]))
+avg = sum(best["grades"].values()) / len(best["grades"])
+
+print(f"{best['name']}, {best['group']}, {avg:.2f}")
