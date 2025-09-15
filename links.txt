@@ -13,3 +13,15 @@ ms-python.python
 Codeium.codeium
 https://gigacode.ru/
 GitHub.vscode-pull-request-github
+
+https://code-basics.com/ru
+кроме этих тем
+Экранированные последовательности
+Конкатенация
+Кодировка
+Переменные и конкатенация
+Интерполяция
+Сигнатура функции
+Детерминированность
+Объекты
+и далее
