@@ -75,7 +75,7 @@ else:
 < 18 несовершеннолтний
 """
 age = int(input("Enter your age: "))
-if mark > 65:
+if age > 65:
     print("пожилой")
 elif age > 18:
     print("Совершеннолетний")
