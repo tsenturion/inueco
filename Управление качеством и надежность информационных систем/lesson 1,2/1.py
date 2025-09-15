@@ -78,6 +78,7 @@ print(10 * 0.1)
 print()
 
 number = 5 
+number = number + 6
 number += 6
 
 print(number)
