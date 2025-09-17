@@ -1,3 +1,15 @@
+SELECT 
+    c.customer_name,
+    EXTRACT(YEAR FROM AGE(c.birth_date)) AS age,
+    COUNT(o.order_id) AS purchase_count
+FROM orders o
+JOIN customers c ON o.customer_id = c.id
+JOIN products p ON o.product_id = p.id
+WHERE p.title = 'Crab'
+GROUP BY c.id, c.customer_name, c.birth_date
+ORDER BY purchase_count DESC, c.customer_name ASC
+LIMIT 3;
+
 Наш магазин морепродуктов собирается сменить дизайн упаковки своих товаров. Для этого нам нужно знать, на какую возрастную группу покупателей мы будем ориентироваться
 
 Таблица customers содержит информацию о покупателях: имя и дату рождения
