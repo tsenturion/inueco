@@ -25,3 +25,5 @@ https://code-basics.com/ru
 Детерминированность
 Объекты
 и далее
+
+https://docs.python.org/3/library/index.html
