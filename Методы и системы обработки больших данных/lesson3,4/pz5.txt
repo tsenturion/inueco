@@ -94,3 +94,27 @@ FROM customer_stats cs
 CROSS JOIN overall_avg oa
 WHERE cs.average_price > oa.avg_all
 ORDER BY cs.average_price DESC;
+
+WITH customer_stats AS (
+    SELECT
+        c.name,
+        COUNT(s.id) AS orders_count,
+        SUM(s.total_price) AS total,
+        ROUND(AVG(s.total_price)::numeric, 2) AS average_price
+    FROM customers c
+    JOIN sales s ON c.id = s.customer_id
+    GROUP BY c.name
+),
+overall_avg AS (
+    SELECT AVG(s.total_price) AS avg_all
+    FROM sales s
+)
+SELECT 
+    cs.name,
+    cs.orders_count,
+    cs.total,
+    cs.average_price
+FROM customer_stats cs
+CROSS JOIN overall_avg oa
+WHERE cs.average_price > oa.avg_all
+ORDER BY cs.average_price DESC;
