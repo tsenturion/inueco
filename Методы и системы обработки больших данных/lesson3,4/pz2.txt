@@ -1,3 +1,14 @@
+SELECT product_name, COUNT() AS total_sales
+FROM orders
+WHERE created_at >= '2023-03-01' AND created_at < '2023-04-01'
+GROUP BY product_name
+ORDER BY total_sales DESC
+LIMIT 1;SELECT product_name, COUNT() AS total_sales
+FROM orders
+WHERE created_at >= '2023-03-01' AND created_at < '2023-04-01'
+GROUP BY product_name
+ORDER BY total_sales DESC
+LIMIT 1;
 Вам предстоит проанализировать продажи за первый квартал, данные о которых содержатся в таблице orders.
 
 Составьте запрос, который выберет самый популярный продукт по количеству продаж в марте 2023 года. Для этого вам понадобятся поля:
