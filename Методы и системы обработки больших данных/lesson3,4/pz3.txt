@@ -223,3 +223,17 @@ INSERT INTO movies (id, title, genre, rating, duration) VALUES
 (198, 'Major Movie Star', 'Adventure', 59, 83),
 (199, 'Motivational Growth', 'Comedy', null, 139),
 (200, 'Lucky Break (a.k.a. Paperback Romance)', 'Comedy', 4, 130);
+
+SELECT 
+    title,
+    rating
+FROM movies
+WHERE 
+    (genre = 'Action' AND rating IS NULL)
+    OR
+    (genre = 'Documentary' AND rating >= 80)
+ORDER BY 
+    CASE WHEN rating IS NULL THEN 0 ELSE 1 END, 
+    rating DESC,                                
+    title ASC                                  
+LIMIT 7;
