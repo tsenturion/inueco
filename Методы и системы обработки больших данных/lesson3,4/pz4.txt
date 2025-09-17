@@ -150,3 +150,15 @@ INSERT INTO orders VALUES
 (48, 8, 1),
 (49, 29, 6),
 (50, 4, 4);
+
+SELECT 
+    c.customer_name,
+    EXTRACT(YEAR FROM AGE(c.birth_date)) AS age,
+    COUNT(*) AS purchase_count
+FROM orders o
+JOIN customers c ON o.customer_id = c.id
+JOIN products p ON o.product_id = p.id
+WHERE p.title = 'Crab'
+GROUP BY c.customer_name, c.birth_date
+ORDER BY purchase_count DESC, c.customer_name ASC
+LIMIT 3;
