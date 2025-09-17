@@ -29,6 +29,7 @@ https://code-basics.com/ru
 
 https://leetcode.com/problems/build-array-from-permutation/description/?envType=problem-list-v2&envId=array
 https://leetcode.com/problems/concatenation-of-array/description/?envType=problem-list-v2&envId=array
+https://leetcode.com/problems/score-of-a-string/description/?envType=problem-list-v2&envId=string
 
 https://leetcode.com/
 https://chromewebstore.google.com/detail/leetcode-to-russian/omcekcjkhekdifemjbknfbijiabbjhmm?hl=ru&pli=1
