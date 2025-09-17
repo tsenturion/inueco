@@ -1,3 +1,133 @@
+"""
+1. Структура данных
+Основной словарь: {key: {nested_key: nested_value}}
+Трехуровневая вложенность: dict → dict → dict
+Ключи верхнего уровня: Уникальные идентификаторы (числа)
+
+2. Базовые операции
+А. Итерация по словарю
+python
+# Получение всех ключей
+keys = list(data.keys())
+i = 0
+while i < len(keys):
+    current_key = keys[i]
+    current_value = data[current_key]
+    i += 1
+Б. Доступ к вложенным данным
+python
+# Доступ ко второму уровню
+value = data[key]["property_name"]
+
+# Доступ к третьему уровню  
+nested_value = data[key]["nested_dict"]["nested_property"]
+В. Добавление и изменение данных
+python
+# Добавление нового элемента
+data[new_key] = {"prop1": value1, "prop2": value2}
+
+# Изменение существующего
+data[key]["existing_prop"] = new_value
+
+# Добавление во вложенный словарь
+data[key]["nested_dict"]["new_prop"] = value
+3. Конкретные алгоритмы обработки
+А. Расчет среднего значения списка
+python
+values = list(nested_dict.values())
+total = 0
+j = 0
+while j < len(values):
+    total += values[j]
+    j += 1
+average = total / len(values) if values else 0
+Б. Поиск максимального значения в словаре
+python
+keys = list(scores.keys())
+best_key = keys[0]
+best_score = scores[best_key]
+
+i = 1
+while i < len(keys):
+    current_key = keys[i]
+    current_score = scores[current_key]
+    if current_score > best_score:
+        best_key = current_key
+        best_score = current_score
+    i += 1
+В. Группировка данных по категориям
+python
+groups = {}
+keys = list(data.keys())
+i = 0
+while i < len(keys):
+    key = keys[i]
+    category = data[key]["category"]
+    
+    if category not in groups:
+        groups[category] = {"count": 0, "total": 0, "items": []}
+    
+    groups[category]["count"] += 1
+    groups[category]["total"] += data[key]["value"]
+    groups[category]["items"].append(data[key]["name"])
+    i += 1
+Г. Проверка на уникальность хешей
+python
+hashes_list = list(hashes_dict.values())
+unique_hashes = []
+j = 0
+while j < len(hashes_list):
+    current_hash = hashes_list[j]
+    found = False
+    k = 0
+    while k < len(unique_hashes):
+        if current_hash == unique_hashes[k]:
+            found = True
+            break
+        k += 1
+    if not found:
+        unique_hashes.append(current_hash)
+    j += 1
+
+is_unique = len(unique_hashes) == len(hashes_dict)
+Д. Фильтрация по условию
+python
+results = []
+keys = list(data.keys())
+i = 0
+while i < len(keys):
+    key = keys[i]
+    if data[key]["property"] == target_value:
+        results.append(data[key]["name"])
+    i += 1
+4. Управление выводом
+python
+# Разделители блоков
+print("-" * 50)
+
+# Форматированный вывод вложенных данных
+props = list(item.keys())
+j = 0
+while j < len(props):
+    prop = props[j]
+    value = item[prop]
+    print(f"  {prop}: {value}")
+    j += 1
+
+5. Особенности реализации
+Ручное управление индексами: Использование счетчиков i, j, k в циклах while
+Явное преобразование в список: list(dict.keys()) и list(dict.values())
+Проверка на пустоту: if len(list) > 0 перед операциями
+Построчная печать: Последовательный вывод данных через multiple print()
+
+6. Альтернативные конструкции
+Вместо: while с ручным индексом
+Можно использовать: for key in data: для прямого обхода ключей
+Вместо: Ручной подсчет суммы в цикле
+Можно использовать: sum(list(values))
+Вместо: Ручная проверка уникальности хешей
+Можно использовать: len(set(hashes_dict.values())) == len(hashes_dict)
+"""
 students = {
     101: {
         "name": "Иван Иванов",
