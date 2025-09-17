@@ -1,3 +1,16 @@
+SELECT 
+    title,
+    rating
+FROM movies
+WHERE 
+    (genre = 'Action' AND rating IS NULL)
+    OR (genre = 'Documentary' AND rating >= 80)
+ORDER BY 
+    CASE WHEN rating IS NULL THEN 0 ELSE 1 END,  
+    rating DESC,                                
+    title ASC                                   
+LIMIT 7;
+
 Вы ведете собственную коллекцию фильмов, которые вы просмотрели или хотели бы посмотреть. Вечером вы решили посмотреть что-нибудь из непросмотренного в жанре Action или что-нибудь хорошее из уже виденных документальных фильмов. Семи фильмов для выбора будет достаточно
 
 
