@@ -237,3 +237,4 @@ ORDER BY
   rating DESC,
   title ASC
 LIMIT 7;
+
