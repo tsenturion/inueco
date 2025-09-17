@@ -1,0 +1,49 @@
+В честь юбилея вашего проекта, вы решили провести конкурс, который спонсирует Google. Было решено, что участвовать в конкурсе могут только две категории пользователей:
+
+Пользователи, зарегистрированные с почты @gmail.com. В силу того, что призы довольно специфичные, возраст пользователя должен быть от 18 и до 50 лет включительно.
+
+Пользователи, зарегистрированные ранее 2020 года. Такие пользователи будут участвовать в конкурсе независимо от возраста и почты, с которой они регистрировались. Компания подберет им приз индивидуально
+
+Составьте запрос, который извлекает из таблицы profiles данные о пользователях, которым позволено участвовать в конкурсе. Для этого понадобятся поля:
+
+* username - имя пользователя
+* email — электронная почта
+* age — возраст пользователя
+Отсортируйте пользователей по возрасту по возрастанию.
+
+Структура таблицы profiles
+
+CREATE TABLE profiles (
+    id BIGINT,
+    username VARCHAR(255),
+    email VARCHAR(255),
+    age INT,
+    created_at DATE
+);
+
+INSERT INTO profiles (id, username, email, age, created_at) VALUES
+(1, 'Sunbeam', 'sunbeam@hotmail.com', 18, '2018-07-01'),
+(2, 'Starwind', 'starwind@yahoo.com', 20, '2019-01-21'),
+(3, 'MoonDust', 'moondust@hotmail.com', 18, '2019-05-21'),
+(4, 'GalacticHero', 'galactichero@outlook.com', 22, '2019-10-11'),
+(5, 'CosmicCat', 'cosmiccat@icloud.com', 16, '2019-09-09'),
+(6, 'MilkyWay', 'milkyway@aol.com', 19, '2020-02-16'),
+(7, 'HeavenlyFire', 'heavenlyfire@protonmail.com', 51, '2020-02-19'),
+(8, 'PlanetaryPirate', 'planetary_pirate@zoho.com', 45, '2020-02-19'),
+(9, 'Constellation', 'constellation@gmail.com', 20, '2020-10-02'),
+(10, 'Astronaut', 'astronaut@mail.ru', 31, '2020-11-10'),
+(11, 'MeteorShower', 'MeteorShower@gmx.com', 33, '2021-02-02'),
+(12, 'CassiopeiaComet', 'cassiopeia_comet@fastmail.com', 17, '2021-03-08'),
+(13, 'OrbitalEagle', 'orbital.eagle@gmail.com', 29, '2021-03-08'),
+(14, 'SaturnSatellite', 'ssatellite@mail.com', 23, '2021-04-20'),
+(15, 'EarthSphere', 'earth_sphere@protonmail.com', 49, '2021-04-22'),
+(16, 'VenusBreeze', 'venus_breeze@gmail.com', 41, '2021-06-29'),
+(17, 'MartianMagnate', 'martianmagnate@gmail.com', 23, '2021-07-04'),
+(18, 'JupiterJester', 'JupiterJester@gmail.com', 27, '2021-07-08'),
+(19, 'NeptuneNinja', 'NeptuneNinja@gmail.com', 65, '2021-07-15'),
+(20, 'UranusScholar', 'UranusScholar@yahoo.com', 43, '2021-08-01'),
+(21, 'PlutoSwimmer', 'plutoswimmer@gmail.com', 40, '2021-08-20'),
+(22, 'MercuryMusician', 'mercury.musician@gmail.com', 39, '2021-09-18'),
+(23, 'SaturnSamurai', 'saturn_samurai@yahoo.com', 25, '2021-09-29'),
+(24, 'LunarFox', 'lunar_fox@hotmail.com', 26, '2021-10-30'),
+(25, 'GalacticGuru', 'GGuru@gmail.com', 70, '2021-11-14');
