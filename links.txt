@@ -14,6 +14,7 @@ Codeium.codeium
 https://gigacode.ru/
 GitHub.vscode-pull-request-github
 
+https://ru.pythontutor.ru/problem/old/1
 https://code-basics.com/ru
 кроме этих тем
 Экранированные последовательности
@@ -25,5 +26,18 @@ https://code-basics.com/ru
 Детерминированность
 Объекты
 и далее
+
+https://leetcode.com/problems/build-array-from-permutation/description/?envType=problem-list-v2&envId=array
+https://leetcode.com/problems/concatenation-of-array/description/?envType=problem-list-v2&envId=array
+https://leetcode.com/problems/score-of-a-string/description/?envType=problem-list-v2&envId=string
+
+https://leetcode.com/
+https://chromewebstore.google.com/detail/leetcode-to-russian/omcekcjkhekdifemjbknfbijiabbjhmm?hl=ru&pli=1
+
+
+
+
+
+
 
 https://docs.python.org/3/library/index.html
