@@ -4,3 +4,9 @@
 Возраст должен быть int
 если вместо возраста введено exit закончить выполнение программы
 """
+
+while True:
+    age = input("Введите возраст: ")
+    if age.lower() == "exit":
+        break
+    print(int(age))
