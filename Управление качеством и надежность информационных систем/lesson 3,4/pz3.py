@@ -7,6 +7,6 @@
 
 while True:
     age = input("Введите возраст: ")
-    if age.lower() == "exit":
+    if age == "exit":
         break
     print(int(age))
