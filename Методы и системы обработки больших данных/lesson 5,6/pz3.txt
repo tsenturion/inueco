@@ -1,3 +1,25 @@
+WITH monthly_visits AS (
+    SELECT 
+        user_id,
+        EXTRACT(MONTH FROM visit_date) AS month
+    FROM visits
+    GROUP BY user_id, EXTRACT(MONTH FROM visit_date)
+),
+user_summary AS (
+    SELECT 
+        user_id,
+        MAX(CASE WHEN month = 1 THEN 1 ELSE 0 END) AS jan,
+        MAX(CASE WHEN month = 2 THEN 1 ELSE 0 END) AS feb,
+        MAX(CASE WHEN month = 3 THEN 1 ELSE 0 END) AS mar
+    FROM monthly_visits
+    GROUP BY user_id
+)
+SELECT
+    SUM(CASE WHEN jan = 1 AND feb = 1 AND mar = 1 THEN 1 ELSE 0 END) AS regulars,
+    SUM(CASE WHEN jan = 1 AND feb = 0 THEN 1 ELSE 0 END) AS left_january,
+    SUM(CASE WHEN feb = 1 AND mar = 0 THEN 1 ELSE 0 END) AS left_february
+FROM user_summary;
+
 В этом задании вам нужно провести анализ посетителей сайта за разные месяцы: определить постоянных посетителей, чтобы разослать им предложения по партнерской программе, и выявить тех, кто перестал посещать сайт, чтобы разослать им рекламные акции.
 
 Вам дана таблица с визитами пользователей за три месяца (январь, февраль и март)
