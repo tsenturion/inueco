@@ -14,7 +14,17 @@ Codeium.codeium
 https://gigacode.ru/
 GitHub.vscode-pull-request-github
 
+https://ru.pythontutor.ru/problem/old/1
 https://code-basics.com/ru
+Функции и их вызов
+Параметры по умолчанию
+Вызов функции — выражение
+Функции с переменным числом параметров
+Создание (определение) функций
+Возврат значений
+Необязательные параметры функций
+Именованные аргументы
+
 кроме этих тем
 Экранированные последовательности
 Конкатенация
@@ -25,3 +35,18 @@ https://code-basics.com/ru
 Детерминированность
 Объекты
 и далее
+
+https://leetcode.com/problems/build-array-from-permutation/description/?envType=problem-list-v2&envId=array
+https://leetcode.com/problems/concatenation-of-array/description/?envType=problem-list-v2&envId=array
+https://leetcode.com/problems/score-of-a-string/description/?envType=problem-list-v2&envId=string
+
+https://leetcode.com/
+https://chromewebstore.google.com/detail/leetcode-to-russian/omcekcjkhekdifemjbknfbijiabbjhmm?hl=ru&pli=1
+
+
+
+
+
+
+
+https://docs.python.org/3/library/index.html
