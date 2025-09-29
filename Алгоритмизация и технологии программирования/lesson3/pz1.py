@@ -140,7 +140,7 @@ def bubble_first_pass(arr):
     for j in range(0, n - 1):
         if arr[j] > arr[j + 1]:
             arr[j], arr[j + 1] = arr[j + 1], arr[j]
-#  Выполняет один проход пузырьковой сортировки
+#  Выполняет один проход пузырьковой сортировки O(n)
 
 #18
 def search_sorted_matrix(matrix, target):
