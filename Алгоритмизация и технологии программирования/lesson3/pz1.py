@@ -1,4 +1,4 @@
-# 1
+#1 O(n)
 def linear_search(arr, target):
     for i in range(len(arr)):
         if arr[i] == target:
@@ -6,7 +6,7 @@ def linear_search(arr, target):
     return -1
 
 
-#2
+#2 O(n)
 def sum_array(arr):
     total = 0
     for num in arr:
@@ -56,7 +56,7 @@ def print_all_pairs(arr):
             print(f"({arr[i]}, {arr[j]})")
 
 
-#8
+#8 O(n^2)
 def has_duplicates(arr):
     for i in range(len(arr)):
         for j in range(i + 1, len(arr)):
@@ -91,7 +91,7 @@ def multiply_matrices(a, b):
     return result
 
 
-#11
+#11 O(1)
 def get_element(arr, index):
     return arr[index]
 
