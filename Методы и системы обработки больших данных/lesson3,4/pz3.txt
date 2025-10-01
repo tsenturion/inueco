@@ -234,3 +234,18 @@ ORDER BY
     rating DESC,
     title ASC
 LIMIT 7;
+
+РЕШЕНИЕ:
+SELECT
+    title,
+    rating
+FROM movies
+WHERE
+    (genre = 'Action' AND rating IS NULL)
+    OR
+    (genre = 'Documentary' AND rating >= 80)
+ORDER BY
+    CASE WHEN rating IS NULL THEN 0 ELSE 1 END ASC, 
+    rating DESC,                                    
+    title ASC                                       
+LIMIT 7;
