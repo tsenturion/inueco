@@ -1,19 +1,17 @@
 SELECT
-    row_num AS row_number,
+    `row_number`,
     name,
     sales_count_sum
 FROM (
     SELECT
-        @row_number := @row_number + 1 AS row_num,
+        ROW_NUMBER() OVER (ORDER BY COUNT(s.id) ASC) AS `row_number`,
         p.name,
         COUNT(s.id) AS sales_count_sum
     FROM products p
     LEFT JOIN sales s ON p.id = s.product_id
-    CROSS JOIN (SELECT @row_number := 0) r
     GROUP BY p.id, p.name
-    ORDER BY sales_count_sum ASC
 ) ranked
-WHERE row_num = 1;
+WHERE `row_number` = 1;
 
 В таблице products хранятся данные о товарах:
 
