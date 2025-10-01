@@ -11,42 +11,22 @@ https://desktop.github.com/download/
 
 ms-python.python
 Codeium.codeium
+shd101wyy.markdown-preview-enhanced
+GitHub.vscode-pull-request-github
+mintlify.document
 https://gigacode.ru/
 GitHub.vscode-pull-request-github
 
 https://ru.pythontutor.ru/problem/old/1
 https://code-basics.com/ru
-Функции и их вызов
-Параметры по умолчанию
-Вызов функции — выражение
-Функции с переменным числом параметров
-Создание (определение) функций
-Возврат значений
-Необязательные параметры функций
-Именованные аргументы
-
-кроме этих тем
-Экранированные последовательности
-Конкатенация
-Кодировка
-Переменные и конкатенация
-Интерполяция
-Сигнатура функции
-Детерминированность
-Объекты
-и далее
-
-https://leetcode.com/problems/build-array-from-permutation/description/?envType=problem-list-v2&envId=array
-https://leetcode.com/problems/concatenation-of-array/description/?envType=problem-list-v2&envId=array
-https://leetcode.com/problems/score-of-a-string/description/?envType=problem-list-v2&envId=string
-
 https://leetcode.com/
 https://chromewebstore.google.com/detail/leetcode-to-russian/omcekcjkhekdifemjbknfbijiabbjhmm?hl=ru&pli=1
-
-
-
-
-
-
-
 https://docs.python.org/3/library/index.html
+https://app.diagrams.net/
+https://miro.com/
+https://mermaid.js.org/
+https://claude.ai/
+https://chat.deepseek.com/
+https://chatgpt.com/
+https://www.perplexity.ai/
+https://giga.chat/
