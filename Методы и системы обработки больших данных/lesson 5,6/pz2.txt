@@ -1,0 +1,41 @@
+В этом задании вам нужно будет проанализировать продажи за два года и найти проблемные товары.
+
+Вам даны две таблицы продаж за 2022 год sales_2022 и за 2023 sales_2023
+
+sales_2022
+
+id	product	quantity
+1	Product 1	24
+2	Product 2	16
+3	Product 3	8
+4	Product 4	10
+5	Product 5	46
+sales_2023
+
+id	product	quantity
+1	Product 1	7
+2	Product 2	12
+3	Product 3	5
+4	Product 4	0
+5	Product 5	26
+Составьте запрос, который найдет проблемные товары. Критерии для проблемных товаров:
+
+есть продажи в 2022, но нет в 2023 году ИЛИ
+продажи в 2022 и в 2023 году меньше 10
+id	product
+3	Product 3
+4	Product 4
+В результате должна получится таблица объединяющая оба запроса. Отсортируйте ее по id товаров.
+
+CREATE TABLE sales_2022 (
+    id INT,
+    product VARCHAR(50),
+    quantity INT
+);
+
+
+CREATE TABLE sales_2023 (
+    id INT,
+    product VARCHAR(50),
+    quantity INT
+);
