@@ -1,3 +1,24 @@
+SET @total = (SELECT COUNT(*) FROM sales);
+
+SELECT
+    category,
+    SUBSTRING_INDEX(GROUP_CONCAT(product_name ORDER BY sales_amount DESC), ',', 1) AS highest_selling_product,
+    MAX(sales_amount) AS highest_sales_amount,
+    SUBSTRING_INDEX(GROUP_CONCAT(product_name ORDER BY sales_amount ASC), ',', 1) AS lowest_selling_product,
+    MIN(sales_amount) AS lowest_sales_amount
+FROM (
+    SELECT
+        product_id,
+        product_name,
+        sales_amount,
+        CEIL((@row := @row + 1) / @total * 4) AS category
+    FROM sales
+    CROSS JOIN (SELECT @row := 0, @total := (SELECT COUNT(*) FROM sales)) r
+    ORDER BY sales_amount DESC
+) s
+GROUP BY category
+ORDER BY category;
+
 В таблице sales хранятся данные о товарах:
 
 product_id - id товара
