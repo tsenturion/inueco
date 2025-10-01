@@ -56,3 +56,17 @@ WHERE
     OR (created_at < '2020-01-01')
 ORDER BY age ASC;
 
+РЕШЕНИЕ:
+
+SELECT 
+    username,
+    email,
+    age
+FROM profiles
+WHERE 
+    (
+        email LIKE '%@gmail.com' 
+        AND age BETWEEN 18 AND 50
+    )
+    OR created_at < '2020-01-01'
+ORDER BY age ASC;
