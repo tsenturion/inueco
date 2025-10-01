@@ -86,3 +86,23 @@ INSERT INTO sales (product_id, city) VALUES
 (4, 'Abakan'),
 (1, 'Abakan'),
 (2, 'Abakan');
+
+Решение: 
+SELECT *
+FROM (
+  SELECT
+    (@rn := @rn + 1) AS row_number,
+    t.name,
+    t.sales_count_sum
+  FROM (
+    SELECT
+      p.name,
+      COUNT(s.id) AS sales_count_sum
+    FROM products p
+    LEFT JOIN sales s ON s.product_id = p.id
+    GROUP BY p.id, p.name
+    ORDER BY sales_count_sum ASC, p.name ASC
+  ) AS t
+  CROSS JOIN (SELECT @rn := 0) AS vars
+) AS numbered
+WHERE row_number = 1;
