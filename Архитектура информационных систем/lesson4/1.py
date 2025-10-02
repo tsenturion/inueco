@@ -1,2 +1,2 @@
-list1 = []
-list1
+number = 10.1234
+print(round(number, ndigits=2))

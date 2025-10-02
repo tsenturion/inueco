@@ -11,6 +11,23 @@ grades_list = [
     [2, 3, 2, 4, 3],
     [4, 4, 5, 4, 4]
 ]
+<<<<<<< HEAD
+average_grades = []
+for grades in grades_list:
+    average = sum(grades) / len(grades)
+    average_grades.append(average)
+print("Средние балл :")
+for i, (name, avg) in enumerate(zip(names, average_grades)):
+    print(f"{i}: {name} - {avg:.2f}")
+max_avg_index = average_grades.index(max(average_grades))
+print(f"\nСтудентс самым высоким средним баллом: {max_avg_index} ({names[max_avg_index]})")
+students_with_2 = []
+for i, grades in enumerate(grades_list):
+    if 2 in grades:
+        students_with_2.append(i)
+print(f"\nИндексы студентов с оценкой 2: {students_with_2}")
+       
+=======
 
 averages = [0, 0, 0, 0, 0]
 i = 0
@@ -45,3 +62,4 @@ for grades in grades_list:
 print("Средние баллы:", averages)
 print("Индекс лучшего студента:", best_index)
 print("Индексы студентов с оценкой 2:", students_with_2)
+>>>>>>> 00aee552062efdd480afea7b5efadd47b33c2255
