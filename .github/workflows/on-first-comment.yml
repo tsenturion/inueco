@@ -62,44 +62,47 @@ jobs:
           script: |
             const issueNodeId = context.payload.issue.node_id;
             const projectNumber = 3;
-            const userLogin = "tsenturion"; // можно заменить на актуального пользователя, если нужно динамически
+            const userLogin = "tsenturion";
 
-            const result = await github.graphql(`
-              query($userLogin: String!, $projectNumber: Int!) {
-                user(login: $userLogin) {
-                  projectV2(number: $projectNumber) {
-                    id
-                    fields(first: 20) {
-                      nodes {
-                        ... on ProjectV2FieldCommon {
-                          id
-                          name
-                        }
-                        ... on ProjectV2SingleSelectField {
-                          options {
+            // Функция для получения данных проекта
+            async function getProjectData() {
+              const result = await github.graphql(`
+                query($userLogin: String!, $projectNumber: Int!) {
+                  user(login: $userLogin) {
+                    projectV2(number: $projectNumber) {
+                      id
+                      fields(first: 20) {
+                        nodes {
+                          ... on ProjectV2FieldCommon {
                             id
                             name
                           }
-                        }
-                      }
-                    }
-                    items(first: 100) {
-                      nodes {
-                        id
-                        content {
-                          ... on Issue {
-                            id
+                          ... on ProjectV2SingleSelectField {
+                            options {
+                              id
+                              name
+                            }
                           }
                         }
-                        fieldValues(first: 20) {
-                          nodes {
-                            ... on ProjectV2ItemFieldSingleSelectValue {
-                              field {
-                                ... on ProjectV2FieldCommon {
-                                  name
+                      }
+                      items(first: 100) {
+                        nodes {
+                          id
+                          content {
+                            ... on Issue {
+                              id
+                            }
+                          }
+                          fieldValues(first: 20) {
+                            nodes {
+                              ... on ProjectV2ItemFieldSingleSelectValue {
+                                field {
+                                  ... on ProjectV2FieldCommon {
+                                    name
+                                  }
                                 }
+                                name
                               }
-                              name
                             }
                           }
                         }
@@ -107,14 +110,41 @@ jobs:
                     }
                   }
                 }
+              `, { userLogin, projectNumber });
+              
+              return result.user.projectV2;
+            }
+
+            // Retry логика с экспоненциальной задержкой
+            let project, item;
+            const maxAttempts = 5;
+            const delays = [0, 1000, 2000, 4000, 8000]; // 0s, 1s, 2s, 4s, 8s = максимум 15s
+            
+            for (let attempt = 0; attempt < maxAttempts; attempt++) {
+              if (attempt > 0) {
+                console.log(`Attempt ${attempt + 1}/${maxAttempts}. Waiting ${delays[attempt]/1000}s...`);
+                await new Promise(resolve => setTimeout(resolve, delays[attempt]));
+              } else {
+                console.log(`Attempt ${attempt + 1}/${maxAttempts}. Checking immediately...`);
               }
-            `, { userLogin, projectNumber });
+              
+              project = await getProjectData();
+              item = project.items.nodes.find(n => n.content?.id === issueNodeId);
+              
+              if (item) {
+                console.log(`✓ Issue found in project on attempt ${attempt + 1}`);
+                break;
+              }
+              
+              console.log(`✗ Issue not found in project (attempt ${attempt + 1}/${maxAttempts})`);
+            }
 
-            const project = result.user.projectV2;
-
-            const item = project.items.nodes.find(n => n.content?.id === issueNodeId);
             if (!item) {
-              core.setFailed("Issue not found in project.");
+              core.setFailed(
+                "Issue not found in project after multiple attempts.\n" +
+                "Please ensure the issue is added to Project #3 before commenting.\n" +
+                "You may need to manually add it or check project automation settings."
+              );
               return;
             }
 
