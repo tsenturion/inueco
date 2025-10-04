@@ -1,3 +1,19 @@
+SELECT
+    DATE_FORMAT(date, '%Y-%m-01') AS month,
+    MIN(date) AS rent_reached_day
+FROM (
+    SELECT
+        date,
+        SUM(amount) OVER (
+            PARTITION BY DATE_FORMAT(date, '%Y-%m')
+            ORDER BY date
+            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+        ) AS cumulative_amount
+    FROM sales
+) s
+WHERE cumulative_amount > 100000
+GROUP BY DATE_FORMAT(date, '%Y-%m-01')
+ORDER BY month;
 В таблице sales хранятся данные о продажах кафе за несколько месяцев:
 
 date — дата продажи
