@@ -1,0 +1,30 @@
+def analyze_temperature(temperatures):
+
+    if not temperatures or len(temperatures) != 7:
+        return None
+    
+    average = round(sum(temperatures) / len(temperatures), 1)
+    
+    max_temp = max(temperatures)
+    min_temp = min(temperatures)
+    
+    hot_days = sum(1 for temp in temperatures if temp > 25)
+    
+    cold_days = sum(1 for temp in temperatures if temp < 10)
+    
+    return {
+        "average": average,
+        "max": max_temp,
+        "min": min_temp,
+        "hot_days": hot_days,
+        "cold_days": cold_days
+    }
+
+if __name__ == "__main__":
+    temperatures = [-22, 38, 25, 0, 11, 8, 25]
+    result = analyze_temperature(temperatures)
+    print(result)
+   
+    temperatures2 = [15, 16, 17]
+    result2 = analyze_temperature(temperatures2)
+    print(result2)
