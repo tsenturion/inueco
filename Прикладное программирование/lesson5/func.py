@@ -59,3 +59,21 @@ def return_function():
     return {'some': 'data'}
 
 print(return_function())
+
+a: int = 1
+a = '1'
+
+def output_data(data):
+    print(data)
+
+def output_data(data: str) -> None | int:
+    print(data)
+
+def multi_return() -> tuple:
+    return 1, "1"
+
+a, b = multi_return()
+
+print(multi_return())
+print(a)
+print(b)

@@ -1,0 +1,18 @@
+mkdir mytest
+
+cd mytest
+
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+
+uv init
+
+uv add --dev pytest
+
+uv run pytest
+
+далее не нужно
+uv pip install --group dev
+uv pip install pytest pytest-cov
+uv run pytest --cov
+
+uv run pytest -s
