@@ -1,6 +1,8 @@
 someStr = '123z121saf253'
 length1 = len([1, 2, 3])
 length2 = len(someStr)
+print(length1)
+print(length2)
 
 sorted1 = sorted(someStr)
 print(sorted1)
@@ -12,6 +14,8 @@ print(msg.strip())
 # 0x00 - 0
 #someStr.replace()
 
+msg = 'qakhbqvbhf'
+msg = msg.encode('utf-8')
 msg = 'qakhbqvbhf'
 msg_encoded = msg.encode('utf-8')
 msg_decoded = msg_encoded.decode('utf-8')
@@ -116,3 +120,12 @@ print(f'erfger {some_number:^} ')
 print(f'erfger {some_number:<} ')
 print(f'erfger {some_number:>} ')
 print(f'erfger {some_number:.2f} ') #округление до двух знаков
+
+"""
+https://leetcode.com/problems/score-of-a-string/description/?envType=problem-list-v2&envId=string
+https://leetcode.com/problems/find-words-containing-character/description/?envType=problem-list-v2&envId=string
+https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box/description/?envType=problem-list-v2&envId=string
+https://leetcode.com/problems/find-most-frequent-vowel-and-consonant/description/?envType=problem-list-v2&envId=string
+https://leetcode.com/problems/defanging-an-ip-address/description/?envType=problem-list-v2&envId=string
+https://leetcode.com/problems/final-value-of-variable-after-performing-operations/description/?envType=problem-list-v2&envId=string
+"""
