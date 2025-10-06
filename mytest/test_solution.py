@@ -1,6 +1,7 @@
 import pytest
 from solution import analyze_temperature
 
+
 class TestAnalyzeTemperature:
     """Тесты для функции analyze_temperature"""
 
@@ -79,7 +80,7 @@ class TestAnalyzeTemperature:
         """Тест с граничными значениями (точно 10 и 25 градусов)"""
         temperatures = [10, 10, 25, 25, 15, 15, 20]
         result = analyze_temperature(temperatures)
-
+  
         # 10 не считается холодным (< 10), 25 не считается жарким (> 25)
         assert result["hot_days"] == 0
         assert result["cold_days"] == 0
@@ -88,7 +89,7 @@ class TestAnalyzeTemperature:
         """Тест с экстремальными температурами"""
         temperatures = [-30, -20, 40, 50, 0, 10, 25]
         result = analyze_temperature(temperatures)
-
+        
         assert result["max"] == 50
         assert result["min"] == -30
         assert result["hot_days"] == 2
@@ -98,11 +99,12 @@ class TestAnalyzeTemperature:
         """Тест когда все дни одинаковая температура"""
         temperatures = [20, 20, 20, 20, 20, 20, 20]
         result = analyze_temperature(temperatures)
-
+ 
         assert result["average"] == 20.0
         assert result["max"] == 20
         assert result["min"] == 20
-	@@ -108,5 +85,4 @@ def test_all_same_temperature(self):
+        assert result["hot_days"] == 0
+        assert result["cold_days"] == 0
 
 
 if __name__ == "__main__":
