@@ -42,13 +42,22 @@ jobs:
             const blockedUsers = [
               "RooveThelema",
               "Tema13cm",
-              "FunnySmailey"
+              "FunnySmailey",
+              "abobobba228"
             ];
 
             const commentUser = context.payload.comment.user.login;
 
             if (blockedUsers.includes(commentUser)) {
-              core.setFailed(`User ${commentUser} is blocked and cannot take this issue.`);
+              console.log(`User ${commentUser} is blocked. Deleting comment...`);
+              
+              await github.rest.issues.deleteComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: context.payload.comment.id,
+              });
+              
+              core.setFailed(`User ${commentUser} is blocked and their comment has been deleted.`);
             } else {
               console.log(`User ${commentUser} is allowed.`);
             }
