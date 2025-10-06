@@ -1,4 +1,4 @@
-﻿import pytest
+import pytest
 from solution import analyze_temperature
 
 
@@ -74,6 +74,7 @@ class TestAnalyzeTemperature:
         result = analyze_temperature(temperatures)
         assert result["hot_days"] == 0
         assert result["cold_days"] == 0
+
     def test_extreme_temperatures(self):
         """Тест с экстремальными температурами"""
         temperatures = [-30, -20, 40, 50, 0, 10, 25]
@@ -82,6 +83,7 @@ class TestAnalyzeTemperature:
         assert result["min"] == -30
         assert result["hot_days"] == 2
         assert result["cold_days"] == 2
+
     def test_all_same_temperature(self):
         """Тест когда все дни одинаковая температура"""
         temperatures = [20, 20, 20, 20, 20, 20, 20]
