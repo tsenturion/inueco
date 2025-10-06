@@ -1,4 +1,4 @@
-﻿from .solution import analyze_temperature
+﻿from mytest.solution import analyze_temperature
 
 def test_analyze_temperature():
     assert analyze_temperature(-5) == "freezing"

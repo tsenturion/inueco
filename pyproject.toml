@@ -1,12 +1,13 @@
 [project]
-name = "mytest"
+name = "inueco"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.7"
 dependencies = []
 
 [dependency-groups]
 dev = [
-    "pytest==8.4.2",
+    "pytest>=7.4.4",
+    "pytest-cov>=4.1.0",
 ]
