@@ -15,10 +15,9 @@ shd101wyy.markdown-preview-enhanced
 GitHub.vscode-pull-request-github
 mintlify.document
 https://gigacode.ru/
-GitHub.vscode-pull-request-github
 
-https://ru.pythontutor.ru/problem/old/1
 https://code-basics.com/ru
+https://ru.pythontutor.ru/problem/old/1
 https://leetcode.com/
 https://chromewebstore.google.com/detail/leetcode-to-russian/omcekcjkhekdifemjbknfbijiabbjhmm?hl=ru&pli=1
 https://docs.python.org/3/library/index.html
