@@ -1,9 +1,5 @@
 ﻿def analyze_temperature(temperatures):
-    """
-    Анализ температур за неделю.
-    Возвращает словарь со статистикой или None,
-    если список пустой или его длина не равна 7.
-    """
+
     if not temperatures or len(temperatures) != 7:
         return None
 
@@ -18,6 +14,5 @@
 
 
 if __name__ == "__main__":
-    # Пример из условия — выводит ровно одну строку
     temps = [22, 28, 15, 8, 30, 18, 25]
     print(analyze_temperature(temps))
