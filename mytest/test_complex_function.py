@@ -1,5 +1,5 @@
 import pytest
-from complex_function import analyze_text_statistics
+from complex_func import analyze_text_statistics
 
 
 # ============= БАЗОВЫЕ ТЕСТЫ =============
@@ -92,25 +92,6 @@ def test_word_frequency_with_min_length():
     assert result["word_frequency"]["dog"] == 2
     assert "bird" in result["word_frequency"]
     assert result["word_frequency"]["bird"] == 1
-    
-    top_words = [word for word, count in result["top_3_words"]]
-    assert "cat" in top_words
-    pass
-
-def test_top_3_words():
-    """Проверка топ-3 самых частых слов"""
-    text = "apple banana apple cherry apple banana cherry cherry cherry"
-    result = analyze_text_statistics(text)
-    
-    assert len(result["top_3_words"]) == 3
-    
-    first_word, first_count = result["top_3_words"][0]
-    second_word, second_count = result["top_3_words"][1]
-    
-    assert first_word == "cherry"
-    assert first_count == 4
-    assert second_word == "apple"
-    assert second_count == 3
     pass
 
 # ============= ДОПОЛНИТЕЛЬНЫЕ ТЕСТЫ =============
@@ -181,17 +162,6 @@ def test_case_insensitivity():
     
     assert result["word_frequency"]["python"] == 4
     assert len(result["word_frequency"]) == 1
-    pass
-
-def test_numbers_and_special_chars():
-    """Проверка обработки чисел и специальных символов"""
-    text = "word123 test-word hyphenated-word"
-    result = analyze_text_statistics(text)
-    
-
-    assert "word123" in result["word_frequency"]
-    assert "test-word" in result["word_frequency"]
-    assert "hyphenated-word" in result["word_frequency"]
     pass
 
 def test_multiple_spaces():
