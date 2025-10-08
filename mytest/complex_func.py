@@ -34,22 +34,20 @@ def analyze_text_statistics(text: str, min_word_length: int = 3) -> dict:
     total_chars = len(text.strip())
     
     # Разделение на предложения (по точкам, восклицательным и вопросительным знакам)
+    # Сначала заменяем множественные знаки препинания на одиночные
+    cleaned_text = text
+    while '!!' in cleaned_text or '??' in cleaned_text or '..' in cleaned_text:
+        cleaned_text = cleaned_text.replace('!!', '!').replace('??', '?').replace('..', '.')
+    
     sentences = []
     current_sentence = ""
-    prev_char_is_punctuation = False
     
-    for char in text:
+    for char in cleaned_text:
+        current_sentence += char
         if char in '.!?':
-            current_sentence += char
-            # Добавляем предложение только при первом знаке препинания подряд
-            if not prev_char_is_punctuation:
-                if current_sentence.strip():
-                    sentences.append(current_sentence.strip())
-                current_sentence = ""
-            prev_char_is_punctuation = True
-        else:
-            current_sentence += char
-            prev_char_is_punctuation = False
+            if current_sentence.strip():
+                sentences.append(current_sentence.strip())
+            current_sentence = ""
     
     if current_sentence.strip():
         sentences.append(current_sentence.strip())
