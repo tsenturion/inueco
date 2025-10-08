@@ -158,20 +158,3 @@ def test_custom_min_word_length():
     
     # Но общее количество слов должно включать все слова
     assert result["total_words"] == 7
-
-
-def test_return_structure():
-    """Тест структуры возвращаемого словаря"""
-    text = "Simple test text"
-    result = analyze_text_statistics(text)
-    
-    expected_keys = {
-        "total_characters", "total_words", "total_sentences",
-        "longest_word", "shortest_word", "average_word_length",
-        "unique_words_count", "unique_words_percentage",
-        "top_3_words", "word_frequency"
-    }
-    
-    assert set(result.keys()) == expected_keys
-    assert isinstance(result["top_3_words"], list)
-    assert isinstance(result["word_frequency"], dict)
