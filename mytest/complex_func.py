@@ -36,12 +36,21 @@ def analyze_text_statistics(text: str, min_word_length: int = 3) -> dict:
     # Разделение на предложения (по точкам, восклицательным и вопросительным знакам)
     sentences = []
     current_sentence = ""
+    prev_char_is_punctuation = False
+    
     for char in text:
-        current_sentence += char
         if char in '.!?':
-            if current_sentence.strip():
-                sentences.append(current_sentence.strip())
-            current_sentence = ""
+            current_sentence += char
+            # Добавляем предложение только при первом знаке препинания подряд
+            if not prev_char_is_punctuation:
+                if current_sentence.strip():
+                    sentences.append(current_sentence.strip())
+                current_sentence = ""
+            prev_char_is_punctuation = True
+        else:
+            current_sentence += char
+            prev_char_is_punctuation = False
+    
     if current_sentence.strip():
         sentences.append(current_sentence.strip())
     
