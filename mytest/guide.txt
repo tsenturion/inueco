@@ -16,3 +16,8 @@ uv pip install pytest pytest-cov
 uv run pytest --cov
 
 uv run pytest -s
+
+
+
+    set Path=C:\Users\24301220\.local\bin;%Path%   (cmd)
+    $env:Path = "C:\Users\24301220\.local\bin;$env:Path"   (powershell)
