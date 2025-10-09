@@ -1,3 +1,25 @@
+WITH ProductSales AS (
+    SELECT
+        p.name,
+        COUNT(s.id) AS sales_count_sum,
+        ROW_NUMBER() OVER (ORDER BY COUNT(s.id) ASC) AS rn
+    FROM
+        sales AS s
+    JOIN
+        products AS p ON s.product_id = p.id
+    GROUP BY
+        p.name
+)
+SELECT
+    rn AS row_number,
+    name,
+    sales_count_sum
+FROM
+    ProductSales
+WHERE
+    rn = 1;
+
+
 В таблице products хранятся данные о товарах:
 
 name - название товара
