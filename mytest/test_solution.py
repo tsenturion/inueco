@@ -74,7 +74,7 @@ class TestAnalyzeTemperature:
         
         assert result is not None
         assert result["min"] == -10
-        assert result["cold_days"] == 5
+        assert result["cold_days"] == 4  # -5, -10, 0, 5 все < 10
     
     def test_boundary_values(self):
         """Тест с граничными значениями (точно 10 и 25 градусов)"""
@@ -92,8 +92,8 @@ class TestAnalyzeTemperature:
         
         assert result["max"] == 50
         assert result["min"] == -30
-        assert result["hot_days"] == 2
-        assert result["cold_days"] == 2
+        assert result["hot_days"] == 2  # 40, 50 оба > 25
+        assert result["cold_days"] == 3  # -30, -20, 0 все < 10
     
     def test_all_same_temperature(self):
         """Тест когда все дни одинаковая температура"""
