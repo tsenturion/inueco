@@ -2,7 +2,7 @@
 
 ## Описание задачи
 
-Вам необходимо создать файл `test_complex_function.py` с тестами для функции `analyze_text_statistics` используя библиотеку pytest.
+Вам необходимо создать файл `test_complex_func.py` с тестами для функции `analyze_text_statistics` используя библиотеку pytest.
 
 ## Требования
 
@@ -90,11 +90,11 @@
 - Проверьте, что в `word_frequency` нет слов короче 4 символов
 - Убедитесь, что 'great' присутствует в word_frequency
 
-## Структура файла test_complex_function.py
+## Структура файла test_complex_func.py
 
 ```python
 import pytest
-from complex_function import analyze_text_statistics
+from complex_func import analyze_text_statistics
 
 def test_basic_text_analysis():
     # Ваш код здесь
@@ -110,7 +110,7 @@ def test_empty_text_raises_error():
 ## Как запустить тесты
 
 ```bash
-pytest test_complex_function.py -v
+pytest test_complex_func.py -v
 ```
 
 ## Критерии оценки
@@ -138,3 +138,5 @@ pytest test_complex_function.py -v
 5. Проверяйте как успешные сценарии, так и ошибочные
 
 Удачи в тестировании! 🚀
+
+![alt text](2025-10-13_17-43-12.png)
