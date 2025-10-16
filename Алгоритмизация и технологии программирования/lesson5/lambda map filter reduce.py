@@ -17,7 +17,7 @@ printf(list1, lambda x : x * x)
 
 print(sqr(5))
 """
-map - применяем F ко всем элементам последовательности
+map - применяем Function ко всем элементам последовательности
 map(функция, последовательность)
 """
 numbers = [1, 2, 3, 4, 5]
@@ -30,9 +30,10 @@ def square(x):
 squared = list(map(square, numbers))
 print(squared)
 
-for i in map(sqr1, list1):
+for i in map(sqr1, numbers):
     print(i)
-list2 = list(map(sqr1, list1))
+
+list2 = list(map(sqr1, numbers))
 print(list2)
 
 
@@ -46,6 +47,7 @@ even_numbers = list(filter(lambda x : x % 2 == 0, numbers))
 
 def is_even(x):
     return x % 2 == 0
+
 for i in filter(lambda x : x % 2 == 0, list1):
     print(i)
 list1 = list(filter(lambda x : x % 2 == 0, list1))
@@ -74,6 +76,7 @@ reduce(функция, последовательность, начальное 
 numbers = [1, 2, 3, 4, 5]
 
 product = reduce(lambda  x, y : x * y, numbers)
+print(product)
 """
 ----------1-----------
 x = 1 = numbers[0]
@@ -141,7 +144,7 @@ def curried_add(x):
 def add(x, y):
     return x + y
 
-add_3 = partial(add, 3)
+#add_3 = partial(add, 3)
 
 #import logging
 
