@@ -1,4 +1,3 @@
-# tasktest/src/buggy_function.py
 def process_student_scores(students_data):
     """
     Обрабатывает данные об оценках студентов и возвращает статистику.

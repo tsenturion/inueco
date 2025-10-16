@@ -1,9 +1,8 @@
-# tasktest/tests/test_buggy_function_fixed.py
 import pytest
 import sys
 import os
 
-# Добавляем путь к src для импорта
+# src для импорта
 sys.path.append(os.path.join(os.path.dirname(__file__), '../src'))
 
 from buggy_function_fixed import process_student_scores
@@ -37,8 +36,6 @@ def test_student_without_scores():
     students_data = [
         {"name": "Анна", "scores": [], "age": 19}
     ]
-    
-    # Теперь не должно быть ошибки деления на ноль
     result = process_student_scores(students_data)
     
     assert result["total_students"] == 1
@@ -72,9 +69,9 @@ def test_failed_students_calculation():
     
     result = process_student_scores(students_data)
     
-    # ИСПРАВЛЕНО: теперь только студенты со средним < 60 попадают в неуспевающие
+   
     assert "Студент1" in result["failed_students"]
-    assert "Студент2" not in result["failed_students"]  # Теперь правильно!
+    assert "Студент2" not in result["failed_students"]  
     assert "Студент3" in result["failed_students"]
     assert len(result["failed_students"]) == 2  # Только два неуспевающих студента
 
@@ -89,7 +86,6 @@ def test_adults_count_calculation():
     
     result = process_student_scores(students_data)
     
-    # ИСПРАВЛЕНО: теперь студенты от 18 лет считаются совершеннолетними
     assert result["adults_count"] == 2  # Оба студента (18 и 19 лет)
 
 
@@ -152,7 +148,6 @@ def test_all_students_no_scores():
     
     result = process_student_scores(students_data)
     
-    # Не должно быть ошибки деления на ноль
     assert result["total_students"] == 2
     assert result["average_score"] == 0
     assert result["failed_students"] == ["С1", "С2"]  # Средний балл 0 < 60

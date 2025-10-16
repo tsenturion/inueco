@@ -1,9 +1,8 @@
-# tasktest/tests/test_buggy_function.py
 import pytest
 import sys
 import os
 
-# Добавляем путь к src для импорта
+#src для импорта
 sys.path.append(os.path.join(os.path.dirname(__file__), '../src'))
 
 from buggy_function import process_student_scores
