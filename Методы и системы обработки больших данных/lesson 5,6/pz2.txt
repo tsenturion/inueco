@@ -1,3 +1,9 @@
+SELECT s22.id, s22.product
+FROM sales_2022 s22
+LEFT JOIN sales_2023 s23 ON s22.id = s23.id
+WHERE s23.id IS NULL OR (s22.quantity < 10 AND COALESCE(s23.quantity, 0) < 10)
+ORDER BY s22.id;
+
 В этом задании вам нужно будет проанализировать продажи за два года и найти проблемные товары.
 
 Вам даны две таблицы продаж за 2022 год sales_2022 и за 2023 sales_2023
