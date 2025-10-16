@@ -1,4 +1,4 @@
-from buggy_function import process_student_scores
+from test_buggy_function import process_student_scores
 
 def test_happy_path_basic():
     students_data = [
