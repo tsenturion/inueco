@@ -1,6 +1,7 @@
 https://code.visualstudio.com/download
     В свою папку
 https://www.python.org/downloads/
+https://www.python.org/downloads/windows/
     В свою папку
     убрать галочку от админа
     добавить галочку в PATH
@@ -14,6 +15,7 @@ Codeium.codeium
 shd101wyy.markdown-preview-enhanced
 GitHub.vscode-pull-request-github
 mintlify.document
+SonarSource.sonarlint-vscode
 https://gigacode.ru/
 
 https://code-basics.com/ru
