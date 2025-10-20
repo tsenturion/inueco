@@ -1,5 +1,6 @@
-#поправить по pep8 (flake8), по pylance, по sonarqube
-
+#поправить по pep8 (flake8), по pylance, по sonarqube, по pylint
+#python -m pylint calculator_min\utils.py
+#python -m flake8 calculator_min\utils.py
 import math
 
 
