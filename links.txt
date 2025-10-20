@@ -15,6 +15,7 @@ Codeium.codeium
 shd101wyy.markdown-preview-enhanced
 GitHub.vscode-pull-request-github
 mintlify.document
+SonarSource.sonarlint-vscode
 https://gigacode.ru/
 
 https://code-basics.com/ru
