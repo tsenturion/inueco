@@ -1,3 +1,4 @@
+устанвока
 https://code.visualstudio.com/download
     В свою папку
 https://www.python.org/downloads/
@@ -10,6 +11,7 @@ https://git-scm.com/downloads/win
     В свою папку
 https://desktop.github.com/download/
 
+расширения
 ms-python.python
 Codeium.codeium
 shd101wyy.markdown-preview-enhanced
@@ -18,6 +20,7 @@ mintlify.document
 SonarSource.sonarlint-vscode
 https://gigacode.ru/
 
+полезные инструменты
 https://code-basics.com/ru
 https://ru.pythontutor.ru/problem/old/1
 https://leetcode.com/
@@ -31,3 +34,6 @@ https://chat.deepseek.com/
 https://chatgpt.com/
 https://www.perplexity.ai/
 https://giga.chat/
+
+документация
+https://docs.astral.sh/ruff/
