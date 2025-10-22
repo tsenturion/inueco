@@ -129,3 +129,8 @@ INSERT INTO orders (id, product_name, product_price, created_at, customer_name) 
 (108, 'Coffee - Ristretto Coffee Capsule', 47, '2023-01-23 14:40:16', 'Israel Riddick'),
 (109, 'Coffee - Ristretto Coffee Capsule', 47, '2023-01-27 14:40:16', 'Israel Riddick'),
 (110, 'Coffee - Ristretto Coffee Capsule', 47, '2023-01-20 14:40:16', 'Israel Riddick');
+
+Решение
+
+SELECT product_name, COUNT(*) AS total_sales FROM orders
+WHERE created_at BETWEEN '2023-03-01' AND '2023-03-31'

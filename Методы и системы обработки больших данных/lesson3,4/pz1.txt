@@ -47,3 +47,9 @@ INSERT INTO profiles (id, username, email, age, created_at) VALUES
 (23, 'SaturnSamurai', 'saturn_samurai@yahoo.com', 25, '2021-09-29'),
 (24, 'LunarFox', 'lunar_fox@hotmail.com', 26, '2021-10-30'),
 (25, 'GalacticGuru', 'GGuru@gmail.com', 70, '2021-11-14');
+
+Решение
+
+SELECT * FROM profiles
+WHERE email LIKE '%@gmail.com' AND age BETWEEN 18 AND 50 or created_at < '2020-01-01'
+ORDER BY age ASC
