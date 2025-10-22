@@ -2,7 +2,6 @@
 https://code.visualstudio.com/download
     В свою папку
 https://www.python.org/downloads/
-https://www.python.org/downloads/windows/
     В свою папку
     убрать галочку от админа
     добавить галочку в PATH
