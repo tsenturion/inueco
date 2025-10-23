@@ -1,6 +1,8 @@
+устанвока
 https://code.visualstudio.com/download
     В свою папку
 https://www.python.org/downloads/
+https://www.python.org/downloads/windows/
     В свою папку
     убрать галочку от админа
     добавить галочку в PATH
@@ -9,33 +11,38 @@ https://git-scm.com/downloads/win
     В свою папку
 https://desktop.github.com/download/
 
+расширения
 ms-python.python
 Codeium.codeium
-https://gigacode.ru/
+shd101wyy.markdown-preview-enhanced
 GitHub.vscode-pull-request-github
+mintlify.document
+SonarSource.sonarlint-vscode
+https://gigacode.ru/
 
-https://ru.pythontutor.ru/problem/old/1
+для обучения
 https://code-basics.com/ru
-кроме этих тем
-Экранированные последовательности
-Конкатенация
-Кодировка
-Переменные и конкатенация
-Интерполяция
-Сигнатура функции
-Детерминированность
-Объекты
-и далее
-
-https://leetcode.com/problems/build-array-from-permutation/description/?envType=problem-list-v2&envId=array
-
+https://ru.pythontutor.ru/problem/old/1
+https://education.yandex.ru/handbook/python
+https://education.yandex.ru/handbook/algorithms
 https://leetcode.com/
 https://chromewebstore.google.com/detail/leetcode-to-russian/omcekcjkhekdifemjbknfbijiabbjhmm?hl=ru&pli=1
 
+полезные инструменты
+https://app.diagrams.net/
+https://miro.com/
+https://mermaid.js.org/
+https://claude.ai/
+https://chat.deepseek.com/
+https://chatgpt.com/
+https://www.perplexity.ai/
+https://giga.chat/
+https://www.lockedinai.com/
+https://www.nvidia.com/en-eu/geforce/technologies/reflex/%20%D0%B8%20https:/www.nvidia.com/ru-ru/geforce/broadcasting/broadcast-app/
+https://github.com/s3rgeym/hh-resume-automate/
+https://easyoffer.ru/
+hh.ru
 
-
-
-
-
-
+документация
+https://docs.astral.sh/ruff/
 https://docs.python.org/3/library/index.html
