@@ -96,7 +96,7 @@ class Student:
             self.attendance.append('P')
         else:
             self.attendance.append('A')
-    
+    НЕ КОПИРУЙ КОД
     def get_average(self):
         if not self.grades:
             return 0
@@ -157,7 +157,7 @@ class BankAccount:
         #Так будет лучше, ну не знаю
         self.balance = self.balance + amount
         self.history.append(("deposit", amount))
-    
+    НЕ КОПИРУЙ КОД
     def withdraw(self, amount):
         if amount > self.balance:
             return False
@@ -178,7 +178,6 @@ class BankAccount:
         self.history.append(("interest", change))
         return True
 
-
 class Dog:
     def __init__(self, name, age):
         self.name = name
@@ -188,7 +187,7 @@ class Dog:
     
     def bark(self):
         print("Гав!")
-    
+    НЕ КОПИРУЙ КОД
     def human_age(self):
         return self.age * 7
     def set_breed(self, breed):
@@ -229,7 +228,7 @@ class Point2D:
         self.x = self.x + dx
         self.y = self.y + dy
 
-
+НЕ КОПИРУЙ КОД
 class Lamp:
     def __init__(self, is_on=False):
         self.is_on = is_on
@@ -260,7 +259,7 @@ class SocialProfile:
         self.posts = posts if posts is not None else []
         self.likes = 0
         self.followers = 0
-    
+    НЕ КОПИРУЙ КОД
     def add_post(self, text):
         self.posts.append(text)
     
@@ -309,7 +308,7 @@ class CoffeeMachine:
         for x in self.service_log:
             log.append(x)
         return log
-
+НЕ КОПИРУЙ КОД
 
 class GameCharacter:
     def __init__(self, name, health=100, damage=10):
@@ -342,3 +341,4 @@ class GameCharacter:
                     already = True
             if not already:
                 self.equipped.append(item)
+                НЕ КОПИРУЙ КОД
