@@ -56,7 +56,6 @@ class Student:
         print(f"Посещения студента:")
         for visit in self.visits:
             print(f"Дата: {visit[0]}, Предмет: {visit[1]}")
-        return True
 
     # Успеваемость
     def is_passing(self):
