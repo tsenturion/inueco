@@ -1,0 +1,116 @@
+Бренд менеджер онлайн школы подготовил новый дизайн толстовок и попросил вас собрать список всех, кому его необходимо отправить
+
+Описание таблиц:
+
+Таблица students
+
+id	full_name	email	points
+1	John Doe	john.doe@example.com	100
+2	Jane Smith	jane.smith@example.com	200
+3	Mark Johnson	mark.johnson@example.com	300
+Таблица teachers
+
+id	name	created_at
+1	Alice Johnson	2023-01-15T00:00:00.000Z
+2	Bob Smith	2018-06-22T00:00:00.000Z
+3	Catherine Brown	2019-11-10T00:00:00.000Z
+Таблица employees
+
+id	full_name	is_active
+1	Alex Johnson	true
+2	Betty Smith	false
+3	Charlie Brown	true
+solution.sql
+Напишите запрос, который который выберет всех участников раздачи мерча. Критерии:
+
+Студенты с количеством баллов 2000 и более (points)
+Преподаватели, которые начали работать до 2023 года (created_at)
+Текущие работники школы (is_active)
+Итоговая таблица должна содержать поле full_name с именем и фамилией участника акции и поле role с указанием роли
+
+student для студента
+teacher для преподавателя
+employee для сотрудника.
+Отсортируйте записи по full_name. Пример итоговой таблицы:
+
+full_name	role
+Alex Johnson	employee
+Bob Smith	teacher
+Chris Lee	student
+
+
+CREATE TABLE students (
+    id INT,
+    full_name VARCHAR(255),
+    email VARCHAR(255),
+    points INT
+);
+
+INSERT INTO students (id, full_name, email, points) VALUES (
+    1, 'John Doe', 'john.doe@example.com', 100
+);
+INSERT INTO students (id, full_name, email, points) VALUES (
+    2, 'Jane Smith', 'jane.smith@example.com', 200
+);
+INSERT INTO students (id, full_name, email, points) VALUES (
+    3, 'Mark Johnson', 'mark.johnson@example.com', 300
+);
+INSERT INTO students (id, full_name, email, points) VALUES (
+    4, 'Emily Brown', 'emily.brown@example.com', 400
+);
+INSERT INTO students (id, full_name, email, points) VALUES (
+    5, 'Michael Wilson', 'michael.wilson@example.com', 500
+);
+INSERT INTO students (id, full_name, email, points) VALUES (
+    6, 'Sarah Davis', 'sarah.davis@example.com', 2000
+);
+INSERT INTO students (id, full_name, email, points) VALUES (
+    7, 'Kevin Martinez', 'kevin.martinez@example.com', 700
+);
+INSERT INTO students (id, full_name, email, points) VALUES (
+    8, 'Laura Garcia', 'laura.garcia@example.com', 1999
+);
+INSERT INTO students (id, full_name, email, points) VALUES (
+    9, 'Chris Lee', 'chris.lee@example.com', 2032
+);
+INSERT INTO students (id, full_name, email, points) VALUES (
+    10, 'Amanda Lopez', 'amanda.lopez@example.com', 1000
+);
+
+CREATE TABLE teachers (
+    id INT,
+    name VARCHAR(255),
+    created_at DATE
+);
+
+INSERT INTO teachers (id, name, created_at) VALUES (
+    1, 'Alice Johnson', '2023-01-15'
+);
+INSERT INTO teachers (id, name, created_at) VALUES (
+    2, 'Bob Smith', '2018-06-22'
+);
+INSERT INTO teachers (id, name, created_at) VALUES (
+    3, 'Catherine Brown', '2019-11-10'
+);
+INSERT INTO teachers (id, name, created_at) VALUES (
+    4, 'David Wilson', '2024-03-05'
+);
+INSERT INTO teachers (id, name, created_at) VALUES (
+    5, 'Eva Martinez', '2017-09-14'
+);
+
+CREATE TABLE employees (
+    id INT,
+    full_name VARCHAR(255),
+    is_active BOOLEAN
+);
+
+INSERT INTO employees (id, full_name, is_active) VALUES (
+    1, 'Alex Johnson', TRUE
+);
+INSERT INTO employees (id, full_name, is_active) VALUES (
+    2, 'Betty Smith', FALSE
+);
+INSERT INTO employees (id, full_name, is_active) VALUES (
+    3, 'Charlie Brown', TRUE
+);
