@@ -317,3 +317,256 @@ class GameCharacter:
     
     def show_equipped(self):
         return self.equipped
+    
+
+"""
+ТЕСТ КЛАССОВ
+"""
+print("ТЕСТИРОВАНИЕ КЛАССА BOOK")
+book1 = Book("Война и мир", "Толстой")
+book2 = Book("Преступление и наказание", "Достоевский")
+
+print(book1.get_info())
+print(book2.get_info())
+
+print("\nСтатус доступности книги:")
+print(f"Книга доступна: {book1.is_available()}")
+book1.set_available(False)
+print(f"После изменения: {book1.is_available()}")
+
+print("\nОценки книг:")
+book1.add_rating(5)
+book1.add_rating(4)
+book1.add_rating(3)
+book2.add_rating(5)
+book2.add_rating(5)
+
+print(f"Средний рейтинг книги 1: {book1.get_average_rating()}")
+print(f"Средний рейтинг книги 2: {book2.get_average_rating()}")
+
+print("\n")
+print("ТЕСТИРОВАНИЕ КЛАССА STUDENT")
+student1 = Student("Иван Петров")
+student2 = Student("Мария Сидорова", [4, 5, 3])
+
+student1.add_grade(5)
+student1.add_grade(4)
+student1.add_grade(5)
+student2.add_grade(4)
+
+print(f"Средний балл {student1.name}: {student1.get_average()}")
+print(f"Средний балл {student2.name}: {student2.get_average()}")
+
+print("\nПосещаемость:")
+student1.mark_attendance("2024-01-01", True)
+student1.mark_attendance("2024-01-02", True)
+student1.mark_attendance("2024-01-03", False)
+student1.mark_attendance("2024-01-04", True)
+
+student2.mark_attendance("2024-01-01", True)
+student2.mark_attendance("2024-01-02", False)
+
+print(f"Процент посещаемости {student1.name}: {student1.get_attendance_rate():.1%}")
+print(f"Процент посещаемости {student2.name}: {student2.get_attendance_rate():.1%}")
+
+print("\n")
+print("ТЕСТИРОВАНИЕ КЛАССА RECTANGLE")
+rect1 = Rectangle(5, 3)
+rect2 = Rectangle(4, 4)
+rect3 = Rectangle(2, 10)
+
+print(f"Площадь прямоугольника 1: {rect1.calculate_area()}")
+print(f"Периметр прямоугольника 1: {rect1.calculate_perimeter()}")
+
+print(f"\nСравнение прямоугольников:")
+print(f"rect1 > rect2: {rect1.is_larger(rect2)}")
+print(f"rect1 = rect3: {rect1.is_equal(rect3)}")
+
+print("\nИзменение размеров:")
+rect1.resize(8, 2)
+print(f"После изменения - площадь: {rect1.calculate_area()}")
+
+print("\n")
+print("ТЕСТИРОВАНИЕ КЛАССА BANKACCOUNT")
+account1 = BankAccount("Иван Иванов", 1000)
+account2 = BankAccount("Петр Петров")
+
+print(f"Баланс {account1.owner}: {account1.balance}")
+print(f"Баланс {account2.owner}: {account2.balance}")
+
+print("\nОперации:")
+account1.deposit(500)
+account1.withdraw(200)
+account2.deposit(1000)
+account2.withdraw(1500)  # Не должно сработать
+
+print(f"\nБаланс после операций:")
+print(f"{account1.owner}: {account1.balance}")
+print(f"{account2.owner}: {account2.balance}")
+
+print("\nНачисление процентов:")
+account1.add_interest(5)
+print(f"После начисления 5%: {account1.balance}")
+
+print("\nИстория операций:")
+account1.show_history()
+
+print("\n")
+print("ТЕСТИРОВАНИЕ КЛАССА DOG")
+dog1 = Dog("Бобик", 3, "овчарка")
+dog2 = Dog("Шарик", 1, "дворняжка")
+dog3 = Dog("Рекс", 8, "ротвейлер")
+
+print(f"Собака: {dog1.name}, Порода: {dog1.breed}, Возраст: {dog1.age}")
+print(f"Возраст в человеческих годах: {dog1.human_age()}")
+
+print("\nНавыки собак:")
+dog1.add_skill("сидеть")
+dog1.add_skill("лежать")
+dog1.add_skill("голос")
+dog2.add_skill("сидеть")
+
+print(f"Навыки {dog1.name}: {dog1.show_skills()}")
+print(f"Навыки {dog2.name}: {dog2.show_skills()}")
+
+print("\nЖизненные этапы:")
+print(f"{dog1.name}: {dog1.life_stage()}")
+print(f"{dog2.name}: {dog2.life_stage()}")
+print(f"{dog3.name}: {dog3.life_stage()}")
+
+dog1.bark()
+
+print("\n")
+print("ТЕСТИРОВАНИЕ КЛАССА POINT2D")
+point1 = Point2D(3, 4)
+point2 = Point2D(0, 0)
+point3 = Point2D(1, 1)
+
+print(f"Координаты точки 1: {point1.get_coords()}")
+print(f"Координаты точки 2: {point2.get_coords()}")
+
+print(f"\nРасстояние от точки 1 до нуля: {point1.distance_to_zero()}")
+print(f"Расстояние между точкой 1 и точкой 3: {point1.distance_to(point3)}")
+
+print("\nПеремещение точки:")
+point1.move(2, -1)
+print(f"После перемещения: {point1.get_coords()}")
+
+print("\n")
+print("ТЕСТИРОВАНИЕ КЛАССА LAMP")
+lamp1 = Lamp()
+lamp2 = Lamp(True)
+
+print("Статус ламп:")
+lamp1.status()
+lamp2.status()
+
+print("\nНастройка лампы 1:")
+lamp1.switch_on()
+lamp1.set_brightness(75)
+lamp1.set_color("синий")
+lamp1.status()
+
+print("\nСветовые эффекты:")
+lamp1.effect_blink()
+lamp2.effect_blink()
+
+print("\n")
+print("ТЕСТИРОВАНИЕ КЛАССА SOCIALPROFILE")
+profile1 = SocialProfile("user123")
+profile2 = SocialProfile("cool_girl")
+
+print("Добавление постов:")
+profile1.add_post("Мой первый пост!")
+profile1.add_post("Сегодня отличный день!")
+profile1.add_post("Изучаю Python")
+profile2.add_post("Привет всем!")
+
+print("\nПосты пользователя 1:")
+profile1.show_posts()
+
+print("\nЛайки и подписчики:")
+profile1.like_post()
+profile1.like_post()
+profile1.like_post()
+profile2.like_post()
+
+profile1.add_follower("friend1")
+profile1.add_follower("friend2")
+profile1.add_follower("friend3")
+profile2.add_follower("friend1")
+
+print(f"Лайков у {profile1.username}: {profile1.get_likes_count()}")
+print(f"Подписчиков у {profile1.username}: {profile1.get_followers_count()}")
+print(f"Лайков у {profile2.username}: {profile2.get_likes_count()}")
+
+print("\nАнализ активности:")
+print(profile1.analyze_activity())
+print(profile2.analyze_activity())
+
+print("\n")
+print("ТЕСТИРОВАНИЕ КЛАССА COFFEEMACHINE")
+coffee_machine = CoffeeMachine()
+
+print("Начальное состояние:")
+print(f"Уровень воды: {coffee_machine.water_level}")
+print(f"Уровень кофе: {coffee_machine.coffee_level}")
+
+print("\nЗаполнение:")
+coffee_machine.add_water(1000)
+coffee_machine.add_coffee(200)
+coffee_machine.set_mode("эспрессо")
+
+print(f"После заполнения - вода: {coffee_machine.water_level}, кофе: {coffee_machine.coffee_level}")
+
+print("\nПриготовление кофе:")
+result1 = coffee_machine.make_coffee()
+result2 = coffee_machine.make_coffee()
+result3 = coffee_machine.make_coffee()  # Должно хватить
+result4 = coffee_machine.make_coffee()  # Должно не хватить
+
+print(f"Результаты: {result1}, {result2}, {result3}, {result4}")
+print(f"Остаток - вода: {coffee_machine.water_level}, кофе: {coffee_machine.coffee_level}")
+
+print("\nОбслуживание:")
+coffee_machine.maintenance()
+print(f"После обслуживания - вода: {coffee_machine.water_level}, кофе: {coffee_machine.coffee_level}")
+
+print("\n")
+print("ТЕСТИРОВАНИЕ КЛАССА GAMECHARACTER")
+hero = GameCharacter("Артур", health=120, damage=15)
+enemy = GameCharacter("Дракон", health=200, damage=20)
+
+print(f"Персонаж: {hero.name}, Здоровье: {hero.health}, Урон: {hero.damage}, Уровень: {hero.level}")
+print(f"Враг: {enemy.name}, Здоровье: {enemy.health}, Урон: {enemy.damage}")
+
+print("\nИнвентарь:")
+hero.add_item("меч")
+hero.add_item("щит")
+hero.add_item("зелье здоровья")
+enemy.add_item("кости")
+
+print(f"Инвентарь героя: {hero.show_inventory()}")
+print(f"Инвентарь врага: {enemy.show_inventory()}")
+
+print("\nЭкипировка:")
+hero.equip_item("меч", "правая рука")
+hero.equip_item("щит", "левая рука")
+enemy.equip_item("кости", "пасть")
+
+print(f"Экипировка героя: {hero.show_equipped()}")
+print(f"Экипировка врага: {enemy.show_equipped()}")
+
+print("\nБой:")
+print(f"Здоровье врага до атаки: {enemy.health}")
+hero.attack(enemy)
+print(f"Здоровье врага после атаки: {enemy.health}")
+
+print("\nЛечение и повышение уровня:")
+hero.heal(30)
+hero.level_up()
+print(f"После лечения: {hero.health}")
+print(f"После повышения уровня: урон={hero.damage}, уровень={hero.level}")
+
+print("\n")
+print("ТЕСТИРОВАНИЕ ЗАВЕРШЕНО")
