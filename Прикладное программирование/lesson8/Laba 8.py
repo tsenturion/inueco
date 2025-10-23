@@ -249,7 +249,6 @@ class GameCharacter:
             elif "оружие" in item: self.damage += 5
 
 
-# Примеры использования
 if __name__ == "__main__":
     book = Book("1984", "Оруэлл")
     book.rate(5)
