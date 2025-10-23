@@ -142,7 +142,7 @@ class Dog:
         self.age = age
         self.sort = sort # Порода собаки
         self.loud_bark = False # Громкость лая
-        self.love_level = 1 # Процент любви к хозяину
+        self.love_level = 1 # Уровень любви к хозяину
     
     # Изменение породы собаки
     def set_sort(self, sort: str):
