@@ -23,7 +23,6 @@ class Book:
             print("Оценка должна быть от 1 до 5")
             return False
         self.reviews.append(review)
-        pass
 
     def get_average_rating(self):
         if not self.reviews:
@@ -132,7 +131,6 @@ class BankAccount:
         print("История операций:")
         for record in self.history:
             print(f"* {self._action_type(record['type'])} на сумму {record['amount']} RUB ({record['time'].strftime('%Y-%m-%d %H:%M:%S')})")
-        pass
 
 """
 5. Класс Dog
