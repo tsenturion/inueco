@@ -158,6 +158,12 @@ ID студента
 Группу
 Все оценки по предметам
 """
+<<<<<<< HEAD
+for student_id, student in students.items():
+  grades_str = ', '.join([f"{subj}: {grade}" for subj, grade in student['grades'].items()])
+  print(f"ID {student_id}: {student['name']}, {student['age']} лет, {student['group']}, оценки: {grades_str}")
+
+=======
 print("-" * 50)
 student_ids = list(students.keys())
 i = 0
@@ -181,6 +187,7 @@ while i < len(student_ids):
     
     print("----------------------------------")
     i = i + 1
+>>>>>>> 0e755aced47183c94ffc7c1c5cfa17db60f34a42
 """
 2
 Добавьте в словарь нового студента с ID 104:
@@ -190,22 +197,43 @@ while i < len(student_ids):
 Группа: "ИТ-102"
 Выведите сообщение о добавлении.
 """
+<<<<<<< HEAD
+students[104] = {
+=======
 print("-" * 50)
 new_student_id = 104
 new_student = {
+>>>>>>> 0e755aced47183c94ffc7c1c5cfa17db60f34a42
     "name": "Екатерина Волкова",
     "age": 20,
     "grades": {"math": 5, "physics": 5, "programming": 5},
     "group": "ИТ-102"
 }
 
+<<<<<<< HEAD
+print("✅ Студент успешно добавлен!")
+for student_id, student in students.items():
+  grades_str = ', '.join([f"{subj}: {grade}" for subj, grade in student['grades'].items()])
+  print(f"ID {student_id}: {student['name']}, {student['age']} лет, {student['group']}, оценки: {grades_str}")
+=======
 students[new_student_id] = new_student
 print("Добавлен новый студент:", new_student["name"])
+>>>>>>> 0e755aced47183c94ffc7c1c5cfa17db60f34a42
 """
 3
 Для каждого студента рассчитайте и выведите средний балл по всем предметам. 
 Сохраните результаты в отдельный словарь average_grades.
 """
+<<<<<<< HEAD
+average_grades = {}
+for student_id, student_info in students.items():
+    grades = student_info["grades"]
+    avg_grade = sum(grades.values()) / len(grades)
+    average_grades[student_id] = round(avg_grade, 2)
+
+print("Словарь средних баллов:")
+print(average_grades)
+=======
 print("-" * 50)
 average_grades = {}
 student_ids = list(students.keys())
@@ -229,10 +257,17 @@ while i < len(student_ids):
     average_grades[student_id] = avg_grade
     print(student_data["name"], ":", avg_grade)
     i = i + 1
+>>>>>>> 0e755aced47183c94ffc7c1c5cfa17db60f34a42
 """
 4
 Найдите студента с наивысшим средним баллом. Выведите его имя, средний балл и группу.
 """
+<<<<<<< HEAD
+best = max(students.values(), key=lambda s: sum(s["grades"].values())/len(s["grades"]))
+avg = sum(best["grades"].values()) / len(best["grades"])
+
+print(f"{best['name']}, {best['group']}, {avg:.2f}")
+=======
 print("-" * 50)
 student_ids = list(average_grades.keys())
 best_id = student_ids[0]
@@ -251,6 +286,7 @@ best_student = students[best_id]
 print("Лучший студент:", best_student["name"])
 print("Средний балл:", best_grade)
 print("Группа:", best_student["group"])
+>>>>>>> 0e755aced47183c94ffc7c1c5cfa17db60f34a42
 """
 5
 Соберите статистику по группам:
@@ -259,6 +295,26 @@ print("Группа:", best_student["group"])
 Список студентов каждой группы
 Выведите статистику для групп "ИТ-101" и "ИТ-102".
 """
+<<<<<<< HEAD
+group_stats = {}
+for s in students.values():
+    g = s["group"]
+    if g not in group_stats:
+        group_stats[g] = {"c": 0, "t": 0, "s": []}
+    group_stats[g]["c"] += 1
+    group_stats[g]["t"] += sum(s["grades"].values()) / len(s["grades"])
+    group_stats[g]["s"].append(s["name"])
+
+for g in ["ИТ-101", "ИТ-102"]:
+    stats = group_stats[g]
+    print(f"{g}: {stats['c']} студентов, ср. балл: {stats['t']/stats['c']:.2f}, студенты: {', '.join(stats['s'])}")
+    """ 
+    c - количество студентов
+    t - сумма баллов
+    s - список студентов
+    g - группа
+    """
+=======
 print("-" * 50)
 group_stats = {}
 student_ids = list(students.keys())
@@ -306,11 +362,17 @@ while k < len(target_groups):
         print("Группа", group + ": не найдена")
         print()
     k = k + 1
+>>>>>>> 0e755aced47183c94ffc7c1c5cfa17db60f34a42
 """
 6
 Для каждого студента вычислите хеш его имени с помощью функции hash(). 
 Проверьте, есть ли коллизии хешей (одинаковые хеши для разных имен).
 """
+<<<<<<< HEAD
+print("Хеши имен:", {s["name"]: hash(s["name"]) for s in students.values()})
+collisions = {h: names for h, names in {hash(s["name"]): [s["name"]] for s in students.values()}.items() if len(names) > 1}
+print(f"Коллизии: {collisions}" if collisions else "Коллизий нет")
+=======
 print("-" * 50)
 name_hashes = {}
 student_ids = list(students.keys())
@@ -345,12 +407,20 @@ if len(unique_hashes) == len(students):
     print("Коллизий хешей не обнаружено!")
 else:
     print("Обнаружены коллизии хешей!")
+>>>>>>> 0e755aced47183c94ffc7c1c5cfa17db60f34a42
 """
 7
 Найдите и выведите:
 Всех студентов с оценкой 5 по программированию
 Всех студентов старше 20 лет
 """
+<<<<<<< HEAD
+prog5 = [s["name"] for s in students.values() if s["grades"].get("programming") == 5]
+print("5 по программированию:", *prog5 if prog5 else "нет")
+
+age20 = [s["name"] for s in students.values() if s["age"] > 20]
+print("Старше 20 лет:", *age20 if age20 else "нет")
+=======
 print("-" * 50)
 student_ids = list(students.keys())
 i = 0
@@ -370,6 +440,7 @@ while i < len(student_ids):
     if student_data["age"] > 20:
         print("-", student_data["name"], "(Возраст:", student_data["age"], ")")
     i = i + 1
+>>>>>>> 0e755aced47183c94ffc7c1c5cfa17db60f34a42
 """
 8
 Добавьте всем студентам оценку по предмету "english":
@@ -379,6 +450,14 @@ ID 103: 3
 ID 104: 5
 Выведите обновленные данные для студента ID 101.
 """
+<<<<<<< HEAD
+students[101]["grades"]["english"] = 4
+students[102]["grades"]["english"] = 5
+students[103]["grades"]["english"] = 3
+students[104]["grades"]["english"] = 5
+
+print(f"{students[101]['name']}: {students[101]['grades']}")
+=======
 print("-" * 50)
 student_ids = list(students.keys())
 i = 0
@@ -410,3 +489,4 @@ while j < len(subjects):
     grade = students[101]["grades"][subject]
     print(" ", subject, ":", grade)
     j = j + 1
+>>>>>>> 0e755aced47183c94ffc7c1c5cfa17db60f34a42
