@@ -1,0 +1,88 @@
+В таблице products хранятся данные о товарах:
+
+name - название товара
+cost - его стоимость
+В таблице sales хранятся данные о продажах:
+
+product_id - id проданного товара в таблице products
+city - город продажи
+products
+
+id	name	cost
+1	Product 1	10
+2	Product 2	2
+3	Product 3	15
+sales
+
+id	product_id	city
+1	1	Moscow
+2	2	Abakan
+3	2	Khabarovsk
+
+Вам нужно определить товар, который продается хуже всего. То есть тот у которого меньше всего продаж во всех городах. Решить задачу нужно с помощью ROW_NUMBER(), а не LIMIT.
+
+Составьте запрос, который выводит таблицу с полями:
+
+row_number - порядковый номер строки товара, так как задача решается с помощью ROW_NUMBER(), значение этого поля должно быть 1.
+name – название товара
+sales_count_sum – сколько всего продаж у этого товара
+
+GROUP BY
+ORDER BY
+SUM()
+
+CREATE TABLE products (
+    id bigint PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    name varchar(255),
+    cost bigint
+);
+
+CREATE TABLE sales (
+    id bigint PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    product_id bigint REFERENCES products (id) NOT NULL,
+    city varchar(255)
+);
+
+INSERT INTO products (name, cost) VALUES
+('chair', 8000),
+('desk', 10000),
+('lamp', 3500),
+('bench', 30000),
+('table', 25000),
+('stool', 5000),
+('coffe', 28000),
+('sofa', 500);
+
+INSERT INTO sales (product_id, city) VALUES
+(1, 'Moscow'),
+(1, 'Abakan'),
+(1, 'Abakan'),
+(1, 'Yaya'),
+(1, 'Yaya'),
+(1, 'Yaya'),
+(4, 'Moscow'),
+(2, 'Sochi'),
+(2, 'Sochi'),
+(3, 'Moscow'),
+(3, 'Sochi'),
+(5, 'Yaya'),
+(5, 'Yaya'),
+(5, 'Yaya'),
+(5, 'Yaya'),
+(5, 'Yaya'),
+(5, 'Yaya'),
+(7, 'Moscow'),
+(6, 'Sochi'),
+(6, 'Sochi'),
+(6, 'Sochi'),
+(8, 'Yakutsk'),
+(8, 'Yakutsk'),
+(2, 'Yakutsk'),
+(3, 'Yakutsk'),
+(4, 'Moscow'),
+(1, 'Moscow'),
+(1, 'Moscow'),
+(6, 'Moscow'),
+(4, 'Abakan'),
+(1, 'Abakan'),
+(2, 'Abakan');

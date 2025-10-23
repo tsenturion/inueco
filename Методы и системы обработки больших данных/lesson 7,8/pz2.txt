@@ -1,0 +1,89 @@
+В таблице sales хранятся данные о товарах:
+
+product_id - id товара
+product_name — название товара
+sales_amount — количество проданных товаров
+sales
+
+product_id	product_name	sales_amount
+1	Smart Watch	1520
+2	Smart Table	267
+3	Smart Fork	3002
+4	Smart Pork	240
+5	Smart Foo	3202
+6	Smart Smart	1035
+7	Smart Air	2307
+8	Smart None	1657
+
+Составьте запрос, который разделяет все товары на 4 категории по объему продаж (от большего к меньшему) и показывает для каждой категории товар с наибольшими и наименьшими продажами и количество продаж.
+
+В результате должна получиться таблица:
+
+category	highest_selling_product	highest_sales_amount	lowest_selling_product	lowest_sales_amount
+1	Smart Foo	3202	Smart Fork	3002
+2	Smart Air	2307	Smart None	1657
+3	Smart Watch	1520	Smart Smart	1035
+4	Smart Table	267	Smart Pork	240
+Результат должен быть отсортирован по category
+
+NTILE(4)
+FIRST_VALUE
+LAST_VALUE
+
+CREATE TABLE sales (
+    product_id int,
+    product_name varchar(255),
+    sales_amount int
+);
+
+INSERT INTO sales (product_id, product_name, sales_amount) VALUES
+(1,'Smart Watch',528),
+(2,'Espresso Machine',5467),
+(3,'Microwave Oven',2411),
+(4,'Coffee Grinder',5010),
+(5,'Drone',5675),
+(6,'Humidifier',2820),
+(7,'Blender',3153),
+(8,'Hair Dryer',8011),
+(9,'Wireless Mouse',5577),
+(10,'Digital Camera',737),
+(11,'Washing Machine',2216),
+(12,'LED Lamp',3956),
+(13,'Gaming Console',4726),
+(14,'Dehumidifier',2711),
+(15,'Air Conditioner',8601),
+(16,'Smart Scale',4960),
+(17,'Refrigerator',3411),
+(18,'Plasma TV',7765),
+(19,'Juicer',465),
+(20,'Smart Thermostat',6715),
+(21,'Bread Maker',7531),
+(22,'Rice Cooker',3904),
+(23,'Slow Cooker',717),
+(24,'Vacuum Cleaner',4878),
+(25,'Dishwasher',6775),
+(26,'Waffle Maker',6265),
+(27,'Electric Kettle',7153),
+(28,'Portable Charger',8385),
+(29,'Air Purifier',2730),
+(30,'Food Processor',5218),
+(31,'E-Book Reader',3994),
+(32,'Space Heater',7843),
+(33,'USB Flash Drive',525),
+(34,'Action Camera',8941),
+(35,'Robot Vacuum Cleaner',7656),
+(36,'Electric Grill',4683),
+(37,'Noise Cancelling Headphones',5778),
+(38,'Laptop',5811),
+(39,'3D Printer',3712),
+(40,'Bluetooth Speaker',5876),
+(41,'Tablet',1040),
+(42,'External Hard Drive',1540),
+(43,'VR Headset',891),
+(44,'Smartphone',421),
+(45,'Electric Toothbrush',4044),
+(46,'Keyboard',3317),
+(47,'Toaster',8337),
+(48,'Fitness Tracker',592),
+(49,'Wireless Headphones',6548),
+(50,'Sandwich Maker',955);
