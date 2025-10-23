@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 1. Запросите два числа
 # 2. Запросите операцию (+, -, *, /)
 # 3. Используя if/elif/else, выполните нужную операцию
@@ -34,3 +35,37 @@ while True:
     except Exception as e:
         print(e)
         break
+=======
+while (1):
+    num1 = int(input("Введите первое число:"))
+    num2 = int(input("Введите второе число:"))
+    oper = input("Введите оперецию (+ - * / ** // % exit):")
+    if (oper == "exit"):
+        print("Выход из системы")
+        break
+    else:
+        match oper:
+            case "+":
+                fin = num1 + num2
+            case "-":
+                fin = num1 - num2
+            case "*":
+                fin = num1 * num2
+            case "/":
+                if (num2 == 0):
+                    print("нельзя делить на 0")
+                    continue
+                else:
+                    fin = num1 / num2
+            case "**":
+                fin = num1 ** num2
+            case "//":
+                fin = num1 // num2
+            case "%":
+                fin = num1 % num2
+            case _:
+                print("не известная команда")
+                continue
+        print(f"Результат: {fin}")
+        print(f"Тип данных: {type(fin)}")
+>>>>>>> ee9f5f84db47acea417509ae078d67e1e17e0541
