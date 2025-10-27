@@ -10,6 +10,9 @@ https://git-scm.com/downloads/win
     убрать галочку only show new options
     В свою папку
 https://desktop.github.com/download/
+https://www.postman.com/downloads/
+clck.ru/3PybNY
+https://web.postman.co/workspace/75831710-a839-44f0-8500-7eeb4d70a717
 
 расширения
 ms-python.python
@@ -19,6 +22,7 @@ GitHub.vscode-pull-request-github
 mintlify.document
 SonarSource.sonarlint-vscode
 https://gigacode.ru/
+mechatroner.rainbow-csv
 
 для обучения
 https://code-basics.com/ru
