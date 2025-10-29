@@ -32,17 +32,12 @@ while True:
             # Функция для добавления книги с обработкой некорректного ввода
             def func():
                 try:
-                    title = input("Введите название книги: ")
-                    author = input("Введите автора книги: ")
-                    year = int(input("Введите год издания (только число): "))
+                    book_data = input_book_data()
+                    if book_data is None:
+                        return False
 
-                    book_data = input_book_data(title, author, year)
-                    try:
-                        book = Book(*book_data)
-                        library.add_book(book)
-                        print_message("Книга добавлена в библиотеку.")
-                    except Exception as e:
-                        print_message(str(e))
+                    book = Book(*book_data)
+                    library.add_book(book)
 
                     return True
                 except ValueError:
@@ -73,25 +68,13 @@ while True:
                 pass
         case "6":
             title = input("Введите название книги: ")
-            try:
-                library.borrow_book(title)
-                print_message("Книга выдана.")
-            except Exception as e:
-                print_message(str(e))
+            library.borrow_book(title)
         case "7":
             title = input("Введите название книги: ")
-            try:
-                library.return_book(title)
-                print_message("Книга возвращена.")
-            except Exception as e:
-                print_message(str(e))
+            library.return_book(title)
         case "8":
             title = input("Введите название книги: ")
-            try:
-                library.remove_book(title)
-                print_message("Книга удалена.")
-            except Exception as e:
-                print_message(str(e))
+            library.remove_book(title)
         case "0":
             print_message("Выход из программы")
             # Прерывание цикла для завершения программы

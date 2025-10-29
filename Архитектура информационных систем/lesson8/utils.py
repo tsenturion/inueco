@@ -1,16 +1,21 @@
 # Вспомогательный модуль с функциями для ввода и вывода данных
 
-from book import Book
+def input_book_data() -> tuple[str, str, int] | None:
+    """Сбор данных о книге и преобразование в кортеж"""
+    try:
+        title = input("Введите название книги: ")
+        author = input("Введите автора книги: ")
+        year = int(input("Введите год издания (только число): "))
+        return (title, author, year)
+    except ValueError:
+        print_message("Некорректный ввод в одном из аргументов. Пожалуйста, введите значения в корректном формате.")
+        return None
 
-def input_book_data(title: str, author: str, year: int):
-    """Преобразование введенных данных в кортеж для последующей инициализации класса Book"""
-    return (title, author, year)
-
-def print_books(books_list: list[Book]):
+def print_books(books_list: list) -> None:
     """Вывод списка книг"""
     for book in books_list:
         print(book)
 
-def print_message(message: str):
+def print_message(message: str) -> None:
     """Вывод сообщения"""
     print(f"*** {message} ***")
