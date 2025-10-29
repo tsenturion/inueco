@@ -1,4 +1,5 @@
-from library import Library, Book
+from library import Library
+from book import Book
 from utils import input_book_data, print_books, print_message
 
 def main():
