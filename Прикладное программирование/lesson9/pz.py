@@ -82,33 +82,33 @@
 
 class Animal:
 
-    def init(self, name: str, species: str, age: int, weight: float):
+    def __init__(self, name: str, species: str, age: int, weight: float):
         self.name = name
         self.species = species
         self.age = age
         self.weight = weight
 
-    def get_info(self) -> str:
+    def __get_info__(self) -> str:
             #Возвращение информации о животном
         return f"{self.name} ({self.species}, {self.age} лет, {self.weight} кг)"
 
-    def get_representation(self) -> str:
+    def __get_representation__(self) -> str:
             #Воссоздание объекта
         return f"Animal('{self.name}', '{self.species}', {self.age}, {self.weight})"
 
-    def is_equal_to(self, other) -> bool:
+    def __is_equal_to__(self, other) -> bool:
             #Сравнение животных
         if not isinstance(other, Animal):
             return False
         return self.name == other.name and self.species == other.species
 
-    def is_lighter_than(self, other) -> bool:
+    def __is_lighter_than__(self, other) -> bool:
             #Сравнение весах животных
         if not isinstance(other, Animal):
             return NotImplemented
         return self.weight < other.weight
 
-    def reproduce_with(self, other):
+    def __reproduce_with__(self, other):
             #Потомок от двух животных
         if not isinstance(other, Animal):
             return None
@@ -118,24 +118,24 @@ class Animal:
 
 class Zoo:
     
-    def init(self, name: str):
+    def __init__(self, name: str):
         self.name = name
         self.animals = []
 
-    def get_info(self) -> str:
+    def __get_info__(self) -> str:
             #Информация о зоопарке 
         count = self.get_animal_count()
         return f"Зоопарк '{self.name}': {count} животных"
 
-    def get_animal_count(self) -> int:
+    def __get_animal_count__(self) -> int:
             #Количество живтных в зоопарке 
         return len(self.animals)
 
-    def get_animal_at(self, index):
+    def __get_animal_at__(self, index):
             #Животное по индексу
         return self.animals[index]
 
-    def has_animal(self, item) -> bool:
+    def __has_animal__(self, item) -> bool:
             #Есть ли животное в зоопарке 
         if isinstance(item, Animal):
             return item in self.animals
@@ -143,7 +143,7 @@ class Zoo:
             return any(animal.name == item for animal in self.animals)
         return False
 
-    def merge_with(self, other):
+    def __merge_with__(self, other):
             #Объединение двух зоопарков
         if not isinstance(other, Zoo):
             return None
