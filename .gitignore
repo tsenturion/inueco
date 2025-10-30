@@ -205,3 +205,9 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# lesson8_lab1
+Прикладное программирование/lesson8/test.py
+
+# Other
+.DS_Store
