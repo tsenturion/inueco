@@ -1,4 +1,4 @@
-### Практическое задание
+"""### Практическое задание
 
 Вы создаете программу для управления виртуальным зоопарком. 
 
@@ -78,37 +78,112 @@
 2.  Реализуйте класс `Zoo` со всеми указанными магическими методами.
 3.  Протестируйте код на демонстрации.
 
-**main демонстрации:**
+**main демонстрации:**"""
 
-```python
-# Создание животных
-lion = Animal("Аристотель", "Лев", 5, 190)
-lioness = Animal("Зара", "Львица", 4, 150)
-elephant = Animal("Дамбо", "Слон", 10, 1500)
-print(lion) # Аристотель (Лев, 5 лет, 190 кг)
-print(repr(lion)) # Animal('Аристотель', 'Лев', 5, 190)
+class Animal:
 
-# Сравнение животных
-print(lion == lioness) # False (разные имена)
-print(lion < elephant) # True (190 < 1500)
+    def __init__(self, name: str, species: str, age: int, weight: float):
+        self.name = name
+        self.species = species
+        self.age = age
+        self.weight = weight
 
-# "Размножение" животных
-baby = lion + lioness
-print(baby) # Потомок (Лев, 0 лет, 34.0 кг)
+    def __get_info__(self) -> str:
+            #Возвращение информации о животном
+        return f"{self.name} ({self.species}, {self.age} лет, {self.weight} кг)"
 
-# Работа с зоопарком
-zoo1 = Zoo("Сафари")
-zoo1.animals.extend([lion, lioness, baby])
+    def __get_representation__(self) -> str:
+            #Воссоздание объекта
+        return f"Animal('{self.name}', '{self.species}', {self.age}, {self.weight})"
 
-zoo2 = Zoo("Африканский")
-zoo2.animals.append(elephant)
+    def __is_equal_to__(self, other) -> bool:
+            #Сравнение животных
+        if not isinstance(other, Animal):
+            return False
+        return self.name == other.name and self.species == other.species
 
-print(len(zoo1)) # 3
-print(zoo1[0]) # Аристотель (Лев, 5 лет, 190 кг)
-print("Аристотель" in zoo1) # True
-print(elephant in zoo1) # False
+    def __is_lighter_than__(self, other) -> bool:
+            #Сравнение весах животных
+        if not isinstance(other, Animal):
+            return NotImplemented
+        return self.weight < other.weight
 
-# Объединение зоопарков
-big_zoo = zoo1 + zoo2
-print(f"{big_zoo}: {len(big_zoo)} животных") # Зоопарк 'Объединенный': 4 животных
-```
+    def __reproduce_with__(self, other):
+            #Потомок от двух животных
+        if not isinstance(other, Animal):
+            return None
+        new_weight = (self.weight + other.weight) * 0.1
+        return Animal("Потомок", self.species, 0, new_weight)
+
+
+class Zoo:
+    
+    def __init__(self, name: str):
+        self.name = name
+        self.animals = []
+
+    def __get_info__(self) -> str:
+            #Информация о зоопарке 
+        count = self.get_animal_count()
+        return f"Зоопарк '{self.name}': {count} животных"
+
+    def __get_animal_count__(self) -> int:
+            #Количество живтных в зоопарке 
+        return len(self.animals)
+
+    def __get_animal_at__(self, index):
+            #Животное по индексу
+        return self.animals[index]
+
+    def __has_animal__(self, item) -> bool:
+            #Есть ли животное в зоопарке 
+        if isinstance(item, Animal):
+            return item in self.animals
+        if isinstance(item, str):
+            return any(animal.name == item for animal in self.animals)
+        return False
+
+    def __merge_with__(self, other):
+            #Объединение двух зоопарков
+        if not isinstance(other, Zoo):
+            return None
+        new_zoo = Zoo("Объединенный зоопарк")
+        new_zoo.animals = self.animals + other.animals
+        return new_zoo
+
+if __name__ == '__main__':
+        #Создание животных
+    lion = Animal("Аристотель", "Лев", 5, 190)
+    lioness = Animal("Зара", "Львица", 4, 150)
+    elephant = Animal("Дамбо", "Слон", 10, 1500)
+    print("Демонстрация класса Animal")
+    print(lion.get_info()) 
+    print(lion.get_representation())
+
+        #Сравнение животных
+    print("\n Сравнение животных")
+    print(f"Аристотель равен Заре: {lion.is_equal_to(lioness)}")
+    print(f"Аристотель легче Дамбо: {lion.is_lighter_than(elephant)}")
+
+        #Размножение животных
+    print("\n Сложение животных")
+    baby = lion.reproduce_with(lioness)
+    print(baby.get_info())
+
+        #Работа с зоопарком
+    print("\n Демонстрация класса Zoo")
+    zoo1 = Zoo("Сафари")
+    zoo1.animals.extend([lion, lioness, baby])
+
+    zoo2 = Zoo("Африканский")
+    zoo2.animals.append(elephant)
+    print(f"Количество животных в '{zoo1.name}': {zoo1.get_animal_count()}")
+    animal_at_0 = zoo1.get_animal_at(0)
+    print(f"Первое животное в '{zoo1.name}': {animal_at_0.get_info()}")
+    print(f"Есть ли 'Аристотель' в '{zoo1.name}': {zoo1.has_animal('Аристотель')}")
+    print(f"Есть ли 'Дамбо' в '{zoo1.name}': {zoo1.has_animal(elephant)}")
+
+        #Объединение зоопарков
+    print("\n Объединение зоопарков")
+    big_zoo = zoo1.merge_with(zoo2)
+    print(f"{big_zoo.get_info()}")
