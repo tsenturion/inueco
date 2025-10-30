@@ -12,6 +12,8 @@ class Animal:
         return f"Animal(name={self.name!r}, species={self.species!r}, age={self.age!r}, weight={self.weight!r})"
     
     def __eq__(self, other):
+        if not isinstance(other, Animal):
+            return False
         return self.name == other.name and self.species == other.species
     
     def __lt__(self, other):

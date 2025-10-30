@@ -19,7 +19,7 @@ class Zoo:
     
     def __contains__(self, item):
         if isinstance(item, str):
-            return item in [animal.name for animal in self.animals]
+            return any(animal.name == item for animal in self.animals)
         return item in self.animals
 
     def __add__(self, other):
