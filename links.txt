@@ -1,4 +1,4 @@
-устанвока
+установка
 https://code.visualstudio.com/download
     В свою папку
 https://www.python.org/downloads/
@@ -11,8 +11,8 @@ https://git-scm.com/downloads/win
     В свою папку
 https://desktop.github.com/download/
 https://www.postman.com/downloads/
-clck.ru/3PybNY
-https://web.postman.co/workspace/75831710-a839-44f0-8500-7eeb4d70a717
+
+pip install -r requirements.txt
 
 расширения
 ms-python.python
