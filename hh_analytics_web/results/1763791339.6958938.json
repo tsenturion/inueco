@@ -1,0 +1,1228 @@
+{
+  "stats": {
+    "total_vacancies": 10,
+    "tech_vacancies": 1,
+    "tech_percentage": 10.0,
+    "tech_vacancies_details": [
+      {
+        "name": "Database Administrator (Greenplum/PostgreSQL) / Linux Admin",
+        "url": "https://hh.ru/vacancy/127860179",
+        "id": "127860179"
+      }
+    ],
+    "technology": "sql"
+  },
+  "vacancies": [
+    {
+      "id": "127776587",
+      "premium": false,
+      "name": "Airbnb admin - guest support agent",
+      "department": null,
+      "has_test": false,
+      "response_letter_required": true,
+      "area": {
+        "id": "1",
+        "name": "Москва",
+        "url": "https://api.hh.ru/areas/1"
+      },
+      "salary": {
+        "from": 1000,
+        "to": 1300,
+        "currency": "USD",
+        "gross": false
+      },
+      "salary_range": {
+        "from": 1000,
+        "to": 1300,
+        "currency": "USD",
+        "gross": false,
+        "mode": {
+          "id": "MONTH",
+          "name": "За месяц"
+        },
+        "frequency": {
+          "id": "TWICE_PER_MONTH",
+          "name": "Два раза в месяц"
+        }
+      },
+      "type": {
+        "id": "open",
+        "name": "Открытая"
+      },
+      "address": null,
+      "response_url": null,
+      "sort_point_distance": null,
+      "published_at": "2025-11-17T12:24:23+0300",
+      "created_at": "2025-11-17T12:24:23+0300",
+      "archived": false,
+      "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=127776587",
+      "show_logo_in_search": null,
+      "show_contacts": false,
+      "insider_interview": null,
+      "url": "https://api.hh.ru/vacancies/127776587?host=hh.ru",
+      "alternate_url": "https://hh.ru/vacancy/127776587",
+      "relations": [],
+      "employer": {
+        "id": "10760540",
+        "name": "Good Stay Holiday Homes",
+        "url": "https://api.hh.ru/employers/10760540",
+        "alternate_url": "https://hh.ru/employer/10760540",
+        "logo_urls": {
+          "original": "https://img.hhcdn.ru/employer-logo-original/1427449.png",
+          "90": "https://img.hhcdn.ru/employer-logo/7329445.png",
+          "240": "https://img.hhcdn.ru/employer-logo/7329446.png"
+        },
+        "vacancies_url": "https://api.hh.ru/vacancies?employer_id=10760540",
+        "country_id": 1,
+        "accredited_it_employer": false,
+        "trusted": true
+      },
+      "snippet": {
+        "requirement": "Опыт работы с платформой Airbnb (обязательно!) в управлении более 20 квартир более 1 года. Свободный разговорный английский на уровне носителя. ",
+        "responsibility": "Общение с клиентами, помощь с решением проблем. Помощь с администрированием квартир на Airbnb. Занесение проблем и резерваций в систему CRM."
+      },
+      "contacts": null,
+      "schedule": {
+        "id": "remote",
+        "name": "Удаленная работа"
+      },
+      "working_days": [],
+      "working_time_intervals": [],
+      "working_time_modes": [],
+      "accept_temporary": true,
+      "fly_in_fly_out_duration": [],
+      "work_format": [
+        {
+          "id": "REMOTE",
+          "name": "Удалённо"
+        }
+      ],
+      "working_hours": [
+        {
+          "id": "HOURS_8",
+          "name": "8 часов"
+        }
+      ],
+      "work_schedule_by_days": [
+        {
+          "id": "SIX_ON_ONE_OFF",
+          "name": "6/1"
+        },
+        {
+          "id": "FIVE_ON_TWO_OFF",
+          "name": "5/2"
+        }
+      ],
+      "night_shifts": false,
+      "professional_roles": [
+        {
+          "id": "40",
+          "name": "Другое"
+        }
+      ],
+      "accept_incomplete_resumes": false,
+      "experience": {
+        "id": "between1And3",
+        "name": "От 1 года до 3 лет"
+      },
+      "employment": {
+        "id": "full",
+        "name": "Полная занятость"
+      },
+      "employment_form": {
+        "id": "FULL",
+        "name": "Полная"
+      },
+      "internship": false,
+      "adv_response_url": null,
+      "is_adv_vacancy": false,
+      "adv_context": null
+    },
+    {
+      "id": "127956045",
+      "premium": false,
+      "name": "HR admin & payroll",
+      "department": null,
+      "has_test": false,
+      "response_letter_required": false,
+      "area": {
+        "id": "1",
+        "name": "Москва",
+        "url": "https://api.hh.ru/areas/1"
+      },
+      "salary": null,
+      "salary_range": null,
+      "type": {
+        "id": "open",
+        "name": "Открытая"
+      },
+      "address": {
+        "city": "Москва",
+        "street": null,
+        "building": null,
+        "lat": 55.755864,
+        "lng": 37.617698,
+        "description": null,
+        "raw": "Москва",
+        "metro": {
+          "station_name": "Библиотека им.Ленина",
+          "line_name": "Сокольническая",
+          "station_id": "1.4",
+          "line_id": "1",
+          "lat": 55.752123,
+          "lng": 37.610388
+        },
+        "metro_stations": [
+          {
+            "station_name": "Библиотека им.Ленина",
+            "line_name": "Сокольническая",
+            "station_id": "1.4",
+            "line_id": "1",
+            "lat": 55.752123,
+            "lng": 37.610388
+          },
+          {
+            "station_name": "Охотный ряд",
+            "line_name": "Сокольническая",
+            "station_id": "1.98",
+            "line_id": "1",
+            "lat": 55.757228,
+            "lng": 37.615078
+          },
+          {
+            "station_name": "Площадь Революции",
+            "line_name": "Арбатско-Покровская",
+            "station_id": "3.100",
+            "line_id": "3",
+            "lat": 55.756741,
+            "lng": 37.62236
+          },
+          {
+            "station_name": "Театральная",
+            "line_name": "Замоскворецкая",
+            "station_id": "2.99",
+            "line_id": "2",
+            "lat": 55.758808,
+            "lng": 37.61768
+          }
+        ],
+        "id": "20512628"
+      },
+      "response_url": null,
+      "sort_point_distance": null,
+      "published_at": "2025-11-21T15:24:48+0300",
+      "created_at": "2025-11-21T15:24:48+0300",
+      "archived": false,
+      "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=127956045",
+      "show_logo_in_search": null,
+      "show_contacts": true,
+      "insider_interview": null,
+      "url": "https://api.hh.ru/vacancies/127956045?host=hh.ru",
+      "alternate_url": "https://hh.ru/vacancy/127956045",
+      "relations": [],
+      "employer": {
+        "id": "1846",
+        "name": "Brainpower Group",
+        "url": "https://api.hh.ru/employers/1846",
+        "alternate_url": "https://hh.ru/employer/1846",
+        "logo_urls": {
+          "original": "https://img.hhcdn.ru/employer-logo-original-round/6431764.jpeg",
+          "90": "https://img.hhcdn.ru/employer-logo-round/6431765.jpeg",
+          "240": "https://img.hhcdn.ru/employer-logo-round/6431766.jpeg"
+        },
+        "vacancies_url": "https://api.hh.ru/vacancies?employer_id=1846",
+        "country_id": 1,
+        "accredited_it_employer": false,
+        "trusted": true
+      },
+      "snippet": {
+        "requirement": "Профильном образование (экономическое, финансовое). Опыт работы по расчету заработной платы (желательно в небольшом иностранном банке). Готовы рассмотреть выпускников профильных направлений...",
+        "responsibility": "Подготовка и предоставление данных для расчета заработной платы, страховых взносов в аутсорсинговую компанию (численность сотрудников - 90 чел.). Проверка подготовленных аутсорсинговой..."
+      },
+      "contacts": null,
+      "schedule": {
+        "id": "fullDay",
+        "name": "Полный день"
+      },
+      "working_days": [],
+      "working_time_intervals": [],
+      "working_time_modes": [],
+      "accept_temporary": false,
+      "fly_in_fly_out_duration": [],
+      "work_format": [],
+      "working_hours": [
+        {
+          "id": "HOURS_8",
+          "name": "8 часов"
+        }
+      ],
+      "work_schedule_by_days": [
+        {
+          "id": "FIVE_ON_TWO_OFF",
+          "name": "5/2"
+        }
+      ],
+      "night_shifts": false,
+      "professional_roles": [
+        {
+          "id": "153",
+          "name": "Менеджер по компенсациям и льготам"
+        }
+      ],
+      "accept_incomplete_resumes": false,
+      "experience": {
+        "id": "between3And6",
+        "name": "От 3 до 6 лет"
+      },
+      "employment": {
+        "id": "full",
+        "name": "Полная занятость"
+      },
+      "employment_form": {
+        "id": "FULL",
+        "name": "Полная"
+      },
+      "internship": false,
+      "adv_response_url": null,
+      "is_adv_vacancy": false,
+      "adv_context": null
+    },
+    {
+      "id": "127835128",
+      "premium": false,
+      "name": "Service&Admin Specialist",
+      "department": null,
+      "has_test": false,
+      "response_letter_required": false,
+      "area": {
+        "id": "1",
+        "name": "Москва",
+        "url": "https://api.hh.ru/areas/1"
+      },
+      "salary": null,
+      "salary_range": null,
+      "type": {
+        "id": "open",
+        "name": "Открытая"
+      },
+      "address": {
+        "city": "Москва",
+        "street": null,
+        "building": null,
+        "lat": 55.755864,
+        "lng": 37.617698,
+        "description": null,
+        "raw": "Москва",
+        "metro": null,
+        "metro_stations": [],
+        "id": "13196049"
+      },
+      "response_url": null,
+      "sort_point_distance": null,
+      "published_at": "2025-11-18T15:00:33+0300",
+      "created_at": "2025-11-18T15:00:33+0300",
+      "archived": false,
+      "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=127835128",
+      "show_logo_in_search": null,
+      "show_contacts": false,
+      "insider_interview": null,
+      "url": "https://api.hh.ru/vacancies/127835128?host=hh.ru",
+      "alternate_url": "https://hh.ru/vacancy/127835128",
+      "relations": [],
+      "employer": {
+        "id": "1947314",
+        "name": "ANCOR",
+        "url": "https://api.hh.ru/employers/1947314",
+        "alternate_url": "https://hh.ru/employer/1947314",
+        "logo_urls": {
+          "original": "https://img.hhcdn.ru/employer-logo-original/1394389.png",
+          "90": "https://img.hhcdn.ru/employer-logo/7197339.png",
+          "240": "https://img.hhcdn.ru/employer-logo/7197340.png"
+        },
+        "vacancies_url": "https://api.hh.ru/vacancies?employer_id=1947314",
+        "country_id": 1,
+        "accredited_it_employer": false,
+        "trusted": true
+      },
+      "snippet": {
+        "requirement": "Свободное владение MS Office (Exсel, Word, Access, Power Point). Умение работать с большим объемом информации. Устный и письменный английский язык...",
+        "responsibility": "Приём, проверка и регистрация входящей документации от клиентов. Регистрация заявок на возмещение стоимости неремонтопригодной продукции в системе N-ERP, работа..."
+      },
+      "contacts": null,
+      "schedule": {
+        "id": "fullDay",
+        "name": "Полный день"
+      },
+      "working_days": [],
+      "working_time_intervals": [],
+      "working_time_modes": [],
+      "accept_temporary": false,
+      "fly_in_fly_out_duration": [],
+      "work_format": [],
+      "working_hours": [
+        {
+          "id": "HOURS_8",
+          "name": "8 часов"
+        }
+      ],
+      "work_schedule_by_days": [
+        {
+          "id": "FIVE_ON_TWO_OFF",
+          "name": "5/2"
+        }
+      ],
+      "night_shifts": false,
+      "professional_roles": [
+        {
+          "id": "155",
+          "name": "Методолог"
+        }
+      ],
+      "accept_incomplete_resumes": false,
+      "experience": {
+        "id": "noExperience",
+        "name": "Нет опыта"
+      },
+      "employment": {
+        "id": "full",
+        "name": "Полная занятость"
+      },
+      "employment_form": {
+        "id": "FULL",
+        "name": "Полная"
+      },
+      "internship": false,
+      "adv_response_url": null,
+      "is_adv_vacancy": false,
+      "adv_context": null
+    },
+    {
+      "id": "127626752",
+      "premium": false,
+      "name": "Руководитель группы кадрового администрирования/HR Admin Manager",
+      "department": null,
+      "has_test": false,
+      "response_letter_required": false,
+      "area": {
+        "id": "1",
+        "name": "Москва",
+        "url": "https://api.hh.ru/areas/1"
+      },
+      "salary": null,
+      "salary_range": null,
+      "type": {
+        "id": "open",
+        "name": "Открытая"
+      },
+      "address": {
+        "city": "Москва",
+        "street": "Шлюзовая набережная",
+        "building": "4",
+        "lat": 55.731551,
+        "lng": 37.644261,
+        "description": null,
+        "raw": "Москва, Шлюзовая набережная, 4",
+        "metro": {
+          "station_name": "Павелецкая",
+          "line_name": "Замоскворецкая",
+          "station_id": "2.101",
+          "line_id": "2",
+          "lat": 55.729741,
+          "lng": 37.638693
+        },
+        "metro_stations": [
+          {
+            "station_name": "Павелецкая",
+            "line_name": "Замоскворецкая",
+            "station_id": "2.101",
+            "line_id": "2",
+            "lat": 55.729741,
+            "lng": 37.638693
+          },
+          {
+            "station_name": "Павелецкая",
+            "line_name": "Кольцевая",
+            "station_id": "5.102",
+            "line_id": "5",
+            "lat": 55.731414,
+            "lng": 37.636294
+          }
+        ],
+        "id": "18847396"
+      },
+      "response_url": null,
+      "sort_point_distance": null,
+      "published_at": "2025-11-20T12:03:24+0300",
+      "created_at": "2025-11-20T12:03:24+0300",
+      "archived": false,
+      "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=127626752",
+      "branding": {
+        "type": "MAKEUP",
+        "tariff": null
+      },
+      "show_logo_in_search": true,
+      "show_contacts": false,
+      "insider_interview": null,
+      "url": "https://api.hh.ru/vacancies/127626752?host=hh.ru",
+      "alternate_url": "https://hh.ru/vacancy/127626752",
+      "relations": [],
+      "employer": {
+        "id": "3339",
+        "name": "Reckitt",
+        "url": "https://api.hh.ru/employers/3339",
+        "alternate_url": "https://hh.ru/employer/3339",
+        "logo_urls": {
+          "original": "https://img.hhcdn.ru/employer-logo-original-round/5561839.png",
+          "90": "https://img.hhcdn.ru/employer-logo-round/5561840.png",
+          "240": "https://img.hhcdn.ru/employer-logo-round/5561841.png"
+        },
+        "vacancies_url": "https://api.hh.ru/vacancies?employer_id=3339",
+        "country_id": 1,
+        "accredited_it_employer": false,
+        "trusted": true
+      },
+      "snippet": {
+        "requirement": "Опыт работы в направлении кадрового администрирования не менее 6 лет. Глубокая экспертиза в Трудовом законодательстве РФ. Знание системы 1С...",
+        "responsibility": "Обеспечение соблюдения компанией трудового законодательства, конфиденциальности и корпоративных стандартов (штат 700+ человек). Управление и развитие процессов кадрового учета, ведение..."
+      },
+      "contacts": null,
+      "schedule": {
+        "id": "fullDay",
+        "name": "Полный день"
+      },
+      "working_days": [],
+      "working_time_intervals": [],
+      "working_time_modes": [],
+      "accept_temporary": false,
+      "fly_in_fly_out_duration": [],
+      "work_format": [
+        {
+          "id": "HYBRID",
+          "name": "Гибрид"
+        }
+      ],
+      "working_hours": [
+        {
+          "id": "HOURS_8",
+          "name": "8 часов"
+        }
+      ],
+      "work_schedule_by_days": [
+        {
+          "id": "FIVE_ON_TWO_OFF",
+          "name": "5/2"
+        }
+      ],
+      "night_shifts": false,
+      "professional_roles": [
+        {
+          "id": "117",
+          "name": "Специалист по кадрам"
+        }
+      ],
+      "accept_incomplete_resumes": false,
+      "experience": {
+        "id": "moreThan6",
+        "name": "Более 6 лет"
+      },
+      "employment": {
+        "id": "full",
+        "name": "Полная занятость"
+      },
+      "employment_form": {
+        "id": "FULL",
+        "name": "Полная"
+      },
+      "internship": false,
+      "adv_response_url": null,
+      "is_adv_vacancy": false,
+      "adv_context": null
+    },
+    {
+      "id": "126023682",
+      "premium": false,
+      "name": "Руководитель команды HR Admin",
+      "department": {
+        "id": "697715-697715-talents",
+        "name": "Островок.Управление талантами"
+      },
+      "has_test": true,
+      "response_letter_required": false,
+      "area": {
+        "id": "1",
+        "name": "Москва",
+        "url": "https://api.hh.ru/areas/1"
+      },
+      "salary": null,
+      "salary_range": null,
+      "type": {
+        "id": "open",
+        "name": "Открытая"
+      },
+      "address": null,
+      "response_url": null,
+      "sort_point_distance": null,
+      "published_at": "2025-10-30T12:13:53+0300",
+      "created_at": "2025-10-30T12:13:53+0300",
+      "archived": false,
+      "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=126023682",
+      "branding": {
+        "type": "MAKEUP",
+        "tariff": null
+      },
+      "show_logo_in_search": true,
+      "show_contacts": false,
+      "insider_interview": null,
+      "url": "https://api.hh.ru/vacancies/126023682?host=hh.ru",
+      "alternate_url": "https://hh.ru/vacancy/126023682",
+      "relations": [],
+      "employer": {
+        "id": "697715",
+        "name": "Островок",
+        "url": "https://api.hh.ru/employers/697715",
+        "alternate_url": "https://hh.ru/employer/697715",
+        "logo_urls": {
+          "original": "https://img.hhcdn.ru/employer-logo-original-round/6647825.png",
+          "90": "https://img.hhcdn.ru/employer-logo-round/6647826.png",
+          "240": "https://img.hhcdn.ru/employer-logo-round/6647827.png"
+        },
+        "vacancies_url": "https://api.hh.ru/vacancies?employer_id=697715",
+        "country_id": 1,
+        "accredited_it_employer": true,
+        "trusted": true
+      },
+      "snippet": {
+        "requirement": "Опыт работы в HR Operations не менее 5 лет в компаниях со штатом от 500 человек. Опыт управления командой от...",
+        "responsibility": "Руководство HR Operations командой (10+ специалистов). Оптимизация и автоматизация HR-процессов с внедрением SLA и инструментов мониторинга и управления..."
+      },
+      "contacts": null,
+      "schedule": {
+        "id": "remote",
+        "name": "Удаленная работа"
+      },
+      "working_days": [],
+      "working_time_intervals": [],
+      "working_time_modes": [],
+      "accept_temporary": false,
+      "fly_in_fly_out_duration": [],
+      "work_format": [
+        {
+          "id": "REMOTE",
+          "name": "Удалённо"
+        },
+        {
+          "id": "HYBRID",
+          "name": "Гибрид"
+        }
+      ],
+      "working_hours": [
+        {
+          "id": "HOURS_8",
+          "name": "8 часов"
+        }
+      ],
+      "work_schedule_by_days": [
+        {
+          "id": "FIVE_ON_TWO_OFF",
+          "name": "5/2"
+        }
+      ],
+      "night_shifts": false,
+      "professional_roles": [
+        {
+          "id": "171",
+          "name": "Руководитель отдела персонала"
+        }
+      ],
+      "accept_incomplete_resumes": false,
+      "experience": {
+        "id": "moreThan6",
+        "name": "Более 6 лет"
+      },
+      "employment": {
+        "id": "full",
+        "name": "Полная занятость"
+      },
+      "employment_form": {
+        "id": "FULL",
+        "name": "Полная"
+      },
+      "internship": false,
+      "adv_response_url": null,
+      "is_adv_vacancy": false,
+      "adv_context": null
+    },
+    {
+      "id": "121469750",
+      "premium": false,
+      "name": "Office Admin Manager",
+      "department": null,
+      "has_test": false,
+      "response_letter_required": false,
+      "area": {
+        "id": "1",
+        "name": "Москва",
+        "url": "https://api.hh.ru/areas/1"
+      },
+      "salary": {
+        "from": null,
+        "to": 190000,
+        "currency": "RUR",
+        "gross": false
+      },
+      "salary_range": {
+        "from": null,
+        "to": 190000,
+        "currency": "RUR",
+        "gross": false,
+        "mode": {
+          "id": "MONTH",
+          "name": "За месяц"
+        },
+        "frequency": null
+      },
+      "type": {
+        "id": "open",
+        "name": "Открытая"
+      },
+      "address": null,
+      "response_url": null,
+      "sort_point_distance": null,
+      "published_at": "2025-11-10T12:31:52+0300",
+      "created_at": "2025-11-10T12:31:52+0300",
+      "archived": false,
+      "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=121469750",
+      "show_logo_in_search": null,
+      "show_contacts": false,
+      "insider_interview": null,
+      "url": "https://api.hh.ru/vacancies/121469750?host=hh.ru",
+      "alternate_url": "https://hh.ru/vacancy/121469750",
+      "relations": [],
+      "employer": {
+        "id": "132302",
+        "name": "Alta Personnel",
+        "url": "https://api.hh.ru/employers/132302",
+        "alternate_url": "https://hh.ru/employer/132302",
+        "logo_urls": {
+          "original": "https://img.hhcdn.ru/employer-logo-original/1394345.png",
+          "90": "https://img.hhcdn.ru/employer-logo/7197163.png",
+          "240": "https://img.hhcdn.ru/employer-logo/7197164.png"
+        },
+        "vacancies_url": "https://api.hh.ru/vacancies?employer_id=132302",
+        "country_id": 1,
+        "accredited_it_employer": false,
+        "trusted": true
+      },
+      "snippet": {
+        "requirement": "Релевантный опыт работы на схожих позициях, предпочтительно в международной компании. Опыт управления сложными проектами, которые связаны с недвижимостью, объектами или...",
+        "responsibility": "Управление арендой офиса: Управление всеми аспектами аренды офиса, включая, продление аренды, переговоры с арендодателями, определение и оценку альтернативных мест размещения. "
+      },
+      "contacts": null,
+      "schedule": {
+        "id": "fullDay",
+        "name": "Полный день"
+      },
+      "working_days": [],
+      "working_time_intervals": [],
+      "working_time_modes": [],
+      "accept_temporary": false,
+      "fly_in_fly_out_duration": [],
+      "work_format": [
+        {
+          "id": "ON_SITE",
+          "name": "На месте работодателя"
+        }
+      ],
+      "working_hours": [
+        {
+          "id": "HOURS_8",
+          "name": "8 часов"
+        }
+      ],
+      "work_schedule_by_days": [
+        {
+          "id": "FIVE_ON_TWO_OFF",
+          "name": "5/2"
+        }
+      ],
+      "night_shifts": false,
+      "professional_roles": [
+        {
+          "id": "88",
+          "name": "Офис-менеджер"
+        }
+      ],
+      "accept_incomplete_resumes": true,
+      "experience": {
+        "id": "between3And6",
+        "name": "От 3 до 6 лет"
+      },
+      "employment": {
+        "id": "full",
+        "name": "Полная занятость"
+      },
+      "employment_form": {
+        "id": "FULL",
+        "name": "Полная"
+      },
+      "internship": false,
+      "adv_response_url": null,
+      "is_adv_vacancy": false,
+      "adv_context": null
+    },
+    {
+      "id": "127027981",
+      "premium": false,
+      "name": "C&B and HR admin manager",
+      "department": null,
+      "has_test": false,
+      "response_letter_required": false,
+      "area": {
+        "id": "1",
+        "name": "Москва",
+        "url": "https://api.hh.ru/areas/1"
+      },
+      "salary": null,
+      "salary_range": null,
+      "type": {
+        "id": "open",
+        "name": "Открытая"
+      },
+      "address": null,
+      "response_url": null,
+      "sort_point_distance": null,
+      "published_at": "2025-10-27T18:56:31+0300",
+      "created_at": "2025-10-27T18:56:31+0300",
+      "archived": false,
+      "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=127027981",
+      "branding": {
+        "type": "MAKEUP",
+        "tariff": null
+      },
+      "show_logo_in_search": true,
+      "show_contacts": false,
+      "insider_interview": null,
+      "url": "https://api.hh.ru/vacancies/127027981?host=hh.ru",
+      "alternate_url": "https://hh.ru/vacancy/127027981",
+      "relations": [],
+      "employer": {
+        "id": "247118",
+        "name": "ГЕТ ЭКСПЕРТС РЕКРУТМЕНТ",
+        "url": "https://api.hh.ru/employers/247118",
+        "alternate_url": "https://hh.ru/employer/247118",
+        "logo_urls": {
+          "original": "https://img.hhcdn.ru/employer-logo-original/1391085.png",
+          "90": "https://img.hhcdn.ru/employer-logo/7184127.png",
+          "240": "https://img.hhcdn.ru/employer-logo/7184128.png"
+        },
+        "vacancies_url": "https://api.hh.ru/vacancies?employer_id=247118",
+        "country_id": 1,
+        "accredited_it_employer": false,
+        "trusted": true
+      },
+      "snippet": {
+        "requirement": "Опыт работы в международной фармацевтической или FMCG компании. Практический опыт реализации полного цикла компенсаций и льгот. Опыт комплексного сопровождения payroll...",
+        "responsibility": "Управление компенсационным циклом, бюджетированием и всеми локальными циклами. Обеспечение репортинга и анализа по блоку компенсаций и льгот. Управление аутсорсом по..."
+      },
+      "contacts": null,
+      "schedule": {
+        "id": "fullDay",
+        "name": "Полный день"
+      },
+      "working_days": [],
+      "working_time_intervals": [],
+      "working_time_modes": [],
+      "accept_temporary": false,
+      "fly_in_fly_out_duration": [],
+      "work_format": [
+        {
+          "id": "ON_SITE",
+          "name": "На месте работодателя"
+        }
+      ],
+      "working_hours": [
+        {
+          "id": "HOURS_8",
+          "name": "8 часов"
+        }
+      ],
+      "work_schedule_by_days": [
+        {
+          "id": "FIVE_ON_TWO_OFF",
+          "name": "5/2"
+        }
+      ],
+      "night_shifts": false,
+      "professional_roles": [
+        {
+          "id": "38",
+          "name": "Директор по персоналу (HRD)"
+        }
+      ],
+      "accept_incomplete_resumes": false,
+      "experience": {
+        "id": "between3And6",
+        "name": "От 3 до 6 лет"
+      },
+      "employment": {
+        "id": "full",
+        "name": "Полная занятость"
+      },
+      "employment_form": {
+        "id": "FULL",
+        "name": "Полная"
+      },
+      "internship": false,
+      "adv_response_url": null,
+      "is_adv_vacancy": false,
+      "adv_context": null
+    },
+    {
+      "id": "127349650",
+      "premium": false,
+      "name": "Инженер по мониторингу (Middle Linux Admin)",
+      "department": null,
+      "has_test": false,
+      "response_letter_required": false,
+      "area": {
+        "id": "1",
+        "name": "Москва",
+        "url": "https://api.hh.ru/areas/1"
+      },
+      "salary": null,
+      "salary_range": null,
+      "type": {
+        "id": "open",
+        "name": "Открытая"
+      },
+      "address": null,
+      "response_url": null,
+      "sort_point_distance": null,
+      "published_at": "2025-11-21T09:56:34+0300",
+      "created_at": "2025-11-21T09:56:34+0300",
+      "archived": false,
+      "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=127349650",
+      "show_logo_in_search": null,
+      "show_contacts": true,
+      "insider_interview": null,
+      "url": "https://api.hh.ru/vacancies/127349650?host=hh.ru",
+      "alternate_url": "https://hh.ru/vacancy/127349650",
+      "relations": [],
+      "employer": {
+        "id": "4670278",
+        "name": "Продамус",
+        "url": "https://api.hh.ru/employers/4670278",
+        "alternate_url": "https://hh.ru/employer/4670278",
+        "logo_urls": {
+          "original": "https://img.hhcdn.ru/employer-logo-original-round/3407004.png",
+          "90": "https://img.hhcdn.ru/employer-logo-round/3407005.png",
+          "240": "https://img.hhcdn.ru/employer-logo-round/3407006.png"
+        },
+        "vacancies_url": "https://api.hh.ru/vacancies?employer_id=4670278",
+        "country_id": 1,
+        "accredited_it_employer": true,
+        "trusted": true
+      },
+      "snippet": {
+        "requirement": "Уверенные знания Linux (администрирование, мониторинг, диагностика, автоматизация) — уровень Middle. Опыт работы с системами мониторинга: Zabbix, Prometheus, Grafana, ELK-stack. ",
+        "responsibility": "Администрирование и развитие систем мониторинга: Zabbix, Prometheus, ELK (Elasticsearch, Logstash, Kibana), Grafana. Настройка метрик, дашбордов и алертов для сервисов и..."
+      },
+      "contacts": null,
+      "schedule": {
+        "id": "remote",
+        "name": "Удаленная работа"
+      },
+      "working_days": [],
+      "working_time_intervals": [],
+      "working_time_modes": [],
+      "accept_temporary": false,
+      "fly_in_fly_out_duration": [],
+      "work_format": [
+        {
+          "id": "REMOTE",
+          "name": "Удалённо"
+        }
+      ],
+      "working_hours": [
+        {
+          "id": "HOURS_8",
+          "name": "8 часов"
+        }
+      ],
+      "work_schedule_by_days": [
+        {
+          "id": "FIVE_ON_TWO_OFF",
+          "name": "5/2"
+        }
+      ],
+      "night_shifts": false,
+      "professional_roles": [
+        {
+          "id": "160",
+          "name": "DevOps-инженер"
+        }
+      ],
+      "accept_incomplete_resumes": false,
+      "experience": {
+        "id": "between3And6",
+        "name": "От 3 до 6 лет"
+      },
+      "employment": {
+        "id": "full",
+        "name": "Полная занятость"
+      },
+      "employment_form": {
+        "id": "FULL",
+        "name": "Полная"
+      },
+      "internship": false,
+      "adv_response_url": null,
+      "is_adv_vacancy": false,
+      "adv_context": null
+    },
+    {
+      "id": "127860179",
+      "premium": false,
+      "name": "Database Administrator (Greenplum/PostgreSQL) / Linux Admin",
+      "department": null,
+      "has_test": true,
+      "response_letter_required": false,
+      "area": {
+        "id": "2",
+        "name": "Санкт-Петербург",
+        "url": "https://api.hh.ru/areas/2"
+      },
+      "salary": null,
+      "salary_range": null,
+      "type": {
+        "id": "open",
+        "name": "Открытая"
+      },
+      "address": {
+        "city": "Санкт-Петербург",
+        "street": null,
+        "building": null,
+        "lat": 59.93895,
+        "lng": 30.31564,
+        "description": null,
+        "raw": "Санкт-Петербург",
+        "metro": null,
+        "metro_stations": [],
+        "id": "19855646"
+      },
+      "response_url": null,
+      "sort_point_distance": null,
+      "published_at": "2025-11-19T10:24:10+0300",
+      "created_at": "2025-11-19T10:24:10+0300",
+      "archived": false,
+      "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=127860179",
+      "show_logo_in_search": null,
+      "show_contacts": false,
+      "insider_interview": null,
+      "url": "https://api.hh.ru/vacancies/127860179?host=hh.ru",
+      "alternate_url": "https://hh.ru/vacancy/127860179",
+      "relations": [],
+      "employer": {
+        "id": "1876072",
+        "name": "Quadcode",
+        "url": "https://api.hh.ru/employers/1876072",
+        "alternate_url": "https://hh.ru/employer/1876072",
+        "logo_urls": {
+          "original": "https://img.hhcdn.ru/employer-logo-original-round/3975362.png",
+          "90": "https://img.hhcdn.ru/employer-logo-round/3975363.png",
+          "240": "https://img.hhcdn.ru/employer-logo-round/3975364.png"
+        },
+        "vacancies_url": "https://api.hh.ru/vacancies?employer_id=1876072",
+        "country_id": 1,
+        "accredited_it_employer": true,
+        "trusted": true
+      },
+      "snippet": {
+        "requirement": "Опыт работы системным администратором Linux от 3 лет. Глубокие знания Linux-систем и принципов их администрирования. Опыт администрирования PostgreSQL, Greenplum...",
+        "responsibility": "Администрирование кластеров Greenplum и серверов PostgreSQL. Администрирование серверов на базе Linux (Ubuntu). Поддержка и администрирование баз данных: KeyDB, ClickHouse, Kafka. "
+      },
+      "contacts": null,
+      "schedule": {
+        "id": "remote",
+        "name": "Удаленная работа"
+      },
+      "working_days": [],
+      "working_time_intervals": [],
+      "working_time_modes": [],
+      "accept_temporary": false,
+      "fly_in_fly_out_duration": [],
+      "work_format": [
+        {
+          "id": "REMOTE",
+          "name": "Удалённо"
+        },
+        {
+          "id": "HYBRID",
+          "name": "Гибрид"
+        }
+      ],
+      "working_hours": [
+        {
+          "id": "HOURS_8",
+          "name": "8 часов"
+        }
+      ],
+      "work_schedule_by_days": [
+        {
+          "id": "FIVE_ON_TWO_OFF",
+          "name": "5/2"
+        }
+      ],
+      "night_shifts": false,
+      "professional_roles": [
+        {
+          "id": "113",
+          "name": "Системный администратор"
+        }
+      ],
+      "accept_incomplete_resumes": false,
+      "experience": {
+        "id": "between3And6",
+        "name": "От 3 до 6 лет"
+      },
+      "employment": {
+        "id": "full",
+        "name": "Полная занятость"
+      },
+      "employment_form": {
+        "id": "FULL",
+        "name": "Полная"
+      },
+      "internship": false,
+      "adv_response_url": null,
+      "is_adv_vacancy": false,
+      "adv_context": null
+    },
+    {
+      "id": "127776588",
+      "premium": false,
+      "name": "Airbnb admin - guest support agent",
+      "department": null,
+      "has_test": false,
+      "response_letter_required": true,
+      "area": {
+        "id": "2",
+        "name": "Санкт-Петербург",
+        "url": "https://api.hh.ru/areas/2"
+      },
+      "salary": {
+        "from": 1000,
+        "to": 1300,
+        "currency": "USD",
+        "gross": false
+      },
+      "salary_range": {
+        "from": 1000,
+        "to": 1300,
+        "currency": "USD",
+        "gross": false,
+        "mode": {
+          "id": "MONTH",
+          "name": "За месяц"
+        },
+        "frequency": {
+          "id": "TWICE_PER_MONTH",
+          "name": "Два раза в месяц"
+        }
+      },
+      "type": {
+        "id": "open",
+        "name": "Открытая"
+      },
+      "address": null,
+      "response_url": null,
+      "sort_point_distance": null,
+      "published_at": "2025-11-17T12:24:23+0300",
+      "created_at": "2025-11-17T12:24:23+0300",
+      "archived": false,
+      "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=127776588",
+      "show_logo_in_search": null,
+      "show_contacts": false,
+      "insider_interview": null,
+      "url": "https://api.hh.ru/vacancies/127776588?host=hh.ru",
+      "alternate_url": "https://hh.ru/vacancy/127776588",
+      "relations": [],
+      "employer": {
+        "id": "10760540",
+        "name": "Good Stay Holiday Homes",
+        "url": "https://api.hh.ru/employers/10760540",
+        "alternate_url": "https://hh.ru/employer/10760540",
+        "logo_urls": {
+          "original": "https://img.hhcdn.ru/employer-logo-original/1427449.png",
+          "90": "https://img.hhcdn.ru/employer-logo/7329445.png",
+          "240": "https://img.hhcdn.ru/employer-logo/7329446.png"
+        },
+        "vacancies_url": "https://api.hh.ru/vacancies?employer_id=10760540",
+        "country_id": 1,
+        "accredited_it_employer": false,
+        "trusted": true
+      },
+      "snippet": {
+        "requirement": "Опыт работы с платформой Airbnb (обязательно!) в управлении более 20 квартир более 1 года. Свободный разговорный английский на уровне носителя. ",
+        "responsibility": "Общение с клиентами, помощь с решением проблем. Помощь с администрированием квартир на Airbnb. Занесение проблем и резерваций в систему CRM."
+      },
+      "contacts": null,
+      "schedule": {
+        "id": "remote",
+        "name": "Удаленная работа"
+      },
+      "working_days": [],
+      "working_time_intervals": [],
+      "working_time_modes": [],
+      "accept_temporary": true,
+      "fly_in_fly_out_duration": [],
+      "work_format": [
+        {
+          "id": "REMOTE",
+          "name": "Удалённо"
+        }
+      ],
+      "working_hours": [
+        {
+          "id": "HOURS_8",
+          "name": "8 часов"
+        }
+      ],
+      "work_schedule_by_days": [
+        {
+          "id": "SIX_ON_ONE_OFF",
+          "name": "6/1"
+        },
+        {
+          "id": "FIVE_ON_TWO_OFF",
+          "name": "5/2"
+        }
+      ],
+      "night_shifts": false,
+      "professional_roles": [
+        {
+          "id": "40",
+          "name": "Другое"
+        }
+      ],
+      "accept_incomplete_resumes": false,
+      "experience": {
+        "id": "between1And3",
+        "name": "От 1 года до 3 лет"
+      },
+      "employment": {
+        "id": "full",
+        "name": "Полная занятость"
+      },
+      "employment_form": {
+        "id": "FULL",
+        "name": "Полная"
+      },
+      "internship": false,
+      "adv_response_url": null,
+      "is_adv_vacancy": false,
+      "adv_context": null
+    }
+  ],
+  "vacancy_title": "admin"
+}
