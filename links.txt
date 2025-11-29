@@ -28,6 +28,7 @@ mechatroner.rainbow-csv
 https://code-basics.com/ru
 https://ru.pythontutor.ru/problem/old/1
 https://education.yandex.ru/handbook/python
+https://stepik.org/catalog/131?free=true
 https://education.yandex.ru/handbook/algorithms
 https://leetcode.com/
 https://chromewebstore.google.com/detail/leetcode-to-russian/omcekcjkhekdifemjbknfbijiabbjhmm?hl=ru&pli=1
