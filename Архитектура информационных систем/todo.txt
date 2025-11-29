@@ -1,0 +1,2 @@
+развернуть fast api
+https://fastapi.tiangolo.com/tutorial/first-steps/
