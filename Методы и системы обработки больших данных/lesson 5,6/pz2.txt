@@ -39,3 +39,10 @@ CREATE TABLE sales_2023 (
     product VARCHAR(50),
     quantity INT
 );
+
+SELECT s22.id, s22.product
+FROM sales_2022 s22
+LEFT JOIN sales_2023 s23 ON s22.id = s23.id
+WHERE s23.id IS NULL
+   OR (s22.quantity < 10 AND s23.quantity < 10)
+ORDER BY s22.id;
