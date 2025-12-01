@@ -70,3 +70,16 @@ INSERT INTO sales VALUES
 (28, 2, 39),
 (29, 1, 74),
 (30, 10, 30);
+
+РЕШЕНИЕ:
+
+SELECT
+  c.name,
+  COUNT(*)                          AS orders_count,
+  SUM(s.total_price)               AS total,
+  ROUND(AVG(s.total_price), 2)     AS average_price
+FROM customers c
+JOIN sales s ON s.customer_id = c.id
+GROUP BY c.id, c.name
+HAVING AVG(s.total_price) > (SELECT AVG(total_price) FROM sales)
+ORDER BY average_price DESC;
