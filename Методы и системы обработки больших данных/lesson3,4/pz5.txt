@@ -70,3 +70,26 @@ INSERT INTO sales VALUES
 (28, 2, 39),
 (29, 1, 74),
 (30, 10, 30);
+
+WITH customer_stats AS (
+    SELECT 
+        c.name,
+        COUNT(s.id) AS orders_count,
+        SUM(s.total_price) AS total,
+        AVG(s.total_price) AS avg_price
+    FROM customers c
+    JOIN sales s ON c.id = s.customer_id
+    GROUP BY c.id
+),
+overall_avg AS (
+    SELECT AVG(total_price) AS avg_all
+    FROM sales
+)
+SELECT
+    name,
+    orders_count,
+    total,
+    ROUND(avg_price, 2) AS average_price
+FROM customer_stats, overall_avg
+WHERE avg_price > avg_all
+ORDER BY average_price DESC;

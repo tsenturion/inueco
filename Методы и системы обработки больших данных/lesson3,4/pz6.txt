@@ -35,3 +35,11 @@ INSERT INTO teams VALUES
 (2, 'Реал Мадрид'),
 (3, 'Уральские звёзды'),
 (4, 'Газмяс');
+
+SELECT 
+    t1.name AS home_team,
+    t2.name AS away_team
+FROM teams t1
+CROSS JOIN teams t2
+WHERE t1.id <> t2.id
+ORDER BY home_team ASC, away_team ASC;
