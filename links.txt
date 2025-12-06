@@ -33,6 +33,7 @@ https://education.yandex.ru/handbook/algorithms
 https://leetcode.com/
 https://chromewebstore.google.com/detail/leetcode-to-russian/omcekcjkhekdifemjbknfbijiabbjhmm?hl=ru&pli=1
 https://yandex.cloud/ru/training/training-pro
+https://labs.play-with-docker.com/
 
 полезные инструменты
 https://app.diagrams.net/
