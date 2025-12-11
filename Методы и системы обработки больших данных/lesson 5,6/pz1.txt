@@ -114,3 +114,28 @@ INSERT INTO employees (id, full_name, is_active) VALUES (
 INSERT INTO employees (id, full_name, is_active) VALUES (
     3, 'Charlie Brown', TRUE
 );
+
+
+SELECT 
+    s.full_name,
+    'student' AS role
+FROM students s
+WHERE s.points >= 2000
+
+UNION ALL
+
+SELECT 
+    t.name AS full_name,
+    'teacher' AS role
+FROM teachers t
+WHERE t.created_at < '2023-01-01'
+
+UNION ALL
+
+SELECT 
+    e.full_name,
+    'employee' AS role
+FROM employees e
+WHERE e.is_active = TRUE
+
+ORDER BY full_name;

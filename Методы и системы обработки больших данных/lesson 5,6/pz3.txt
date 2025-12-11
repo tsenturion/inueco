@@ -275,3 +275,27 @@ INSERT INTO visits (user_id, visit_date) VALUES
 (50,'2023-02-27T13:35:09'),
 (50,'2023-02-24T08:39:55'),
 (50,'2023-03-21T06:42:45');
+
+WITH months AS (
+    SELECT
+        user_id,
+        CASE 
+            WHEN visit_date >= '2023-01-01' AND visit_date < '2023-02-01' THEN 'jan'
+            WHEN visit_date >= '2023-02-01' AND visit_date < '2023-03-01' THEN 'feb'
+            WHEN visit_date >= '2023-03-01' AND visit_date < '2023-04-01' THEN 'mar'
+        END AS month
+    FROM visits
+),
+agg AS (
+    SELECT 
+        user_id,
+        BOOL_OR(month = 'jan') AS jan,
+        BOOL_OR(month = 'feb') AS feb,
+        BOOL_OR(month = 'mar') AS mar
+    FROM months
+    GROUP BY user_id
+)
+SELECT 
+    COUNT(*) FILTER (WHERE jan AND feb AND mar) AS regulars,
+    COUNT(*) FILTER (WHERE jan AND NOT feb AND NOT mar) AS left_january,
+    COUNT(*) FILTER (WHERE jan AND feb AND NOT mar) AS left_february;
