@@ -15,6 +15,7 @@ https://www.postman.com/downloads/
 pip install -r requirements.txt
 
 расширения
+donjayamanne.python-extension-pack
 ms-python.python
 Codeium.codeium
 shd101wyy.markdown-preview-enhanced
@@ -23,6 +24,7 @@ mintlify.document
 SonarSource.sonarlint-vscode
 https://gigacode.ru/
 mechatroner.rainbow-csv
+MS-CEINTL.vscode-language-pack-ru
 
 для обучения
 https://code-basics.com/ru
@@ -53,3 +55,4 @@ hh.ru
 документация
 https://docs.astral.sh/ruff/
 https://docs.python.org/3/library/index.html
+https://habr.com/ru/articles/959760/
