@@ -15,6 +15,7 @@ https://www.postman.com/downloads/
 pip install -r requirements.txt
 
 расширения
+donjayamanne.python-extension-pack
 ms-python.python
 Codeium.codeium
 shd101wyy.markdown-preview-enhanced
@@ -23,14 +24,19 @@ mintlify.document
 SonarSource.sonarlint-vscode
 https://gigacode.ru/
 mechatroner.rainbow-csv
+MS-CEINTL.vscode-language-pack-ru
+ms-toolsai.jupyter
 
 для обучения
 https://code-basics.com/ru
 https://ru.pythontutor.ru/problem/old/1
 https://education.yandex.ru/handbook/python
+https://stepik.org/catalog/131?free=true
 https://education.yandex.ru/handbook/algorithms
 https://leetcode.com/
 https://chromewebstore.google.com/detail/leetcode-to-russian/omcekcjkhekdifemjbknfbijiabbjhmm?hl=ru&pli=1
+https://yandex.cloud/ru/training/training-pro
+https://labs.play-with-docker.com/
 
 полезные инструменты
 https://app.diagrams.net/
@@ -50,3 +56,4 @@ hh.ru
 документация
 https://docs.astral.sh/ruff/
 https://docs.python.org/3/library/index.html
+https://habr.com/ru/articles/959760/
