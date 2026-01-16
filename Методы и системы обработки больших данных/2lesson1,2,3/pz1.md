@@ -2,7 +2,7 @@
 
 **Тема:** Работа с табличными данными в pandas. Первичный анализ и индексация
 **Датасет:** `insurance.csv` (Kaggle, медицинские страховые расходы) https://www.kaggle.com/datasets/mirichoi0218/insurance 
-
+https://www.kaggle.com/datasets/mosapabdelghany/medical-insurance-cost-dataset
 ### Цель практической работы
 
 Ваша задача —  поработать с `DataFrame`: загружать данные, понимать их структуру, обращаться к строкам и столбцам, работать с индексами и выполнять первичный осмотр датасета.
