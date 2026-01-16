@@ -3,7 +3,6 @@ def divide(a, b):
         raise ValueError("Деление на ноль")
     else:
         return a / b
-
 def power(base, exponent):
    
     return base ** exponent

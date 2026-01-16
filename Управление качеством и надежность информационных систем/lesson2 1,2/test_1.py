@@ -56,6 +56,5 @@ class TestPower(unittest.TestCase):
         self.assertAlmostEqual(power(0.5, 2), 0.25)
         self.assertAlmostEqual(power(1.5, 3), 3.375)
 
-
 if __name__ == '__main__':
     unittest.main()
