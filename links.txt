@@ -1,7 +1,7 @@
 установка
 https://code.visualstudio.com/download
     В свою папку
-https://www.python.org/downloads/
+3.13.7
 https://www.python.org/downloads/windows/
     В свою папку
     убрать галочку от админа
