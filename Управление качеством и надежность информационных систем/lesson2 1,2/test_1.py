@@ -13,5 +13,6 @@ class TestDivide(unittest.TestCase):
 
 #протестировать функцию pow
 
+
 if __name__ == '__main__':
     unittest.main()
