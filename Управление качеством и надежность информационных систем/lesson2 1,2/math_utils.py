@@ -4,8 +4,11 @@ def divide(a, b):
     else:
         return a / b
 
-#добавить функцию для возведения в степень 
-import math
-
-def pow(a , b):
-    return a ** b
+def power(base, exponent):
+    """Возведение в степень"""
+    if isinstance(exponent, int) and exponent >= 0:
+        result = 1
+        for _ in range(exponent):
+            result *= base
+        return result
+    return pow(base, exponent)

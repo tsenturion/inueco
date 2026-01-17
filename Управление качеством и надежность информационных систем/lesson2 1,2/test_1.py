@@ -1,6 +1,5 @@
 import unittest
-from math_utils import divide
-
+from math_utils import divide, power  
 
 class TestDivide(unittest.TestCase):
     def test_correct_division(self):
@@ -11,11 +10,18 @@ class TestDivide(unittest.TestCase):
         with self.assertRaises(ValueError):
             divide(10, 0)
 
-#протестировать функцию pow
-class TestPow(unittest.TestCase):
-    def test_correct_division(self):
-        result = pow (2, 5)
+class TestPower(unittest.TestCase):
+    def test_correct_power(self):  
+        result = power(2, 5)
         self.assertEqual(result, 32)
+    
+    def test_power_zero_exponent(self):
+        result = power(5, 0)
+        self.assertEqual(result, 1)
+    
+    def test_power_negative_exponent(self):
+        result = power(2, -2)
+        self.assertEqual(result, 0.25)
 
-if __name__ == '__main__':
+if __name__ == '__main__':  
     unittest.main()
