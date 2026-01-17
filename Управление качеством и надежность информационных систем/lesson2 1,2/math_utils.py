@@ -5,3 +5,7 @@ def divide(a, b):
         return a / b
 
 #добавить функцию для возведения в степень 
+import math
+
+result=math.pow(a,b)
+print(result)
