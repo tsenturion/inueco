@@ -7,5 +7,5 @@ def divide(a, b):
 #добавить функцию для возведения в степень 
 import math
 
-result=math.pow(a,b)
-print(result)
+def pow(a , b):
+    return a ** b

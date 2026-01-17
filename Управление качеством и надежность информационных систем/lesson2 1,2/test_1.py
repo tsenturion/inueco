@@ -12,7 +12,10 @@ class TestDivide(unittest.TestCase):
             divide(10, 0)
 
 #протестировать функцию pow
-
+class TestPow(unittest.TestCase):
+    def test_correct_division(self):
+        result = pow (2, 5)
+        self.assertEqual(result, 32)
 
 if __name__ == '__main__':
     unittest.main()
