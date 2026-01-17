@@ -1,5 +1,6 @@
 import unittest
 from math_utils import divide
+from math_utils import pow
 
 
 class TestDivide(unittest.TestCase):
