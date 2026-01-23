@@ -50,3 +50,37 @@ class TestListExample(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)
+    
+    
+def test_user_creation(self):
+    # Подготовка
+    db_connection = connect_to_database()
+    create_test_tables(db_connection)
+    cleanup_old_data(db_connection)
+    
+    # Сам тест
+    create_user(db_connection, "test_user")
+    user = get_user(db_connection, "test_user")
+    
+    # Проверка
+    self.assertIsNotNone(user)
+    
+    # Очистка
+    delete_user(db_connection, "test_user")
+    drop_test_tables(db_connection)
+    db_connection.close()
+    
+    
+    
+def setUp(self):
+    self.db_connection = connect_to_database()
+    create_test_tables(self.db_connection)
+    
+def tearDown(self):
+    drop_test_tables(self.db_connection)
+    self.db_connection.close()
+    
+def test_user_creation(self):
+    create_user(self.db_connection, "test_user")
+    user = get_user(self.db_connection, "test_user")
+    self.assertIsNotNone(user)
