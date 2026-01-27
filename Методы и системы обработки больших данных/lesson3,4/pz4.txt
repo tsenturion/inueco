@@ -152,13 +152,19 @@ INSERT INTO orders VALUES
 (50, 4, 4);
 
 SELECT
-  c.customer_name,
-  TIMESTAMPDIFF(YEAR, c.birth_date, CURDATE()) AS age,
-  COUNT(*) AS purchase_count
+    c.customer_name,
+    EXTRACT(YEAR FROM AGE(c.birth_date)) AS age,
+    COUNT(*) AS purchase_count
 FROM orders o
-JOIN customers c ON c.id = o.customer_id
-JOIN products  p ON p.id = o.product_id
+JOIN products p
+    ON o.product_id = p.id
+JOIN customers c
+    ON o.customer_id = c.id
 WHERE p.title = 'Crab'
-GROUP BY c.id, c.customer_name, c.birth_date
-ORDER BY purchase_count DESC, c.customer_name ASC
+GROUP BY
+    c.customer_name,
+    c.birth_date
+ORDER BY
+    purchase_count DESC,
+    c.customer_name ASC
 LIMIT 3;

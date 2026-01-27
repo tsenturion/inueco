@@ -226,10 +226,22 @@ INSERT INTO movies (id, title, genre, rating, duration) VALUES
 
 Решение
 
-SELECT title FROM movies
-WHERE rating is NULL AND genre = 'Action' or rating > 80 And genre = 'Documentary'
+SELECT
+    title,
+    rating
+FROM movies
+WHERE
+    (
+        genre = 'Action'
+        AND rating IS NULL
+    )
+    OR
+    (
+        genre = 'Documentary'
+        AND rating >= 80
+    )
 ORDER BY
-rating is NULL ASC,
-rating DESC,
-title ASC
+    rating IS NOT NULL,   
+    rating DESC,         
+    title ASC            
 LIMIT 7;
