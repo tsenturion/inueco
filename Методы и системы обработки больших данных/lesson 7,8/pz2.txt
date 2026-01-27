@@ -88,48 +88,35 @@ INSERT INTO sales (product_id, product_name, sales_amount) VALUES
 (49,'Wireless Headphones',6548),
 (50,'Sandwich Maker',955);
 
-SELECT
-a.category,
-MIN(CASE WHEN t.sales_amount = a.max_sales THEN t.product_name END) AS highest_selling_product,
-a.max_sales AS highest_sales_amount,
-MIN(CASE WHEN t.sales_amount = a.min_sales THEN t.product_name END) AS lowest_selling_product,
-a.min_sales AS lowest_sales_amount
-FROM
-(
-SELECT category, MAX(sales_amount) AS max_sales, MIN(sales_amount) AS min_sales
-FROM (
-SELECT CEIL(rn*4/n) AS category, product_name, sales_amount
-FROM (
-SELECT
-@rn:=@rn+1 AS rn,
-s.product_name,
-s.sales_amount,
-cnt.n
-FROM (SELECT product_name, sales_amount
-FROM sales
-ORDER BY sales_amount DESC, product_name ASC) AS s
-CROSS JOIN (SELECT @rn:=0) AS v
-CROSS JOIN (SELECT COUNT(*) AS n FROM sales) AS cnt
-) AS ranked
-) AS bucketed
-GROUP BY category
-) AS a
-JOIN
-(
-SELECT CEIL(rn*4/n) AS category, product_name, sales_amount
-FROM (
-SELECT
-@rn2:=@rn2+1 AS rn,
-s.product_name,
-s.sales_amount,
-cnt.n
-FROM (SELECT product_name, sales_amount
-FROM sales
-ORDER BY sales_amount DESC, product_name ASC) AS s
-CROSS JOIN (SELECT @rn2:=0) AS v2
-CROSS JOIN (SELECT COUNT(*) AS n FROM sales) AS cnt
-) AS ranked2
-) AS t
-ON t.category = a.category
-GROUP BY a.category, a.max_sales, a.min_sales
-ORDER BY a.category;
+WITH ranked_sales AS (
+    SELECT
+        *,
+        NTILE(4) OVER (ORDER BY sales_amount DESC) AS category
+    FROM sales
+),
+category_summary AS (
+    SELECT
+        category,
+        FIRST_VALUE(product_name) OVER (PARTITION BY category ORDER BY sales_amount DESC) AS highest_selling_product,
+        FIRST_VALUE(sales_amount) OVER (PARTITION BY category ORDER BY sales_amount DESC) AS highest_sales_amount,
+        LAST_VALUE(product_name) OVER (
+            PARTITION BY category 
+            ORDER BY sales_amount DESC 
+            ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING
+        ) AS lowest_selling_product,
+        LAST_VALUE(sales_amount) OVER (
+            PARTITION BY category 
+            ORDER BY sales_amount DESC 
+            ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING
+        ) AS lowest_sales_amount
+    FROM ranked_sales
+)
+SELECT DISTINCT
+    category,
+    highest_selling_product,
+    highest_sales_amount,
+    lowest_selling_product,
+    lowest_sales_amount
+FROM category_summary
+ORDER BY category;
+

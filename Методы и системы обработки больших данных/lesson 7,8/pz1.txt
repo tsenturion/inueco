@@ -88,22 +88,19 @@ INSERT INTO sales (product_id, city) VALUES
 (2, 'Abakan');
 
 
-WITH sales_count AS (
-    SELECT 
-        p.id,
+SELECT
+    row_number,
+    name,
+    sales_count_sum
+FROM (
+    SELECT
+        ROW_NUMBER() OVER (ORDER BY COUNT(s.id)) AS row_number,
         p.name,
         COUNT(s.id) AS sales_count_sum
     FROM products p
-    LEFT JOIN sales s ON p.id = s.product_id
+    LEFT JOIN sales s
+        ON s.product_id = p.id
     GROUP BY p.id, p.name
-),
-ranked AS (
-    SELECT
-        ROW_NUMBER() OVER (ORDER BY sales_count_sum ASC) AS row_number,
-        name,
-        sales_count_sum
-    FROM sales_count
-)
-SELECT *
-FROM ranked
+) t
 WHERE row_number = 1;
+
