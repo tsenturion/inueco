@@ -87,3 +87,36 @@ INSERT INTO sales (product_id, product_name, sales_amount) VALUES
 (48,'Fitness Tracker',592),
 (49,'Wireless Headphones',6548),
 (50,'Sandwich Maker',955);
+
+WITH ranked_sales AS (
+    SELECT
+        *,
+        NTILE(4) OVER (ORDER BY sales_amount DESC) AS category
+    FROM sales
+),
+category_summary AS (
+    SELECT
+        category,
+        FIRST_VALUE(product_name) OVER (PARTITION BY category ORDER BY sales_amount DESC) AS highest_selling_product,
+        FIRST_VALUE(sales_amount) OVER (PARTITION BY category ORDER BY sales_amount DESC) AS highest_sales_amount,
+        LAST_VALUE(product_name) OVER (
+            PARTITION BY category 
+            ORDER BY sales_amount DESC 
+            ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING
+        ) AS lowest_selling_product,
+        LAST_VALUE(sales_amount) OVER (
+            PARTITION BY category 
+            ORDER BY sales_amount DESC 
+            ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING
+        ) AS lowest_sales_amount
+    FROM ranked_sales
+)
+SELECT DISTINCT
+    category,
+    highest_selling_product,
+    highest_sales_amount,
+    lowest_selling_product,
+    lowest_sales_amount
+FROM category_summary
+ORDER BY category;
+
