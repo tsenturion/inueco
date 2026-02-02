@@ -4,4 +4,5 @@ def divide(a, b):
     else:
         return a / b
 
-#добавить функцию для возведения в степень 
+def power(a, b):
+    return a ** b
