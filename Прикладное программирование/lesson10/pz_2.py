@@ -76,3 +76,4 @@ cols_to_show = ['name', 'group', 'avg_score', 'level', 'hours', 'passed']
 final_view = rating[cols_to_show].head(5)
 
 print(final_view)
+# test 2
