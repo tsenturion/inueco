@@ -1,0 +1,13 @@
+#1 print('Hello, World!')
+#2 # You know nothing, Jon Snow!
+#3 print('Robert'); print('Stannis'); print('Renly')
+#4 print('What Is Dead May Never Die')
+#5 print('What Is Dead May Never Die')
+#6 print(81 / 9)
+#7 print(6 - (-81))
+#8 print(3**5) ; print(-8/-4)
+#9 print(8 / 2 + 5 - -3 / 2)
+#10 print(70 * (3 + 4) / (8 + 2))
+#11 print(0.39 * 0.22)
+#12 print(5**2-3 * 7)
+#13 print('"Khal Drogo\'s favorite word is "athjahakar""')
