@@ -1,3 +1,16 @@
+SELECT s.full_name, 'student' AS role
+FROM students s
+WHERE s.points >= 2000
+UNION ALL
+SELECT t.name AS full_name, 'teacher' AS role
+FROM teachers t
+WHERE t.created_at < DATE '2023-01-01'
+UNION ALL
+SELECT e.full_name, 'employee' AS role
+FROM employees e
+WHERE e.is_active = TRUE
+ORDER BY full_name;
+
 Бренд менеджер онлайн школы подготовил новый дизайн толстовок и попросил вас собрать список всех, кому его необходимо отправить
 
 Описание таблиц:
