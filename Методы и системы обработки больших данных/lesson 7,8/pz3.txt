@@ -145,3 +145,27 @@ INSERT INTO sales (date, amount) VALUES
 ('2023-04-28', 5453.00),
 ('2023-04-29', 5561.00),
 ('2023-04-30', 4123.00);
+
+SELECT
+month_start AS month,
+MIN(dt) AS rent_reached_day
+FROM (
+SELECT
+s.date AS dt,
+s.amount,
+s.month_start,
+@cum := IF(@pm = s.month_start, @cum + s.amount, s.amount) AS cum_sum,
+@pm := s.month_start AS _pm
+FROM (
+SELECT
+`date`,
+amount,
+DATE_ADD(DATE_SUB(`date`, INTERVAL DAY(`date`) - 1 DAY), INTERVAL 0 DAY) AS month_start
+FROM sales
+) s
+CROSS JOIN (SELECT @pm := NULL, @cum := 0) vars
+ORDER BY s.date
+) x
+WHERE x.cum_sum > 100000
+GROUP BY month_start
+ORDER BY month_start;
