@@ -50,3 +50,22 @@ euros_count = 100 * 1.25
 dollars_count = euros_count * 6.91
 print(euros_count)
 print(dollars_count)
+# 21 Переменные и конкатенация
+ first_name = 'Joffrey'
+greeting = 'Hello'
+info = 'Here is important information about your account security.'
+intro = 'We couldn\'t verify your mother\'s maiden name.'
+print(greeting + ', ' + first_name + '!')
+print(info + '\n' + intro)
+# 22 Именование переменных
+first_number = 20
+second_number = -100
+print(first_number * second_number)
+# 23 Магические числа
+king = "Rooms in King Balon's Castles:"
+number_of_castles = 6
+rooms_per_castle = 17
+print(king)
+print(number_of_castles * rooms_per_castle)
+# 24 Константы
+DRAGONS_BORN_COUNT = 3
