@@ -15,3 +15,33 @@ print((5**2)-(3*7))
 print('"Khal Drogo\'s favorite word is "athjahakar""')
 #Экранированные последовательности
 print("- Did Joffrey agree?\n- He did. He also said \"I love using \\n\".")
+
+#Конкатенация
+print('Winter ' + 'came ' +  'for ' +  'the ' + 'House ' + 'of ' + 'Frey' + '.')
+#Кодировка
+print(chr(126))
+print(chr(94))
+print(chr(37))
+#Что такое переменная
+motto='What Is Dead May Never Die!'
+print(motto)
+#Изменение переменной
+name = "Brienna"
+name= "anneirB"
+print(name)
+#Выбор имени переменной
+two = 2
+print(two)
+#Выражения в определениях
+euros_count = 100
+dollar = euros_count * 1.25
+print(dollar)
+yuans = dollar * 6.91
+print(yuans)
+#Переменные и конкатенация
+first_name = 'Joffrey'
+greeting = 'Hello'
+print(greeting + ', ' + first_name + '!')
+info = 'Here is important information about your account security.'
+intro = "We couldn't verify your mother's maiden name."
+print(info + '\n' + intro)
