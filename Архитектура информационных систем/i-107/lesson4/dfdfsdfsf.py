@@ -15,3 +15,20 @@ print( (5 **2)-(3* 7))
 print('"Khal Drogo\'s favorite word is "athjahakar""')
 #Экранированные последовательности
 print("- Did Joffrey agree?\n- He did. He also said \"I love using \\n\".")
+#Конкатенация
+print('Winter' + ' ' + 'came' + ' ' + 'for' + ' ' + 'the' + ' ' + 'House' + ' ' + 'of' + ' ' + 'Frey.')
+#Кодировка
+print(chr(126))
+print(chr(94))
+print(chr(37))
+#Что такое переменная
+motto = 'What Is Dead May Never Die!'
+print(motto)
+#Изменение переменной
+name = "Brienna"
+
+# BEGIN (write your solution here)
+name = name[::-1]
+# END
+
+print(name)
