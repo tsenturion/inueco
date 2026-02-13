@@ -45,3 +45,19 @@ print(greeting + ', ' + first_name + '!')
 info = 'Here is important information about your account security.'
 intro = "We couldn't verify your mother's maiden name."
 print(info + '\n' + intro)
+#Именование переменных
+first = 20
+second = -100
+summa = first * second
+print(summa)
+#Магические числа
+king = "Rooms in King Balon's Castles:"
+print(king)
+per_king=6
+per_castle=17
+print(per_king * per_castle)
+#Константы
+DRAGONS_BORN_COUNT = 3
+#Интерполяция
+stark = 'Arya'
+print(f'Do you want to eat, {stark}?')
