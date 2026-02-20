@@ -69,4 +69,3 @@ print(king)
 print(x_6 * x_17)
 # 24 Константы
 DRAGONS_BORN_COUNT = 3
-print(12)
