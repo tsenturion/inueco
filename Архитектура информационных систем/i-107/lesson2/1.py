@@ -16,7 +16,7 @@ print(x * 5)
 print(x / 5)
 print(x // 5)
 print(x % 5)
-
+print(type(x))
 y = 15
 wpmlepmlewwpm = 1232132132132121
 
