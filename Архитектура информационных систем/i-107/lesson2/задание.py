@@ -98,3 +98,13 @@ second_number = -100
 cifra = first_number * second_number
 print(cifra)
 
+#23 Магические числа
+king = "Rooms in King Balon's Castles:"
+
+# BEGIN (write your solution here)
+print(king + "\n" + "102")
+# END
+
+#24 Константы
+DRAGONS_BORN_COUNT = 3
+
