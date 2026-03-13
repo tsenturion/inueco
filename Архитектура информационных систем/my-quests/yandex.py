@@ -148,3 +148,48 @@ else:
     print("Всё наладится!")
 
 #22
+a = int(input())
+b = int(input())
+
+if a > b:
+    print("Петя")
+else:
+    print("Вася")
+
+#23
+p = int(input())
+v = int(input())
+t = int(input())
+
+if p > v and p > t:
+    print("Петя")
+elif v > p and v > t:
+    print("Вася")
+else:
+    print("Толя")
+
+#24
+p = int(input())
+v = int(input())
+t = int(input())
+if p > v and p > t:
+    first = "Петя"
+elif v > p and v > t:
+    first = "Вася"
+else:
+    first = "Толя"
+if p < v and p < t:
+    third = "Петя"
+elif v < p and v < t:
+    third = "Вася"
+else:
+    third = "Толя"
+if p != first and p != third:
+    second = "Петя"
+elif v != first and v != third:
+    second = "Вася"
+else:
+    second = "Толя"
+print(first)
+print(second)
+print(third)
