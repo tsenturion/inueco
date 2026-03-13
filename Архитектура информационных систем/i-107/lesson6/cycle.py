@@ -60,3 +60,25 @@ while True:
 else:
     print('end')
     
+str1 = '1234567890'
+list1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+#индексация с 0
+print(str1[1])
+print(list1[1])
+
+print(str1[0])
+print(list1[0])
+
+print('start')
+#для элементов в последовательности
+#для элементов в строке
+for i in str1:
+    print(i, end=' ')
+    
+print('\n', 'end', sep='')
+
+#для элементов в списке
+for i in list1:
+    print(i, end=' ')
+    
+print('\n','end', sep='')
