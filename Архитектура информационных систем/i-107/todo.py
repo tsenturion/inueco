@@ -1,0 +1,23 @@
+"""
+https://code-basics.com/ru
+все, кроме
+Создание (определение) функций
+Возврат значений
+Необязательные параметры функций
+
+https://ru.pythontutor.ru/problem/old/1
+
+https://education.yandex.ru/handbook/python
+до 3.2 Не включая
+
+https://stepik.org/catalog/131?free=true
+"Поколение Python": курс для начинающих 
+до 13 Функции Не включая
+
+Difficulty is Easy;
+Language is Python3:
+https://leetcode.com/problem-list/array/
+https://leetcode.com/problem-list/string/
+https://leetcode.com/problem-list/math/
+https://leetcode.com/problem-list/counting/
+"""
