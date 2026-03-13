@@ -398,3 +398,182 @@ if abs(x1 - x2) <= 1 and abs(y1 - y2) <= 1:
     print("YES")
 else:
     print("NO")
+
+
+
+
+
+
+
+
+
+
+
+
+
+#1
+print("Привет, Яндекс!")
+#END
+#2
+print("Как Вас зовут?")
+name = input()
+print(f"Привет, {name}")
+#END
+#3
+text = input()
+print(text)
+print(text)
+print(text)
+#END
+#4
+bill = int(input())
+price_per_kg = 38
+weight = 2.5
+cost = price_per_kg * weight
+change = bill - int(cost)
+print(change)
+#END
+#5
+price = int(input())
+weight = int(input())
+money = int(input())
+cost = price * weight
+change = money - cost
+print(change)
+#END
+#6
+product = input()
+price = int(input())
+weight = int(input())
+money = int(input())
+total_cost = price * weight
+change = money - total_cost
+print("Чек")
+print(f"{product} - {weight}кг - {price}руб/кг")
+print(f"Итого: {total_cost}руб")
+print(f"Внесено: {money}руб")
+print(f"Сдача: {change}руб")
+#END
+#7
+n = int(input())
+for i in range(n):
+    print("Купи слона!")
+#END
+#8
+n = int(input())
+text = input()
+for _ in range(n):
+    print(f'Я больше никогда не буду писать "{text}"!')
+#END
+#9
+n = int(input())
+m = int(input())
+result = (n * m) // 2
+print(result)
+#END
+#10
+name = input()
+number = input()
+group = number[0]
+child = number[2]
+bed = number[1]
+print(f"Группа №{group}.")
+print(f"{child}. {name}.")
+print(f"Шкафчик: {number}.")
+print(f"Кроватка: {bed}.")
+#END
+#11
+n = int(input())
+a = n // 1000
+b = (n // 100) % 10
+c = (n // 10) % 10
+d = n % 10
+result = b * 1000 + a * 100 + d * 10 + c
+print(result)
+#END
+#12
+a = int(input())
+b = int(input())
+a1 = a // 100
+a2 = (a // 10) % 10
+a3 = a % 10
+b1 = b // 100
+b2 = (b // 10) % 10
+b3 = b % 10
+r1 = (a1 + b1) % 10
+r2 = (a2 + b2) % 10
+r3 = (a3 + b3) % 10
+result = r1 * 100 + r2 * 10 + r3
+print(result)
+#END
+#13
+n = int(input())
+m = int(input())
+each = m // n
+remain = m % n
+print(each)
+print(remain)
+#END
+#14
+red = int(input())
+green = int(input())
+blue = int(input())
+max_moves = red + blue + 1
+print(max_moves)
+#END
+#15
+n = int(input())
+m = int(input())
+t = int(input())
+total_minutes = n * 60 + m + t
+hours = (total_minutes // 60) % 24
+minutes = total_minutes % 60
+print(f"{hours:02d}:{minutes:02d}")
+#END
+#16
+a = int(input())
+b = int(input())
+c = int(input())
+distance = abs(b - a)
+time = distance / c
+print(f"{time:.2f}")
+#END
+#17
+total = int(input())
+binary = input()
+last = int(binary, 2)
+result = total + last
+print(result)
+#END
+#18
+price_bin = input()
+cash = int(input())
+price_dec = int(price_bin, 2)
+change = cash - price_dec
+print(change)
+#END
+#19
+product = input()
+price = int(input())
+weight = int(input())
+money = int(input())
+total = price * weight
+change = money - total
+print("================Чек================")
+print(f"Товар:{product:>29}")
+print(f"Цена:{weight:>3}кг * {price}руб/кг")
+print(f"Итого:{total:>26}руб")
+print(f"Внесено:{money:>25}руб")
+print(f"Сдача:{change:>26}руб")
+print("===================================")
+#END
+#20
+n = int(input())
+m = int(input())
+k1 = int(input())
+k2 = int(input())
+x = n * (m - k2) // (k1 - k2)
+y = n - x
+print(x, y)
+
+
