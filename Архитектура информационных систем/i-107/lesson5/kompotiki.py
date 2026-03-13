@@ -399,3 +399,184 @@ print(f'Do you want to eat, {stark}?')
 
 
 
+#Яндекс
+
+#1
+print("Привет, Яндекс!")
+
+#2
+print("Как Вас зовут?")
+name = input()
+print(f"Привет, {name}")
+
+
+#3
+text = input()
+print(text)
+print(text)
+print(text)
+
+#4
+banknote = int(input())
+weight = 2.5
+price_per_kg = 38  
+cost = weight * price_per_kg  
+change = banknote - cost
+print(int(change))
+
+
+#5
+price = int(input())    
+weight = int(input())   
+money = int(input())  
+cost = price * weight
+change = money - cost
+print(change)
+
+
+
+
+#6
+product_name = input()         
+price_per_kg = int(input())     
+weight = int(input())             
+money = int(input())            
+total_cost = price_per_kg * weight
+change = money - total_cost
+print("Чек")
+print(f"{product_name} - {weight}кг - {price_per_kg}руб/кг")
+print(f"Итого: {total_cost}руб")
+print(f"Внесено: {money}руб")
+print(f"Сдача: {change}руб")
+
+
+#7
+n = int(input())
+for _ in range(n):
+    print("Купи слона!")
+
+
+
+#8
+n = int(input())
+punishment_text = input()
+for _ in range(n):
+    print(f'Я больше никогда не буду писать "{punishment_text}"!')
+
+
+#9
+n = int(input()) 
+m = int(input())
+result = (n * m) // 2 
+print(result)
+
+
+#10
+name = input()
+locker = input()
+group_num = locker[0]    
+bed_num = locker[1]      
+child_num = locker[2] 
+print(f"Группа №{group_num}.")
+print(f"{child_num}. {name}.")
+print(f"Шкафчик: {locker}.")
+print(f"Кроватка: {bed_num}.")
+
+
+#11
+num = int(input())
+a = num // 1000
+b = (num // 100) % 10
+c = (num // 10) % 10
+d = num % 10
+result = b * 1000 + a * 100 + d * 10 + c
+print(result)
+
+
+#12
+a = int(input())
+b = int(input())
+a1 = a // 100
+a2 = (a // 10) % 10
+a3 = a % 10
+b1 = b // 100
+b2 = (b // 10) % 10
+b3 = b % 10
+r1 = (a1 + b1) % 10
+r2 = (a2 + b2) % 10
+r3 = (a3 + b3) % 10
+result = r1 * 100 + r2 * 10 + r3
+print(result)
+
+
+#13
+n = int(input())
+m = int(input())
+per_child = m // n
+left = m % n
+print(per_child)
+print(left)
+
+#14
+red = int(input())
+green = int(input())
+blue = int(input())
+max_moves = red + blue + 1
+print(max_moves)
+
+
+#15
+n = int(input())
+m = int(input())
+t = int(input())
+total_minutes = n * 60 + m + t
+hours = (total_minutes // 60) % 24
+minutes = total_minutes % 60
+print(f"{hours:02}:{minutes:02}")
+
+
+#16
+a = int(input())
+b = int(input())
+c = int(input())
+distance = abs(a - b)
+time = distance / c
+print(f"{time:.2f}")
+
+
+#17
+total = int(input())
+binary = input()
+last = int(binary, 2)
+print(total + last)
+
+
+#18
+price_bin = input()
+banknote = int(input())
+price = int(price_bin, 2)
+change = banknote - price
+print(change)
+
+
+#19
+
+#20
+
+n = int(input())
+m = int(input())
+k1 = int(input())
+k2 = int(input())
+y = n * (m - k1) // (k2 - k1)
+x = n - y
+print(x, y)
+
+
+
+
+
+
+
+
+
+
