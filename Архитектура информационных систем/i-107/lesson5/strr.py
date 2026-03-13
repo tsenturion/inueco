@@ -18,3 +18,6 @@ print("-" * 40)
 print("213 \n123")
 print("213 \\n 123")
 print("213 \t 123")
+
+c = '1'
+c = c.capitalize
