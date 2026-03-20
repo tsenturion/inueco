@@ -575,5 +575,18 @@ k2 = int(input())
 x = n * (m - k2) // (k1 - k2)
 y = n - x
 print(x, y)
+#END
+#1
+print("Как Вас зовут?")
+name = input()
+print(f"Здравствуйте, {name}!")
+print("Как дела?")
+status = input()
+
+if status == "хорошо":
+    print("Я за Вас рада!")
+elif status == "плохо":
+    print("Всё наладится!")
+#END
 
 
