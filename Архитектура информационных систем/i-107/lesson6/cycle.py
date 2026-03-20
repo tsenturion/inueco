@@ -82,3 +82,39 @@ for i in list1:
     print(i, end=' ')
     
 print('\n','end', sep='')
+
+#range()
+print(range(10))
+print(list(range(10)))
+
+for i in range(10):
+    print(i, 'hello')
+    
+print(list(range(20)))
+print(list(range(5, 20)))
+# начало, конец, шаг
+print(list(range(5, 20, 2)))
+
+# начало, конец, шаг
+print('-' * 50)
+str1 = '0123456789'
+list1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+print(str1)
+print(list1)
+
+#индексация с 0, вывести элемент по индексу
+print(str1[1])
+print(list1[1])
+
+# срез по 4 элемент не включая
+print(str1[:4])
+print(list1[:4])
+
+# срез c 2 по 7 элемент не включая
+print(str1[2:7])
+print(list1[2:7])
+
+# с шагом 2
+print(str1[2:7:2])
+print(list1[2:7:2])
