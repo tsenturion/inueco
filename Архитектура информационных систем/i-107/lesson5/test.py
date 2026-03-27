@@ -46,7 +46,7 @@ print ('"Khal Drogo\'s favorite word is "athjahakar""')
 print ('- Did Joffrey agree?\n- He did. He also said "I love using \\n".')
 
 # 15 Конкатенация
-print ('Winter ' + "came " + "for " + "the " "House " + "of " + "Frey.")
+print ('Winter ' + "came " + "for " + " the " "House " + "of " + "Frey.")
 
 # 16 Кодировка
 print(chr(126))
@@ -108,3 +108,133 @@ print(king + "\n" + "102")
 #24 Константы
 DRAGONS_BORN_COUNT = 3
 
+#25 Интерполяция
+stark = "Arya?"
+
+# BEGIN (write your solution here)
+print(f'Do you want to eat, {stark}')
+# END
+
+#26 Извлечение символов из строки
+name = "Na\nharis"
+
+# BEGIN (write your solution here)
+print(name[7])
+# END
+
+#27 Срезы строк
+value = "Hexlet"
+
+# BEGIN (write your solution here)
+print(value[2:5])
+# END
+
+#28 Multi-line строки
+# BEGIN (write your solution here)
+text = ''' Lannister, Targaryen, Baratheon, Stark, Tyrell...
+they're all just spokes on a wheel.
+This one's on top, then that one's on top, and on and on it spins,
+crushing those on the ground.'''
+# END
+
+print(text)
+
+#29 Типы данных
+print (-0.304)
+
+#30 Сильная (или Строгая) типизация
+print (7 - (-8 - -2))
+
+#31 Неизменяемость примитивных типов
+one = "\nNaharis"
+two = "\nMormont"
+three = "\nSand"
+
+# BEGIN (write your solution here)
+print (one[3] + two[2] + three[4] + two[5] + two[3])
+# END
+
+#32 Явное преобразование типов
+value = 2.9
+
+# BEGIN (write your solution here)
+value = 2.9 - 0.9
+a= int(value)
+print(str(a) + " times")
+# END
+
+#33 Функции и их вызов
+company1 = "Apple"
+company2 = "Samsung"
+
+# BEGIN (write your solution here)
+print (len(company1 + company2))
+# END
+
+#34 Параметры по умолчанию
+number = 10.1234
+
+# BEGIN (write your solution here)
+result= round(number, 2)
+print (result)
+# END
+
+#35 Вызов функции — выражение
+text = "Never forget what you are, for surely the world will not"
+
+# BEGIN (write your solution here)
+result = f'First: {text[0]}\nLast: {text[-1]}'
+print (result)
+# END
+
+#36 Функции с переменным числом параметров
+# BEGIN (write your solution here)
+print (min(3,10,22,-3,0))
+# END
+
+#37 Детерминированность
+# imports are studied on Hexlet
+from random import random
+
+# BEGIN (write your solution here)
+print(round(random()*10))
+# END
+
+#38 Объекты
+text = "a MIND needs Books as a Sword needS a WHETSTONE."
+
+# BEGIN (write your solution here)
+print (text.lower())
+# END
+
+#39 Неизменяемость
+first_name = "  Grigor   \n"
+
+# BEGIN (write your solution here)
+print(first_name.strip())
+# END
+
+#40 Цепочка вызовов
+text = "When \t\n you play a \t\n game of thrones you win or you die."
+
+# BEGIN (write your solution here)
+print(len(text[6:15].strip()))
+# END
+
+#41 Создание (определение) функций
+def print_motto():
+    motto= 'Winter is coming'
+    print(motto)
+
+#42 Возврат значений
+def truncate(text, length):
+    # BEGIN (write your solution here)
+    result=f"{text[0:length]}..."
+    return(result)
+    # END
+
+#43 Именованные аргументы
+def trim_and_repeat (text, offset=0, repetitions=1):
+    return text[offset:] * repetitions
+
+#44
