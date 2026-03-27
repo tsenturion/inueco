@@ -193,3 +193,15 @@ else:
 print(first)
 print(second)
 print(third)
+
+#25
+n, m, q, cw, sw, hw, tw = map(int, input().split())
+print(m)
+print(n)
+print(cw)
+print(sw)
+print(hw)
+print(tw)
+print(q)
+
+#26
