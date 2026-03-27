@@ -597,5 +597,16 @@ if petya_speed > vasya_speed:
 else:
     print("Вася")
 #END
+#3
+petia_speed = int(input())
+vasia_speed = int(input())
+tolia_speed = int(input())
+if petia_speed > vasia_speed and petia_speed > tolia_speed:
+    print("Петя")
+elif vasia_speed > petia_speed and vasia_speed > tolia_speed:
+    print("Вася")
+else:
+    print("Толя")
+#END
 
 
