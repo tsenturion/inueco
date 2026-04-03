@@ -12,6 +12,7 @@ https://stepik.org/catalog/131?free=true
 "Поколение Python": курс для начинающих 
 до 15 Работа над мини-проектом
 
+https://leetcode.com/problem-list/wks0hhwh/
 Difficulty is Easy;
 Language is Python3:
 https://leetcode.com/problem-list/array/
