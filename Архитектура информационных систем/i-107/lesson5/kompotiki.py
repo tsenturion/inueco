@@ -572,6 +572,283 @@ x = n - y
 print(x, y)
 
 
+#яндекс 2
+
+#1
+print("Как Вас зовут?")
+name = input()
+print(f"Здравствуйте, {name}!")
+print("Как дела?")
+status = input()
+
+if status == "хорошо":
+    print("Я за Вас рада!")
+elif status == "плохо":
+    print("Всё наладится!")
+
+#2
+petya_speed = int(input())
+vasya_speed = int(input())
+
+if petya_speed > vasya_speed:
+    print("Петя")
+else:
+    print("Вася")
+
+#3
+petia_speed = int(input())
+vasia_speed = int(input())
+tolia_speed = int(input())
+if petia_speed > vasia_speed and petia_speed > tolia_speed:
+    print("Петя")
+elif vasia_speed > petia_speed and vasia_speed > tolia_speed:
+    print("Вася")
+else:
+    print("Толя")
+
+#4
+petia_speed = int(input())
+vasia_speed = int(input())
+tolia_speed = int(input())
+racers = [
+    (petia_speed, "Петя"),
+    (vasia_speed, "Вася"),
+    (tolia_speed, "Толя")
+]
+racers.sort(reverse=True)
+print(f"1. {racers[0][1]}")
+print(f"2. {racers[1][1]}")
+print(f"3. {racers[2][1]}")
+
+#5
+N = int(input())
+M = int(input())
+
+petja = 6 + N
+vasja = 11 + M
+
+if petja > vasja:
+    print("Петя")
+else:
+    print("Вася")
+
+#6
+year = int(input())
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print("YES")
+else:
+    print("NO")
+
+#7
+n = int(input())
+a = n // 1000
+b = (n // 100) % 10
+c = (n // 10) % 10
+d = n % 10
+if a == d and b == c:
+    print("YES")
+else:
+    print("NO")
+
+#8
+s = input()
+if "зайка" in s:
+    print("YES")
+else:
+    print("NO")
+
+#9
+name1 = input()
+name2 = input()
+name3 = input()
+
+if name1 <= name2 and name1 <= name3:
+    print(name1)
+elif name2 <= name1 and name2 <= name3:
+    print(name2)
+else:
+    print(name3)
+
+#10
+n = int(input())
+a = n // 100
+b = (n // 10) % 10
+c = n % 10
+
+sum1 = a + b
+sum2 = b + c
+
+if sum1 >= sum2:
+    print(f"{sum1}{sum2}")
+else:
+    print(f"{sum2}{sum1}")
+
+#11
+n = int(input())
+a = n // 100
+b = (n // 10) % 10
+c = n % 10
+
+max_digit = max(a, b, c)
+min_digit = min(a, b, c)
+middle_digit = a + b + c - max_digit - min_digit
+
+if max_digit + min_digit == middle_digit * 2:
+    print("YES")
+else:
+    print("NO")
+
+#12
+a = int(input())
+b = int(input())
+c = int(input())
+
+if a + b > c and a + c > b and b + c > a:
+    print("YES")
+else:
+    print("NO")
+
+#13
+a = input()
+b = input()
+c = input()
+
+if a[0] == b[0] == c[0]:
+    print(a[0])
+else:
+    print(a[1])
+
+#14
+a = input()
+b = input()
+c = input()
+
+if a[0] == b[0] == c[0]:
+    print(a[0])
+else:
+    print(a[1])
+
+#15
+n = input()
+digits = sorted(n)
+
+min_num = int(digits[0] + digits[1])
+max_num = int(digits[2] + digits[1])
+
+if digits[0] == '0':
+    min_num = int(digits[1] + digits[0])
+
+print(min_num, max_num)
+
+#16
+a = int(input())
+b = int(input())
+
+digits = [a // 10, a % 10, b // 10, b % 10]
+
+first = max(digits)
+last = min(digits)
+
+digits.remove(first)
+digits.remove(last)
+
+middle = (digits[0] + digits[1]) % 10
+
+print(f"{first}{middle}{last}")
+
+#17
+v1 = float(input())  # Петя
+v2 = float(input())  # Вася  
+v3 = float(input())  # Толя
+
+t1 = 43872 / v1
+t2 = 43872 / v2
+t3 = 43872 / v3
+
+riders = [("Петя", t1), ("Вася", t2), ("Толя", t3)]
+
+riders.sort(key=lambda x: x[1])
+
+print("          {}          ".format(riders[0][0]))
+print("  {}  ".format(riders[1][0]).rjust(8))
+print("                  {}".format(riders[2][0]))
+print("   II      I      III   ")
+
+#18
+a = float(input())
+b = float(input())
+c = float(input())
+
+if a == 0 and b == 0 and c == 0:
+    print("Infinite solutions")
+elif a == 0 and b == 0:
+    print("No solution")
+elif a == 0:
+    x = -c / b
+    print(f"{x:.2f}")
+else:
+    d = b ** 2 - 4 * a * c
+    if d < 0:
+        print("No solution")
+    elif d == 0:
+        x = -b / (2 * a)
+        print(f"{x:.2f}")
+    else:
+        x1 = (-b - d ** 0.5) / (2 * a)
+        x2 = (-b + d ** 0.5) / (2 * a)
+        if x1 > x2:
+            x1, x2 = x2, x1
+        print(f"{x1:.2f} {x2:.2f}")
+
+#19
+a = float(input())
+b = float(input())
+c = float(input())
+
+sides = sorted([a, b, c])
+x, y, z = sides[0], sides[1], sides[2]
+
+if x + y <= z:
+    print("крайне мала")
+else:
+    if x**2 + y**2 == z**2:
+        print("100%")
+    elif x**2 + y**2 > z**2:
+        print("крайне мала")
+    else:
+        print("велика")
+
+#20
+x = float(input())
+y = float(input())
+
+if x**2 + y**2 >= 100:
+    print("Вы вышли в море и рискуете быть съеденным акулой!")
+elif y >= 0 and y <= 5 and x >= -7 and x <= 7:
+    print("Опасность! Покиньте зону как можно скорее!")
+elif y <= 0 and y >= -5 and x >= -9 and x <= -5:
+    print("Опасность! Покиньте зону как можно скорее!")
+elif y <= 0 and y >= -5 and x >= 5 and x <= 9:
+    print("Опасность! Покиньте зону как можно скорее!")
+elif y <= -5 and y >= -9 and x >= -9 and x <= 9 and x**2 + y**2 <= 81:
+    print("Опасность! Покиньте зону как можно скорее!")
+else:
+    print("Зона безопасна. Продолжайте работу.")
+
+#21
+strings = []
+for _ in range(3):
+    s = input()
+    if "зайка" in s:
+        strings.append(s)
+
+strings.sort()
+
+print(strings[0], len(strings[0]))
+
+
+
+
 
 
 
