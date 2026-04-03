@@ -237,4 +237,35 @@ def truncate(text, length):
 def trim_and_repeat (text, offset=0, repetitions=1):
     return text[offset:] * repetitions
 
-#44
+#44 Аннотации типов
+def word_multiply(text:str,count:int) ->str:
+    return text*count
+
+#45 Логический тип
+def is_pensioner(age):
+    if age >= 60:
+        return True
+    else:
+        return False
+
+#46 Сравнение строк
+def is_long_word(bimbimbimbambambam):
+    if len (bimbimbimbambambam) >5:
+        return True
+    else: 
+        return False
+
+#47 Комбинирование операций и функций
+def is_international_phone(number:int) -> str:
+    return number [0] == '+'
+
+#48 Логические операторы
+def is_leap_year(year):
+    if year % 400 == 0 or year % 4 ==0 and year % 100 !=0:
+        return True
+    else:
+        False
+    
+#49 Отрицание
+
+
