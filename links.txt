@@ -38,6 +38,7 @@ https://chromewebstore.google.com/detail/leetcode-to-russian/omcekcjkhekdifemjbk
 https://yandex.cloud/ru/training/training-pro
 https://labs.play-with-docker.com/
 https://stepik.org/course/209514/syllabus
+https://leetcode.com/studyplan/top-interview-150/
 
 
 полезные инструменты
