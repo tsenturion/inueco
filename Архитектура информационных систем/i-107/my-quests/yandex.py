@@ -205,3 +205,67 @@ print(tw)
 print(q)
 
 #26
+
+
+
+
+########N
+def print_hello(name):
+    print(f"Hello, {name}!")
+#########
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+##########
+def number_length(a):
+    return len(str(abs(a)))
+#########
+def take_small(money):
+    result = []
+    for i in money:
+        if i < 100:
+            result.append(i)
+    return result
+###########
+count = 0
+
+
+def click():
+    global count
+    count += 1
+
+
+def get_count():
+    return count
+##############
+
+score = 0
+
+
+def move(player, number):
+    global score
+    if player == 'Петя':
+        score += number
+    elif player == 'Ваня':
+        score -= number
+
+
+def game_over():
+    if score > 0:
+        return 'Петя'
+    elif score < 0:
+        return 'Ваня'
+    else:
+        return 'Ничья'
+##########################
+def max2D(matrix):
+    if not matrix:
+        return None
+    
+    current_max = matrix[0][0]
+    for row in matrix:
+        for element in row:
+            if element > current_max:
+                current_max = element
+    return current_max
