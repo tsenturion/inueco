@@ -98,3 +98,181 @@ print(king + "\n" + "102")
 
 #24
 DRAGONS_BORN_COUNT = 3
+#25
+stark = "Arya?"
+
+
+# BEGIN (write your solution here)
+print(f'Do you want to eat, {stark}')
+# END
+
+#26
+name = "Na\nharis"
+
+# BEGIN (write your solution here)
+print(name[7])
+# END
+
+#27
+value = "Hexlet"
+
+# BEGIN (write your solution here)
+print(value[2:5])
+# END
+
+#28
+
+# BEGIN (write your solution here)
+text = '''Lannister, Targaryen, Baratheon, Stark, Tyrell...
+they're all just spokes on a wheel.
+This one's on top, then that one's on top, and on and on it spins,
+crushing those on the ground.'''
+
+# END
+
+print(text)
+
+#29
+
+print(-0.304)
+
+#30
+
+print(7 - (-8 - -2))
+
+#31
+
+one = "\nNaharis"
+two = "\nMormont"
+three = "\nSand"
+
+# BEGIN (write your solution here)
+print(one[3] + two[2] + three[4] + two[5] + two[3])
+# END
+
+#32
+
+value = 2.9
+
+# BEGIN (write your solution here)
+value = 2.9 - 0.9
+a = int(value)
+print(str(a) + " times")
+# END
+
+#33
+company1 = "Apple"
+company2 = "Samsung"
+
+# BEGIN (write your solution here)
+print(len(company1 + company2))
+
+# END
+
+#34
+
+number = 10.1234
+
+# BEGIN (write your solution here)
+result = round(10.1234, 2)
+print(result)
+# END
+
+
+#35
+
+text = "Never forget what you are, for surely the world will not"
+
+# BEGIN (write your solution here)
+result = f'First: {text[0]}\nLast: {text[-1]}'
+print(result)
+
+# END
+
+#36
+
+# BEGIN (write your solution here)
+print(min(3, 10, 22, -3, 0))
+# END
+
+#37
+
+# imports are studied on Hexlet
+from random import random
+
+# BEGIN (write your solution here)
+print(round(random()*10))
+# END
+#38
+
+text = "a MIND needs Books as a Sword needS a WHETSTONE."
+
+# BEGIN (write your solution here)
+print(text.lower())
+# END
+#39
+text = "a MIND needs Books as a Sword needS a WHETSTONE."
+
+# BEGIN (write your solution here)
+print(text.lower())
+# END
+
+#40
+
+text = "When \t\n you play a \t\n game of thrones you win or you die."
+
+# BEGIN (write your solution here)
+print(len(text[6:15].strip()))
+# END
+
+#41
+def print_motto():
+    motto = 'Winter is coming'
+    print(motto)
+    
+#42
+def truncate(text, length):
+    # BEGIN (write your solution here)
+    result = f"{text[0:length]}..."
+    return(result)
+    # END
+
+#43
+
+def trim_and_repeat (text, offset=0, repetitions=1):
+    return text[offset:] * repetitions
+#44
+def word_multiply(text: str,count: int) -> str:
+    return text * count
+
+#45
+def is_pensioner(age):
+    if age >= 60:
+        return True 
+    else:
+        return False
+        
+
+#46
+def is_long_word(word):
+    if len(word) > 5:
+        return True
+    else:
+        return False
+
+#47
+def is_international_phone(number:int) -> str:
+    return number[0] == '+'
+#48
+def is_leap_year(year):
+    if year % 400 == 0 or year % 4 ==0 and year % 100 !=0:
+        return True
+    else:
+        False
+        
+№49
+def is_palindrome(word):
+    lower_word = word.lower()
+    return lower_word == lower_word[::-1]
+def is_not_palindrome(word):
+    return not is_palindrome(word)
