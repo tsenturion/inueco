@@ -20,7 +20,6 @@ b = int(input())
 c = int(input())
 print(c - (a * b))
 #6
-
 a = input()
 b = int(input())
 c = int(input())
@@ -917,3 +916,193 @@ first_number = int(input())
 second_number = int(input())
 min_value = min(first_number, second_number)
 print(min_value)
+# 122
+# Получаем число от пользователя
+number = input()
+
+# Проходим по цифрам в обратном порядке и выводим каждую
+for digit in reversed(number):
+    print(digit)
+# 123
+# Получаем число от пользователя
+number = input()
+
+# Переворачиваем строку и выводим как число
+print(int(number[::-1]))
+# 124 
+separator = input()
+first_string = input()
+second_string = input()
+third_string = input()
+print(first_string, second_string, third_string, sep=separator)
+# 125
+number = int(input())
+print(number)
+print(number + 1)
+print(number + 2)
+# 126
+a = int(input())
+b = int(input())
+c = int(input())
+summa = a + b + c
+print(summa)
+# 127
+monitor_price = int(input())
+system_unit_price = int(input())
+keyboard_price = int(input())
+mouse_price = int(input())
+computer_cost = monitor_price + system_unit_price + keyboard_price + mouse_price
+total_cost = computer_cost * 3
+print(total_cost)
+# 128
+a = int(input())
+b = int(input())
+sum_ab = a + b    
+cube_sum_ab = sum_ab * sum_ab * sum_ab 
+square_b = b * b   
+result = 3 * cube_sum_ab + 275 * square_b - 127 * a - 41
+print(result)
+# 129
+num = int(input())
+next_num = num + 1
+prev_num = num - 1
+print(f"Следующее за числом {num} число: {next_num}")
+print(f"Для числа {num} предыдущее число: {prev_num}")
+# 130
+a = int(input())
+volume = a * a * a
+surface_area = 6 * a * a
+print("Объем =", volume)
+print("Площадь полной поверхности =", surface_area)
+# 131
+a = int(input())
+b = int(input())
+sum_ab = a + b
+diff_ab = a - b
+prod_ab = a * b
+print(f"{a} + {b} = {sum_ab}")
+print(f"{a} - {b} = {diff_ab}")
+print(f"{a} * {b} = {prod_ab}")
+# 132
+# Получаем число от пользователя
+n = int(input())
+
+# Инициализируем переменные
+max_digit = 0
+min_digit = 9
+
+# Проходим по всем цифрам числа
+while n > 0:
+    digit = n % 10  # получаем последнюю цифру
+    if digit > max_digit:
+        max_digit = digit
+    if digit < min_digit:
+        min_digit = digit
+    n //= 10  # удаляем последнюю цифру
+
+# Выводим результат
+print(f"Максимальная цифра равна {max_digit}")
+print(f"Минимальная цифра равна {min_digit}")
+# 133
+# Получаем число от пользователя
+n = input()
+
+# Преобразуем строку в список цифр
+digits = [int(d) for d in n]
+
+# 1. Сумма цифр
+sum_digits = sum(digits)
+
+# 2. Количество цифр
+count_digits = len(digits)
+
+# 3. Произведение цифр
+product = 1
+for d in digits:
+    product *= d
+
+# 4. Среднее арифметическое
+average = sum_digits / count_digits
+
+# 5. Первая цифра
+first_digit = digits[0]
+
+# 6. Сумма первой и последней цифры
+sum_first_last = digits[0] + digits[-1]
+
+# Выводим результаты
+print(sum_digits)
+print(count_digits)
+print(product)
+print(average)
+print(first_digit)
+print(sum_first_last)
+# 134
+# Получаем число от пользователя
+n = int(input())
+
+# Находим количество цифр в числе
+temp = n
+count = 0
+while temp > 0:
+    count += 1
+    temp //= 10
+
+# Удаляем первую цифру (делим на 10 в степени (количество цифр - 1))
+divisor = 10 ** (count - 1)
+n %= divisor
+
+# Теперь удаляем все цифры, кроме первой (которая была второй)
+while n >= 10:
+    n //= 10
+
+print(n)
+#135
+a = int(input())
+b = int(input())
+c = int(input())
+d = int(input())
+minimum_value = min(a, b, c, d)
+print(minimum_value)
+# 136
+x = int(input())
+if -1<x<17:
+    print("Принадлежит")
+else:
+    print("Не принадлежит")
+# 137
+x = int(input())
+if x <= -3 or x >= 7:
+    print("Принадлежит")
+else:
+    print("Не принадлежит")
+# 138
+x = int(input())
+if (-30 < x <= -2) or (7 < x <= 25):
+    print("Принадлежит")
+else:
+    print("Не принадлежит")
+# 139
+a = int(input())
+b = int(input())
+c = int(input())
+if a + b > c and a + c > b and b + c > a:
+    print("YES")
+else:
+    print("NO")
+# 140
+year = int(input())
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print("YES")
+else:
+    print("NO")
+# 141
+motto = "What Is Dead May Never Die!"
+print(motto)
+# 142
+somevar = 'message'
+# Записываем message в обратном порядке
+some_var = some_var[::-1]  # теперь some_var = 'egassem'
+# 143
+brothers_count = 2
+print(brothers_count)
