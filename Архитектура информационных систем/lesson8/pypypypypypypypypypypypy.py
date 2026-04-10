@@ -846,6 +846,113 @@ strings.sort()
 
 print(strings[0], len(strings[0]))
 
+#code-basics
+#26
+name = "Na\nharis"
+
+# BEGIN (write your solution here)
+print(name[7])
+# END
+
+#27
+value = "Hexlet"
+
+# BEGIN (write your solution here)
+print(value[2:5])
+# END
+
+#28
+# BEGIN (write your solution here)
+text = """Lannister, Targaryen, Baratheon, Stark, Tyrell...
+they're all just spokes on a wheel.
+This one's on top, then that one's on top, and on and on it spins,
+crushing those on the ground."""
+# END
+
+print(text)
+
+#29
+print(-0.304)
+
+#30
+a = 7
+print(a - (-8 - (-2)))
+
+#31
+one = "Naharis"
+two = "Mormont"
+three = "Sand"
+
+# BEGIN (write your solution here)
+result = one[2]+two[1]+three[3]+two[4]+two[2]
+print(result)
+#32
+value = 2.9
+
+# BEGIN (write your solution here)
+print(str(int(value)) + ' times')
+# END
+
+#33
+company1 = "Apple"
+company2 = "Samsung"
+
+# BEGIN (write your solution here)
+total_length = len(company1) + len(company2)
+print(total_length)
+# END
+#34
+
+number = round(10.1234, 2)
+print(number)
+#35
+
+text = "Never forget what you are, for surely the world will not"
+
+result = f'First: {text[0]}\nLast: {text[-1]}'
+print(result)
+
+#36
+
+print(min(3, 10, 22, -3, 0))
+
+#37
+
+from random import random
+print(round(random() * 10))
+
+#38
+
+text = "a MIND needs Books as a Sword needS a WHETSTONE."
+print(text.lower())
+
+#39
+
+first_name = "  Grigor   \n"
+cleaned = first_name.strip()
+print(cleaned)
+
+#40
+
+text = "When \t\n you play a \t\n game of thrones you win or you die."
+result = text[5:15].strip()
+print(len(result))
+
+#41
+
+def print_motto():
+    print('Winter is coming')
+
+# 42
+
+def truncate(text, length):
+    return text[:length] + '...'
+
+#43
+
+def get_hidden_card(card_number, stars_count=4):
+    return '*' * stars_count + card_number[-4:]
+
 
 
 
