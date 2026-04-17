@@ -275,3 +275,139 @@ def is_not_palindrome(word):
 
 #50 Результат логических выражений
 
+def get_hidden_card(card_number, stars_count=4):
+    visible_digits = card_number[-4:]
+    return '*' * stars_count + visible_digits
+
+#51 Условная конструкция (if)
+
+def guess_number(number):
+    if number == 42:
+        return 'You win!'
+    return 'Try again!'
+
+#52 Условная конструкция else
+
+def normalize_url(url):
+    if url.startswith('https://'):
+        return url
+    if url.startswith('http://'):
+        return 'https://' + url[7:]
+    return 'https://' + url
+
+#53 Конструкция else + if = elif
+
+def who_is_this_house_to_starks(house_name):
+    if house_name == 'Karstark' or house_name == 'Tully':
+        return 'friend'
+    if house_name == 'Lannister' or house_name == 'Frey':
+        return 'enemy'
+    return 'neutral'
+
+#54 Тернарный оператор
+
+def flip_flop(string):
+    if string == 'flip':
+        return 'flop'
+    return 'flip'
+
+#55 Оператор Match
+
+def get_number_explanation(number):
+    if number == 666:
+        return 'devil number'
+    if number == 42:
+        return 'answer for everything'
+    if number == 7:
+        return 'prime number'
+    return 'just a number'
+
+#56 Цикл While
+
+def print_reversed_numbers(number):
+    while number > 0:
+        print(number)
+        number -= 1
+    print('finished!')
+    
+#57 Агрегация данных (Числа)
+
+def multiply_numbers_from_range(start, end):
+    result = 1
+    i = start
+    while i <= end:
+        result *= i
+        i += 1
+    return result
+
+#58 Агрегация данных (Строки)
+
+def join_numbers_from_range(start, end):
+    result = ''
+    i = start
+    while i <= end:
+        result += str(i)
+        i += 1
+    return result
+
+#59 Обход строк
+
+def add_spaces(text):
+    result = ''
+    for char in text:
+        result += char + ' '
+    return result.strip()
+
+#60 Условия внутри тела цикла
+
+def count_chars(text, char):
+    text_lower = text.lower()
+    char_lower = char.lower()
+    
+    count = 0
+    for current_char in text_lower:
+        if current_char == char_lower:
+            count += 1
+    return count
+
+#61 Синтаксический сахар
+
+def filter_string(text, char):
+    result = ''
+    for current_char in text:
+        if current_char != char:
+            result += current_char
+    return result
+
+#62 Возврат из циклов
+
+def is_contains_char(text, char):
+    for current_char in text:
+        if current_char == char:
+            return True
+    return False
+
+#63 Цикл For
+
+def filter_string(text, char):
+    result = ''
+    lower_char = char.lower()
+    for current_char in text:
+        if current_char.lower() != lower_char:
+            result += current_char
+    return result
+
+#64 Цикл for и функция range
+
+def fizzbuzz(n):
+    result = []
+    for i in range(1, n + 1):
+        if i % 3 == 0 and i % 5 == 0:
+            result.append("FizzBuzz")
+        elif i % 3 == 0:
+            result.append("Fizz")
+        elif i % 5 == 0:
+            result.append("Buzz")
+        else:
+            result.append(str(i))
+    return " ".join(result)
