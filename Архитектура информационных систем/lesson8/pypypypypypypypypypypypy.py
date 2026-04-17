@@ -1172,7 +1172,7 @@ for i in range(n):
     prev_hash = h
 else:
     print(-1)
-ЭХ
+
 
 
 
