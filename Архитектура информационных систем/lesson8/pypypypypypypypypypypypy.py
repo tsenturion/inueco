@@ -958,6 +958,227 @@ def get_hidden_card(card_number, stars_count=4):
 
 
 
+#1
+while True:
+    cry = input()
+    if cry == "Три!":
+        print("Ёлочка, гори!")
+        break
+    else:
+        print("Режим ожидания...")
+
+#2
+count = 0
+while True:
+    line = input()
+    if line == "Приехали!":
+        break
+    if "зайка" in line:
+        count += 1
+print(count)
+
+#3
+start = int(input())
+end = int(input())
+for i in range(start, end + 1):
+    print(i, end=" ")
+
+#4
+start = int(input())
+end = int(input())
+if start <= end:
+    step = 1
+else:
+    step = -1
+for i in range(start, end + step, step):
+    print(i, end=" ")
+
+#5
+total = 0
+while True:
+    price = float(input())
+    if price == 0:
+        break
+    if price >= 500:
+        price *= 0.9
+    total += price
+print(total)
+
+#6
+a = int(input())
+b = int(input())
+while b != 0:
+    a, b = b, a % b
+print(a)
+
+#7
+a = int(input())
+b = int(input())
+x, y = a, b
+while y != 0:
+    x, y = y, x % y
+nod = x
+nok = a * b // nod
+print(nok)
+
+#8
+text = input()
+n = int(input())
+for _ in range(n):
+    print(text)
+
+#9
+n = int(input())
+factorial = 1
+for i in range(1, n + 1):
+    factorial *= i
+print(factorial)
+
+#10
+x = 0
+y = 0
+while True:
+    direction = input()
+    if direction == "СТОП":
+        break
+    steps = int(input())
+    if direction == "СЕВЕР":
+        y += steps
+    elif direction == "ЮГ":
+        y -= steps
+    elif direction == "ВОСТОК":
+        x += steps
+    elif direction == "ЗАПАД":
+        x -= steps
+print(y)
+print(x)
+
+#11
+n = int(input())
+sum_digits = 0
+while n > 0:
+    sum_digits += n % 10
+    n //= 10
+print(sum_digits)
+
+#12
+n = int(input())
+max_digit = 0
+while n > 0:
+    digit = n % 10
+    if digit > max_digit:
+        max_digit = digit
+    n //= 10
+print(max_digit)
+
+#13
+n = int(input())
+first_player = input()
+for _ in range(n - 1):
+    name = input()
+    if name < first_player:
+        first_player = name
+print(first_player)
+
+#14
+n = int(input())
+if n < 2:
+    print("NO")
+else:
+    is_prime = True
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            is_prime = False
+            break
+    if is_prime:
+        print("YES")
+    else:
+        print("NO")
+
+#15
+n = int(input())
+count = 0
+for _ in range(n):
+    line = input()
+    if "зайка" in line:
+        count += 1
+print(count)
+
+#16
+n = int(input())
+original = n
+reversed_num = 0
+while n > 0:
+    digit = n % 10
+    reversed_num = reversed_num * 10 + digit
+    n //= 10
+if original == reversed_num:
+    print("YES")
+else:
+    print("NO")
+
+#17
+n = int(input())
+result = 0
+multiplier = 1
+while n > 0:
+    digit = n % 10
+    if digit % 2 != 0:
+        result += digit * multiplier
+        multiplier *= 10
+    n //= 10
+print(result)
+
+#18
+n = int(input())
+divisor = 2
+factors = []
+while n > 1:
+    while n % divisor == 0:
+        factors.append(str(divisor))
+        n //= divisor
+    divisor += 1
+print(" * ".join(factors))
+
+#19
+low = 1
+high = 1000
+while True:
+    guess = (low + high) // 2
+    print(guess)
+    answer = input()
+    if answer == "Угадал!":
+        break
+    elif answer == "Больше":
+        low = guess + 1
+    elif answer == "Меньше":
+        high = guess - 1
+
+#20
+n = int(input())
+prev_hash = 0
+for i in range(n):
+    b = int(input())
+    h = b % 256
+    r = (b // 256) % 256
+    m = b // (256 ** 2)
+   
+    expected_h = (37 * (m + r + prev_hash)) % 256
+   
+    if h != expected_h or h >= 100:
+        print(i)
+        break
+   
+    prev_hash = h
+else:
+    print(-1)
+ЭХ
+
+
+
+
+
+
 
 
 
