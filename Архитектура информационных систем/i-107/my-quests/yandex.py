@@ -269,3 +269,27 @@ def max2D(matrix):
             if element > current_max:
                 current_max = element
     return current_max
+################
+def fragments(numbers):
+    if not numbers:
+        return []
+    result = [[numbers[0]]]
+
+    for i in range(1, len(numbers)):
+        if numbers[i] > numbers[i - 1]:
+            result[-1].append(numbers[i])
+        else:
+            result.append([numbers[i]])
+            
+    return result
+
+##############################
+def month(number, language):
+    months_ru = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 
+                 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь']
+    months_en = ['January', 'February', 'March', 'April', 'May', 'June', 
+                 'July', 'August', 'September', 'October', 'November', 'December']
+    if language == 'ru':
+        return months_ru[number - 1]
+    else:
+        return months_en[number - 1]
